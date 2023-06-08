@@ -214,11 +214,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
             "usegalaxy": "true"
@@ -401,11 +396,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://galaxy.genouest.org",
             "name": "Galaxy@GenOuest",
@@ -732,11 +722,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://galaxy.genouest.org",
             "name": "Galaxy@GenOuest",
@@ -1218,11 +1203,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://galaxy.genouest.org",
             "name": "Galaxy@GenOuest",
             "usegalaxy": "false"
@@ -1486,11 +1466,6 @@
       "supported_servers": {
         "exact": [
           {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
-          {
             "url": "https://galaxy.mesocentre.uca.fr",
             "name": "Galaxy@AuBi",
             "usegalaxy": "false"
@@ -1730,11 +1705,6 @@
           }
         ],
         "inexact": [
-          {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
@@ -1985,11 +1955,6 @@
       ],
       "supported_servers": {
         "exact": [
-          {
-            "url": "https://test.galaxyproject.org/",
-            "name": "Galaxy Test",
-            "usegalaxy": "false"
-          },
           {
             "url": "https://usegalaxy.eu",
             "name": "UseGalaxy.eu",
