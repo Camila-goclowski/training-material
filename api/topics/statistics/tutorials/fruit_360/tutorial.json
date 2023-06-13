@@ -29,6 +29,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kxk302/"
     }
   ],
+  "short_id": "T00265",
   "url": "/topics/statistics/tutorials/fruit_360/tutorial.html",
   "topic_name": "statistics",
   "tutorial_name": "fruit_360",
@@ -91,7 +92,8 @@
           "class": "Person",
           "name": "Kaivan Kamali"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/statistics/tutorials/fruit_360/tutorial.json",
@@ -129,6 +131,7 @@
 
     ]
   },
+  "topic_name_human": "Statistics and machine learning",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

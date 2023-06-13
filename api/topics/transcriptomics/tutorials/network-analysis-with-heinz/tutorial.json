@@ -30,6 +30,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/ChaoZhang123/"
     }
   ],
+  "short_id": "T00293",
   "url": "/topics/transcriptomics/tutorials/network-analysis-with-heinz/tutorial.html",
   "topic_name": "transcriptomics",
   "tutorial_name": "network-analysis-with-heinz",
@@ -56,7 +57,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/transcriptomics/tutorials/network-analysis-with-heinz/tutorial.json",
@@ -94,6 +96,7 @@
       }
     ]
   },
+  "topic_name_human": "Transcriptomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

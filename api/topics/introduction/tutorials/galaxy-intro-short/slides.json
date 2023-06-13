@@ -33,6 +33,7 @@
       "bebatut"
     ]
   },
+  "short_id": "S00072",
   "url": "/topics/introduction/tutorials/galaxy-intro-short/slides.html",
   "topic_name": "introduction",
   "tutorial_name": "galaxy-intro-short",
@@ -59,7 +60,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/introduction/tutorials/galaxy-intro-short/tutorial.json",
@@ -114,6 +116,7 @@
       }
     ]
   },
+  "topic_name_human": "Introduction to Galaxy Analyses",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -159,7 +162,6 @@
     "nsoranzo"
   ],
   "logo": "GTN",
-  "short_id": "S00072",
   "redirect_from": [
     "/short/introduction/galaxy-intro-short/slides",
     "/short/S00072"

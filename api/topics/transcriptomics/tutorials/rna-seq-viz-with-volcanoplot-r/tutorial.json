@@ -53,6 +53,7 @@
       ]
     }
   ],
+  "short_id": "T00305",
   "url": "/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot-r/tutorial.html",
   "topic_name": "transcriptomics",
   "tutorial_name": "rna-seq-viz-with-volcanoplot-r",
@@ -126,6 +127,7 @@
 
     ]
   },
+  "topic_name_human": "Transcriptomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

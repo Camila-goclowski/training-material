@@ -50,6 +50,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/tseemann/"
     }
   ],
+  "short_id": "T00313",
   "url": "/topics/variant-analysis/tutorials/microbial-variants/tutorial.html",
   "topic_name": "variant-analysis",
   "tutorial_name": "microbial-variants",
@@ -76,7 +77,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/microbial-variants/tutorial.json",
@@ -125,6 +127,7 @@
       }
     ]
   },
+  "topic_name_human": "Variant Analysis",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

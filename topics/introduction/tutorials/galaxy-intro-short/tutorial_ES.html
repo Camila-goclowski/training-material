@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -301,7 +306,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/introduction/tutorials/galaxy-intro-short/tutorial_ES.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -348,13 +353,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -421,7 +426,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Autores: <a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=27" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/pclo/" class="contributor-badge contributor-pclo"><img src="https://avatars.githubusercontent.com/pclo?s=27" alt="Avatar">Patricia Carvajal López</a><a href="/training-material/hall-of-fame/ales-ibt/" class="contributor-badge contributor-ales-ibt"><img src="https://avatars.githubusercontent.com/ales-ibt?s=27" alt="Avatar">Alejandra Escobar-Zepeda</a>
+		Autores: <a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/pclo/" class="contributor-badge contributor-pclo"><img src="https://avatars.githubusercontent.com/pclo?s=36" alt="Avatar">Patricia Carvajal López</a><a href="/training-material/hall-of-fame/ales-ibt/" class="contributor-badge contributor-ales-ibt"><img src="https://avatars.githubusercontent.com/ales-ibt?s=36" alt="Avatar">Alejandra Escobar-Zepeda</a>
 	</div>
 
 </div>
@@ -633,6 +638,7 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Última modificación:</strong> Feb 7, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> Licencia:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">GTN Framework tiene licencia del MIT</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
@@ -691,7 +697,7 @@ Sentry.init({
     <li>Inicia sesión o regístrate</li>
   </ol>
 
-  <p><img src="../../images/galaxy-login.png" alt="login. " loading="lazy" /></p>
+  <p><img src="../../images/galaxy-login.png" alt="login. " width="2196" height="912" loading="lazy" /></p>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-diferentes-servidores-galaxy"><i class="far fa-comment-dots" aria-hidden="true"></i> Comentario: Diferentes servidores Galaxy</div>
@@ -714,7 +720,7 @@ Sentry.init({
   <li>Historial de análisis y archivos a la derecha</li>
 </ul>
 
-<p><img src="../../images/galaxy_interface.png" alt="galaxy overview screenshot. " loading="lazy" /></p>
+<p><img src="../../images/galaxy_interface.png" alt="galaxy overview screenshot. " width="1777" height="1290" loading="lazy" /></p>
 
 <p>La primera vez que uses Galaxy, no encontrarás archivos en tu panel de historial.</p>
 
@@ -731,7 +737,7 @@ Sentry.init({
     <li>
       <p>Haz clic en el nombre del historial (que por defecto es “Unnamed history”)</p>
 
-      <p><img src="../../../../shared/images/rename_history.png" alt="name history. " width="320px" loading="lazy" /></p>
+      <p><img src="../../../../shared/images/rename_history.png" alt="name history. " width="270" height="320" loading="lazy" /></p>
     </li>
     <li>Teclea el nuevo nombre, por ejemplo, “Mi-Analisis”</li>
     <li>Presiona <kbd>Enter</kbd> en tu teclado para guardar</li>
@@ -754,11 +760,11 @@ Sentry.init({
     <li>
       <p>En la parte superior del panel <strong>Tools</strong> (a la derecha), haz clic en <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload</strong></p>
 
-      <p><img src="../../images/upload-data.png" alt="upload button. " loading="lazy" /></p>
+      <p><img src="../../images/upload-data.png" alt="upload button. " width="276" height="205" loading="lazy" /></p>
 
       <p>Se desplegará el siguiente cuadro:</p>
 
-      <p><img src="../../images/upload-box.png" alt="filebox. " width="500px" loading="lazy" /></p>
+      <p><img src="../../images/upload-box.png" alt="filebox. " width="1792" height="1087" loading="lazy" /></p>
     </li>
     <li>Haz clic en <strong>Paste/Fetch data</strong></li>
     <li>
@@ -790,7 +796,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
     <li>
       <p>Haz clic en el icono <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (ojo) junto al nombre del conjunto de datos para visualizar su contenido</p>
 
-      <p><img src="../../images/eye-icon.png" alt="eye. " width="320px" loading="lazy" /></p>
+      <p><img src="../../images/eye-icon.png" alt="eye. " width="580" height="549" loading="lazy" /></p>
     </li>
   </ol>
 </blockquote>
@@ -799,7 +805,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
 
 <p>Este archivo contiene lecturas de secuenciación de ADN bacteriano en formato FASTQ:</p>
 
-<p><img src="../../images/fastq.png" alt="fastq. " width="620px" loading="lazy" /></p>
+<p><img src="../../images/fastq.png" alt="fastq. " width="1088" height="428" loading="lazy" /></p>
 
 <h2 id="utilizar-una-herramienta">Utilizar una herramienta</h2>
 
@@ -848,7 +854,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
 
       <p>La información se desplegará en el panel central</p>
 
-      <p><img src="../../images/fastqc-out.png" alt="fastqc-out. " width="620px" loading="lazy" /></p>
+      <p><img src="../../images/fastqc-out.png" alt="fastqc-out. " width="742" height="729" loading="lazy" /></p>
     </li>
   </ul>
 </blockquote>
@@ -912,7 +918,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
 
       <p>Esta acción expandirá la información que se tenga sobre el archivo.</p>
 
-      <p><img src="../../images/filter-fastq1.png" alt="filter1. " loading="lazy" /></p>
+      <p><img src="../../images/filter-fastq1.png" alt="filter1. " width="623" height="696" loading="lazy" /></p>
     </li>
   </ol>
 
@@ -939,7 +945,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
     <li>
       <p>Haz clic en el icono <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> (<strong>Run this job again</strong>) para el set de datos de salida <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
-      <p><img src="../../images/rerun.png" alt="rerun. " loading="lazy" /></p>
+      <p><img src="../../images/rerun.png" alt="rerun. " width="249" height="412" loading="lazy" /></p>
 
       <p>La interfaz de la herramienta aparecerá en el panel central con los valores de parámetros que utilizamos previamente para generar este set de datos</p>
     </li>
@@ -999,7 +1005,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
     <li>
       <p>Haz clic en el icono <strong>View all histories</strong> (<i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-columns</span>) en la parte superior derecha de tu historial</p>
 
-      <p><img src="../../images/galaxy_interface_history_switch.png" alt="view-hist. " width="320px" loading="lazy" /></p>
+      <p><img src="../../images/galaxy_interface_history_switch.png" alt="view-hist. " width="287" height="120" loading="lazy" /></p>
 
       <p>Aparecerá una nueva página donde se desplegarán todos tus historiales.</p>
     </li>
@@ -1014,7 +1020,7 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
     <li>Haz clic en el icono <i class="fas fa-home" aria-hidden="true"></i><span class="visually-hidden">galaxy-home</span> (o en <strong>Analyze Data</strong> en versiones anteriores de Galaxy) en la parte superior para regresar a la ventana de análisis</li>
   </ol>
 
-  <figure id="figure-1"><img src="../../images/copy-dataset.gif" alt="Copy a dataset between histories. " width="1280" height="720" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figura 1</strong>:</span> Copia un conjunto de datos arrastrándolo de un historial a otro</figcaption></figure>
+  <figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/copy-dataset.gif" alt="Copy a dataset between histories. " width="1280" height="720" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figura 1</strong>:</span> Copia un conjunto de datos arrastrándolo de un historial a otro</figcaption></figure>
 
 </blockquote>
 
@@ -1092,6 +1098,9 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
                             Anna Syme, Patricia Carvajal López, Alejandra Escobar-Zepeda,  <b>Breve introducción a Galaxy - en español (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html">https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1113,12 +1122,12 @@ Cuando el archivo se haya cargado en Galaxy, aparecerá en color verde.</p>
 
 <code id="citation-code">@misc{introduction-galaxy-intro-short,
 author = "Anna Syme and Patricia Carvajal López and Alejandra Escobar-Zepeda",
-title = "Breve introducción a Galaxy - en español (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html}",
-note = "[Online; accessed TODAY]"
+	title = "Breve introducción a Galaxy - en español (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial_ES.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1215,15 +1224,15 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -1243,7 +1252,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1251,9 +1260,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

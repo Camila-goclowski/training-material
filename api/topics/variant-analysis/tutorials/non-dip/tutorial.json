@@ -38,6 +38,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/"
     }
   ],
+  "short_id": "T00314",
   "url": "/topics/variant-analysis/tutorials/non-dip/tutorial.html",
   "topic_name": "variant-analysis",
   "tutorial_name": "non-dip",
@@ -64,7 +65,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/variant-analysis/tutorials/non-dip/tutorial.json",
@@ -113,6 +115,7 @@
       }
     ]
   },
+  "topic_name_human": "Variant Analysis",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

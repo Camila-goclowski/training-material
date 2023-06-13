@@ -34,6 +34,7 @@
       "teresa-m"
     ]
   },
+  "short_id": "T00200",
   "url": "/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html",
   "topic_name": "metagenomics",
   "tutorial_name": "beer-data-analysis",
@@ -103,7 +104,8 @@
           "identifier": "0000-0002-0507-4602",
           "name": "Polina Polunina"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/metagenomics/tutorials/beer-data-analysis/tutorial.json",
@@ -138,6 +140,7 @@
 
     ]
   },
+  "topic_name_human": "Metagenomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

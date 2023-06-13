@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -287,7 +292,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/contributing/tutorials/create-new-tutorial-content/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/contributing/tutorials/create-new-tutorial-content/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -334,13 +339,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -413,7 +418,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -425,7 +430,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=27" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a></td>
+			<a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a></td>
 	</tr>
 	
 
@@ -621,12 +626,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 30, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00058">https://gxy.io/GTN:T00058</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00058">https://gxy.io/GTN:T00058</a> </div>
         
     </blockquote>
     </section>
@@ -1489,6 +1495,8 @@ blabla
 	
 		
 	
+		
+	
 
 	
 	
@@ -1653,6 +1661,60 @@ blabla
 	
 
 	
+
+</blockquote>
+
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="tip">
+
+	<div class="box-title">
+		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: copyright">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>copyright</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>A copyright attribution string, as required by some licenses.</p>
+
+</p>
+
+
+
+
+
+
+
+
+<p>
+	<b>Example(s)</b>
+<div>
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">copyright</span><span class="pi">:</span> <span class="s">© Copyright 2021-2023 University of Technology Sydney, The University of Manchester UK and RO-Crate contributors</span>
+</code></pre></div>        </div>
+      </div>
+	
+	</p>
+
+
+
+
+
+
+
+
 
 </blockquote>
 
@@ -2486,6 +2548,11 @@ the tutorial.</p>
 	<b>Example(s)</b>
 <div>
         <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">license</span><span class="pi">:</span> <span class="s">MIT</span>
+</code></pre></div>        </div>
+      </div>
+	
+<div>
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">license</span><span class="pi">:</span> <span class="s">Apache-2.0</span>
 </code></pre></div>        </div>
       </div>
 	
@@ -3935,7 +4002,7 @@ Each contributor is defined in this file like:</p>
   <span class="na">funding_id</span><span class="pi">:</span> <span class="s">2020-1-NL01-KA203-064717</span>
   <span class="na">funding_statement</span><span class="pi">:</span> <span class="pi">|</span>
      <span class="s">This project ([`2020-1-NL01-KA203-064717`](https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717)) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.</span>
-     <span class="s">&lt;img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg" alt="eu flag with the text: with the support of the erasmus programme of the european union. "  loading="lazy"&gt;</span>
+     <span class="s">&lt;img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg"  alt="eu flag with the text: with the support of the erasmus programme of the european union. "   loading="lazy"&gt;</span>
 </code></pre></div>    </div>
 
     <p>Funding bodies will be credited at the bottom of the tutorial with the appropriate funding statement, and will get a page in the hall of fame listing all tutorials that list them as a funder.</p>
@@ -6162,7 +6229,7 @@ their Hall of Fame profile.</p>
 
 <p>We have also added a small plugin to handle captions for each image:</p>
 
-<figure id="figure-1"><img src="../../images/image_caption_screenshot.png" alt="A textual description of the image. " width="424" height="301" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of an image with a caption </figcaption></figure>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/image_caption_screenshot.png" alt="A textual description of the image. " width="424" height="301" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of an image with a caption</figcaption></figure>
 <!-- Adding a space to the caption to not trigger figurigy skip_titles -->
 
 <p>The prefix “Figure 1.” is automatically added before its caption. This is done with the following Markdown syntax:</p>
@@ -6185,7 +6252,7 @@ illustrative.</strong></p>
 
 <p>As an example for this image:</p>
 
-<figure id="figure-2"><img src="/training-material/topics/metagenomics/images/plasmid-metagenomics-nanopore/sequence_method.jpg" alt="alt text. " width="554" height="313" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Example of an image with a caption </figcaption></figure>
+<figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/metagenomics/images/plasmid-metagenomics-nanopore/sequence_method.jpg" alt="alt text. " width="554" height="313" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Example of an image with a caption</figcaption></figure>
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!​<span class="p">[</span><span class="nv">Alt text (shown when image cannot be displayed)</span><span class="p">](</span><span class="sx">path/to/image.png</span> <span class="nn">"Example of an image with a caption"</span><span class="p">)</span>
 </code></pre></div></div>
@@ -6770,7 +6837,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
 
 <p>With the new <a href="https://github.com/galaxyproject/galaxy/pull/10024">GTN in Galaxy Webhook</a>, trainees can view training directly within Galaxy. As part of this, we enable those trainees to click on tools, and have those tools directly activated in Galaxy, enabling for a seamless training experience for trainees.</p>
 
-<figure id="figure-3"><img src="../../images/88277962-ddda4a80-cce1-11ea-92cd-41b1df063db0.gif" alt="GIF of a user using the GTN in Galaxy webhook." width="1722" height="1036" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> A gif showing how the GTN in Galaxy webhook works. A student clicks the learning hat icon in the masthead of a Galaxy server, and an overlay is activated showing the GTN website. Within the GTN they can browse around and their place in tutorials is saved. While following a tutorial the student reches a step which instructs them to run a specific tool. Instead of the normal experience searching for a tool (quite difficult on large servers), they click a blue button and the tool is activated in Galaxy, and the overlay is closed. The student can reactivate the overlay at any time and return to their place in the tutorial.</figcaption></figure>
+<figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="../../images/88277962-ddda4a80-cce1-11ea-92cd-41b1df063db0.gif" alt="GIF of a user using the GTN in Galaxy webhook." width="1722" height="1036" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> A gif showing how the GTN in Galaxy webhook works. A student clicks the learning hat icon in the masthead of a Galaxy server, and an overlay is activated showing the GTN website. Within the GTN they can browse around and their place in tutorials is saved. While following a tutorial the student reches a step which instructs them to run a specific tool. Instead of the normal experience searching for a tool (quite difficult on large servers), they click a blue button and the tool is activated in Galaxy, and the overlay is closed. The student can reactivate the overlay at any time and return to their place in the tutorial.</figcaption></figure>
 
 <p>To enable these in your tutorial you can use the following syntax:</p>
 
@@ -6805,7 +6872,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
   <li>Keep only the part after the <code class="language-plaintext highlighter-rouge">=</code>, so <code class="language-plaintext highlighter-rouge">toolshed.g2.bx.psu.edu/repos/galaxyp/mz_to_sqlite/mz_to_sqlite/2.0.4+galaxy1</code> in this example</li>
 </ol>
 
-<p><img src="../../images/tool-id.png" alt="Finding the tool ID. " loading="lazy" /></p>
+<p><img src="../../images/tool-id.png" alt="Finding the tool ID. " width="717" height="417" loading="lazy" /></p>
 
 <h2 id="faqs-snippets">FAQs (snippets)</h2>
 
@@ -7905,6 +7972,11 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
 	</div>
 
 	<div class="col-md-2 col-sm-3" style="text-align: center">
+		<div style="font-size: 400%"><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">icon[0]</span></div>
+		<div>purl</div>
+	</div>
+
+	<div class="col-md-2 col-sm-3" style="text-align: center">
 		<div style="font-size: 400%"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">icon[0]</span></div>
 		<div>question</div>
 	</div>
@@ -8699,7 +8771,7 @@ switch pages.</p>
 
 <p>If all worked well, it should look something like this, with a dropdown menu on the slides and/or tutorial showing the presence of a curated tutorial:</p>
 
-<p><img src="../../images/curated-translations.png" alt="example of the view in the topic page for a tutorial with a Spanish translation. " loading="lazy" /></p>
+<p><img src="../../images/curated-translations.png" alt="example of the view in the topic page for a tutorial with a Spanish translation. " width="701" height="416" loading="lazy" /></p>
 
 <h2 id="other-languages">Other Languages</h2>
 <p>Would you like to add a different language to the GTN? Please contact us first (e.g. on <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter</a>), to discuss a long-term sustainability plan!</p>
@@ -8790,6 +8862,9 @@ document.getElementsByTagName("body")[0].innerHTML = document.getElementsByTagNa
                             Bérénice Batut, Helena Rasche,  <b>Creating content in Markdown (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html">https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -8811,12 +8886,12 @@ document.getElementsByTagName("body")[0].innerHTML = document.getElementsByTagNa
 
 <code id="citation-code">@misc{contributing-create-new-tutorial-content,
 author = "Bérénice Batut and Helena Rasche",
-title = "Creating content in Markdown (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Creating content in Markdown (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -9024,19 +9099,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00058">https://gxy.io/GTN:T00058</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00058">https://gxy.io/GTN:T00058</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -9056,7 +9131,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -9064,9 +9139,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

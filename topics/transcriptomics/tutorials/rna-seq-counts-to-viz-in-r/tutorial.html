@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -478,7 +483,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -525,13 +530,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -598,7 +603,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=27" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/tobyhodges/" class="contributor-badge contributor-tobyhodges"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tobyhodges?s=27" alt="Avatar">Toby Hodges</a><a href="/training-material/hall-of-fame/erasmusplus/" class="contributor-badge contributor-erasmusplus"><img src="https://avatars.githubusercontent.com/erasmusplus?s=27" alt="Avatar">Erasmus+ Programme</a>
+		Authors: <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/tobyhodges/" class="contributor-badge contributor-tobyhodges"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tobyhodges?s=36" alt="Avatar">Toby Hodges</a><a href="/training-material/hall-of-fame/erasmusplus/" class="contributor-badge contributor-erasmusplus"><img src="https://avatars.githubusercontent.com/erasmusplus?s=36" alt="Avatar">Erasmus+ Programme</a>
 	</div>
 
 </div>
@@ -1001,6 +1006,8 @@ Sentry.init({
                         
                     
                         
+                    
+                        
                             
                             <li> Reference-based RNA-Seq data analysis:
                             
@@ -1172,12 +1179,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 18, 2022 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00299">https://gxy.io/GTN:T00299</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00299">https://gxy.io/GTN:T00299</a> </div>
         
     </blockquote>
     </section>
@@ -1358,7 +1366,7 @@ Sentry.init({
 
 <p>We should obtain our first ggplot2 plot:</p>
 
-<p><img src="../../images/rna-seq-counts-to-viz-in-r/firstPlot.png" alt="Our first ggplot2 plot. " loading="lazy" /></p>
+<p><img src="../../images/rna-seq-counts-to-viz-in-r/firstPlot.png" alt="Our first ggplot2 plot. " width="640" height="425" loading="lazy" /></p>
 
 <p>This plot is called a volcano plot, a type of scatterplot that shows statistical significance (P value) versus magnitude of change (fold change). The most upregulated genes are towards the right, the most downregulated genes are towards the left, and the most statistically significant genes are towards the top. With this plot, we can then quickly identify genes with large fold changes that are also statistically significant, i.e. probably the most biologically significant genes.</p>
 
@@ -1378,7 +1386,7 @@ Sentry.init({
   </ol>
 </blockquote>
 
-<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v0.png" alt="Volcano Plot version 0. " loading="lazy" /></p>
+<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v0.png" alt="Volcano Plot version 0. " width="640" height="425" loading="lazy" /></p>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-categorising-expression-levels"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Categorising expression levels</div>
@@ -1441,7 +1449,7 @@ Sentry.init({
      </span><span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
 </span></code></pre></div>      </div>
 
-      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v1.png" alt="Volcano Plot version 1. " loading="lazy" /></p>
+      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v1.png" alt="Volcano Plot version 1. " width="640" height="425" loading="lazy" /></p>
     </li>
     <li>
       <p>Add colors for all the points</p>
@@ -1450,7 +1458,7 @@ Sentry.init({
     </span><span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">)</span><span class="w">
 </span></code></pre></div>      </div>
 
-      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v2.png" alt="Volcano Plot version 2. " loading="lazy" /></p>
+      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v2.png" alt="Volcano Plot version 2. " width="640" height="425" loading="lazy" /></p>
     </li>
     <li>
       <p>Color point based on their strand</p>
@@ -1459,7 +1467,7 @@ Sentry.init({
      </span><span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
 </span></code></pre></div>      </div>
 
-      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v3.png" alt="Volcano Plot version 3. " loading="lazy" /></p>
+      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v3.png" alt="Volcano Plot version 3. " width="640" height="425" loading="lazy" /></p>
 
       <p>We use a vector as an input to the argument color and <code class="language-plaintext highlighter-rouge">ggplot2</code> provides a different color corresponding to different values in the vector.</p>
     </li>
@@ -1477,7 +1485,7 @@ Sentry.init({
 
 <p>We have now a nice Volcano plot:</p>
 
-<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v5.png" alt="Volcano Plot version 5. " loading="lazy" /></p>
+<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v5.png" alt="Volcano Plot version 5. " width="640" height="425" loading="lazy" /></p>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-standard-error-over-the-log10-of-the-adjusted-p-value"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Standard error over the `-log10` of the adjusted `P-value`</div>
@@ -1493,7 +1501,7 @@ Sentry.init({
           y = "StdErr")
 </code></pre></div>    </div>
 
-    <p><img src="../../images/rna-seq-counts-to-viz-in-r/ggplotExercise01.png" alt="Exercise Plot 1. " loading="lazy" /></p>
+    <p><img src="../../images/rna-seq-counts-to-viz-in-r/ggplotExercise01.png" alt="Exercise Plot 1. " width="640" height="425" loading="lazy" /></p>
   </blockquote>
 </blockquote>
 
@@ -1515,7 +1523,7 @@ Sentry.init({
   </span><span class="n">facet_grid</span><span class="p">(</span><span class="n">.</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Chromosome</span><span class="p">)</span><span class="w">
 </span></code></pre></div>      </div>
 
-      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v6.png" alt="Volcano Plot version 6. " loading="lazy" /></p>
+      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v6.png" alt="Volcano Plot version 6. " width="640" height="425" loading="lazy" /></p>
     </li>
     <li>
       <p>Split volcano plot by chromosome using <code class="language-plaintext highlighter-rouge">facet_grid</code> with plots stacked vertically</p>
@@ -1527,7 +1535,7 @@ Sentry.init({
   </span><span class="n">facet_grid</span><span class="p">(</span><span class="n">Chromosome</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.</span><span class="p">)</span><span class="w">
 </span></code></pre></div>      </div>
 
-      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v7.png" alt="Volcano Plot version 7. " loading="lazy" /></p>
+      <p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v7.png" alt="Volcano Plot version 7. " width="640" height="425" loading="lazy" /></p>
 
       <p>The <code class="language-plaintext highlighter-rouge">facet_grid</code> geometry allows to explicitly specify how we want your plots to be arranged via formula notation (<code class="language-plaintext highlighter-rouge">rows ~ columns</code>). The <code class="language-plaintext highlighter-rouge">.</code> can be used as a placeholder that indicates only one row or column).</p>
     </li>
@@ -1571,7 +1579,7 @@ Sentry.init({
 
 </blockquote>
 
-<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v8.png" alt="Volcano Plot version 8. " loading="lazy" /></p>
+<p><img src="../../images/rna-seq-counts-to-viz-in-r/volcanoPlot_v8.png" alt="Volcano Plot version 8. " width="640" height="425" loading="lazy" /></p>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-standard-error-over-the-log10-of-the-adjusted-p-value-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Standard error over the `-log10` of the adjusted `P-value`</div>
@@ -1588,7 +1596,7 @@ Sentry.init({
  facet_grid(Strand ~ .)
 </code></pre></div>    </div>
 
-    <p><img src="../../images/rna-seq-counts-to-viz-in-r/ggplotExercise02.png" alt="Exercise Plot 2. " loading="lazy" /></p>
+    <p><img src="../../images/rna-seq-counts-to-viz-in-r/ggplotExercise02.png" alt="Exercise Plot 2. " width="640" height="425" loading="lazy" /></p>
 
   </blockquote>
 </blockquote>
@@ -1612,7 +1620,7 @@ Sentry.init({
   </ol>
 </blockquote>
 
-<p><img src="../../images/rna-seq-counts-to-viz-in-r/barPlot_v1.png" alt="Bar plot 1. " loading="lazy" /></p>
+<p><img src="../../images/rna-seq-counts-to-viz-in-r/barPlot_v1.png" alt="Bar plot 1. " width="640" height="425" loading="lazy" /></p>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-remove-the-legend"><i class="far fa-question-circle" aria-hidden="true"></i> Question: Remove the legend</div>
@@ -1626,7 +1634,7 @@ Sentry.init({
  geom_bar(show.legend = F) +
  facet_grid(Chromosome ~ .)
 </code></pre></div>    </div>
-    <p><img src="../../images/rna-seq-counts-to-viz-in-r/barPlot_v2.png" alt="Bar plot 2. " loading="lazy" /></p>
+    <p><img src="../../images/rna-seq-counts-to-viz-in-r/barPlot_v2.png" alt="Bar plot 2. " width="640" height="425" loading="lazy" /></p>
 
   </blockquote>
 </blockquote>
@@ -1709,6 +1717,9 @@ Sentry.init({
                             Bérénice Batut, Fotis E. Psomopoulos, Toby Hodges, Erasmus+ Programme,  <b>RNA Seq Counts to Viz in R (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1730,12 +1741,12 @@ Sentry.init({
 
 <code id="citation-code">@misc{transcriptomics-rna-seq-counts-to-viz-in-r,
 author = "Bérénice Batut and Fotis E. Psomopoulos and Toby Hodges and Erasmus+ Programme",
-title = "RNA Seq Counts to Viz in R (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "RNA Seq Counts to Viz in R (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1812,19 +1823,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00299">https://gxy.io/GTN:T00299</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00299">https://gxy.io/GTN:T00299</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -1844,7 +1855,7 @@ tools: []
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1852,9 +1863,13 @@ tools: []
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

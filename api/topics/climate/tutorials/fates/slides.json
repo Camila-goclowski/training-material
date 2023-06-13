@@ -30,6 +30,7 @@
     "rosiealice",
     "annefou"
   ],
+  "short_id": "S00036",
   "url": "/topics/climate/tutorials/fates/slides.html",
   "topic_name": "climate",
   "tutorial_name": "fates",
@@ -127,7 +128,8 @@
           "identifier": "https://orcid.org/0000-0002-1784-2920",
           "name": "Anne Fouilloux"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/climate/tutorials/fates/tutorial.json",
@@ -152,6 +154,7 @@
 
     ]
   },
+  "topic_name_human": "Climate",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -208,7 +211,6 @@
   },
   "type": "tutorial",
   "logo": "GTN",
-  "short_id": "S00036",
   "redirect_from": [
     "/short/climate/fates/slides",
     "/short/S00036"

@@ -26,6 +26,7 @@
     "gallardoalba",
     "pavanvidem"
   ],
+  "short_id": "S00095",
   "url": "/topics/transcriptomics/tutorials/mirna-target-finder/slides.html",
   "topic_name": "transcriptomics",
   "tutorial_name": "mirna-target-finder",
@@ -127,7 +128,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/transcriptomics/tutorials/mirna-target-finder/tutorial.json",
@@ -170,6 +172,7 @@
       }
     ]
   },
+  "topic_name_human": "Transcriptomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -269,7 +272,6 @@
   "type": "tutorial",
   "logo": "GTN",
   "priority": 4,
-  "short_id": "S00095",
   "redirect_from": [
     "/short/transcriptomics/mirna-target-finder/slides",
     "/short/S00095"

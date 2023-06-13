@@ -25,6 +25,7 @@
     "annefou",
     "rabernat"
   ],
+  "short_id": "S00038",
   "url": "/topics/climate/tutorials/pangeo/slides.html",
   "topic_name": "climate",
   "tutorial_name": "pangeo",
@@ -86,7 +87,8 @@
           "name": "Anne Fouilloux",
           "url": "https://github.com/annefou"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/climate/tutorials/pangeo/tutorial.json",
@@ -120,6 +122,7 @@
 
     ]
   },
+  "topic_name_human": "Climate",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -204,7 +207,6 @@
   },
   "type": "tutorial",
   "logo": "GTN",
-  "short_id": "S00038",
   "redirect_from": [
     "/short/climate/pangeo/slides",
     "/short/S00038"

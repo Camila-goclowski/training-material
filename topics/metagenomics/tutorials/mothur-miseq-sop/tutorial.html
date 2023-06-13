@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -333,7 +338,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/metagenomics/tutorials/mothur-miseq-sop/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -380,13 +385,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -453,7 +458,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=27" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge contributor-tnabtaf"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tnabtaf?s=27" alt="Avatar">Dave Clements</a>
+		Authors: <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-shiltemann"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Avatar">Saskia Hiltemann</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge contributor-tnabtaf"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tnabtaf?s=36" alt="Avatar">Dave Clements</a>
 	</div>
 
 </div>
@@ -650,12 +655,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 7, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00205">https://gxy.io/GTN:T00205</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00205">https://gxy.io/GTN:T00205</a> </div>
         
     </blockquote>
     </section>
@@ -731,7 +737,6 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
   </li>
   <li><a href="#visualisations" id="markdown-toc-visualisations">Visualisations</a>    <ol>
       <li><a href="#krona" id="markdown-toc-krona">Krona</a></li>
-      <li><a href="#phinch" id="markdown-toc-phinch">Phinch</a></li>
     </ol>
   </li>
   <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
@@ -749,7 +754,7 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
 
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-background-the-16s-ribosomal-rna-gene"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Background: The 16S ribosomal RNA gene</div>
-  <p><img src="../../images/16S_gene.png" alt="The 16S ribosomal RNA gene. " loading="lazy" /> <br /><br /></p>
+  <p><img src="../../images/16S_gene.png" alt="The 16S ribosomal RNA gene. " width="1374" height="927" loading="lazy" /> <br /><br /></p>
 
   <p>The 16S rRNA gene has several properties that make it ideally suited for our purposes</p>
 
@@ -759,7 +764,7 @@ analysis steps (e.g. data cleaning) at once, please see the <a href="/training-m
     <li>Huge reference databases</li>
   </ol>
 
-  <p><img src="../../images/16S_variableregions.jpg" alt="16S Variable regions. " loading="lazy" /></p>
+  <p><img src="../../images/16S_variableregions.jpg" alt="16S Variable regions. " width="1200" height="626" loading="lazy" /></p>
 
   <p>The highly conserved regions make it easy to target the gene across different organisms,
 while the highly variable regions allow us to distinguish between different species.</p>
@@ -780,7 +785,7 @@ nothing was done to our mice except allow them to eat, get fat, and be merry. We
 weight observed during the first 10 dpw affected the stability microbiome compared to the microbiome observed between days
 140 and 150.”</em></p>
 
-<p><img src="../../images/experiment_setup.png" alt="Experiment setup. " loading="lazy" /></p>
+<p><img src="../../images/experiment_setup.png" alt="Experiment setup. " width="986" height="603" loading="lazy" /></p>
 
 <p>To speed up analysis for this tutorial, we will use only a subset of this data. We will look at a single mouse at 10 different
 time points (5 early, 5 late). In order to assess the error rate of the analysis pipeline and experimental setup, the Schloss lab
@@ -870,11 +875,11 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
           </blockquote>
 
           <!--SNIPPET-->
-          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
           <p><!--END_SNIPPET--></p>
 
           <!--SNIPPET-->
-          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-data-from-a-data-library"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-data-from-a-data-library" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing data from a data library<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>   <ol>   <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>   <li>Navigate to the correct folder as indicated by your instructor</li>   <li>Select the desired files</li>   <li>Click on <strong>Add to History</strong> <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> near the top and select <strong>as Datasets</strong> from the dropdown menu</li>   <li>     <p>In the pop-up window, choose</p>     <ul>       <li><em>“Select history”</em>: the history you want to import the data to (or create a new one)</li>     </ul>   </li>   <li>Click on <strong>Import</strong></li> </ol> </blockquote>
+          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-data-from-a-data-library"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-data-from-a-data-library" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing data from a data library<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>   <ol>   <li>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></li>   <li>Navigate to  the correct folder as indicated by your instructor.     <ul>       <li>On most Galaxies tutorial data will be provided in a folder named <strong>GTN - Material –&gt; Topic Name -&gt; Tutorial Name</strong>.</li>     </ul>   </li>   <li>Select the desired files</li>   <li>Click on <strong>Add to History</strong> <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> near the top and select <strong>as Datasets</strong> from the dropdown menu</li>   <li>     <p>In the pop-up window, choose</p>     <ul>       <li><em>“Select history”</em>: the history you want to import the data to (or create a new one)</li>     </ul>   </li>   <li>Click on <strong>Import</strong></li> </ol> </blockquote>
           <p><!--END_SNIPPET--></p>
         </li>
       </ul>
@@ -934,7 +939,7 @@ should be <code class="language-plaintext highlighter-rouge">_R1</code> and <cod
       <p>Click on “Choose Filters” and select <code class="language-plaintext highlighter-rouge">Forward: _R1, Reverse: _R2</code> (note that you can also enter Filters manually in the text fields on the top)</p>
 
       <p>You should now see a list of pairs suggested by Galaxy:
-<img src="../../images/create_collection.png" alt="List of suggested paired datasets. " loading="lazy" /></p>
+<img src="../../images/create_collection.png" alt="List of suggested paired datasets. " width="826" height="477" loading="lazy" /></p>
     </li>
     <li>Click on <strong>Auto-pair</strong> to create the suggested pairs.
       <ul>
@@ -954,7 +959,7 @@ should be <code class="language-plaintext highlighter-rouge">_R1</code> and <cod
         </li>
       </ul>
 
-      <p><img src="../../images/create_collection2.png" alt="The result of pairing. " loading="lazy" /></p>
+      <p><img src="../../images/create_collection2.png" alt="The result of pairing. " width="790" height="617" loading="lazy" /></p>
     </li>
     <li><strong>Name your collection</strong> at the bottom right of the screen
       <ul>
@@ -985,7 +990,7 @@ and several other metrics.</p>
 The sequencing was done from either end of each fragment. Because the reads are about 250 bp in length, this results in a
 significant overlap between the forward and reverse reads in each pair. We will combine these pairs of reads into <em>contigs</em>.</p>
 
-<p><img src="../../images/16S_merge_contigs.png" alt="Merging into contigs. " loading="lazy" /></p>
+<p><img src="../../images/16S_merge_contigs.png" alt="Merging into contigs. " width="407" height="224" loading="lazy" /></p>
 
 <p>The <strong>Make.contigs</strong> tool creates the contigs, and uses the paired collection as input. <strong>Make.contigs</strong>
 will look at each pair, take the reverse complement reverse read, and then determine the overlap between the
@@ -1626,7 +1631,7 @@ A mock community sample was sequenced for different combinations of sequencer an
 Since we know the expected outcome, we can assess the accuracy of each pipeline. A similar approach can be used to
 assess different parameter settings of the <em>in-silico</em>  analysis pipeline.</p>
 
-  <figure id="figure-1"><img src="../../images/mock_community.jpg" alt="example results of mock community sequencing to assess error rates. " width="778" height="560" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of usage of a mock community to assess accuracy. On the left is the expected result given that we know the exact composition of the mock sample. This was then used to assess the accuracy of different combinations of sequencing platform and primer set (choice of V-region)</figcaption></figure>
+  <figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/mock_community.jpg" alt="example results of mock community sequencing to assess error rates. " width="778" height="560" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of usage of a mock community to assess accuracy. On the left is the expected result given that we know the exact composition of the mock sample. This was then used to assess the accuracy of different combinations of sequencing platform and primer set (choice of V-region)</figcaption></figure>
 
   <p><strong>Further reading</strong></p>
 
@@ -2036,7 +2041,7 @@ ochiai, canberra, thetayc, invsimpson</em>, just to name a few ;). A comparison 
     <div class="box-title question-title" id="question-15"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
     <p>To understand the difference between richness and evenness, consider the following example:</p>
 
-    <p><img src="../../images/richness-evenness-blank.png" alt="illustration of richness and evenness. " loading="lazy" /></p>
+    <p><img src="../../images/richness-evenness-blank.png" alt="illustration of richness and evenness. " width="1400" height="1053" loading="lazy" /></p>
 
     <ol>
       <li>Which of these communities has the highest richness?</li>
@@ -2050,7 +2055,7 @@ ochiai, canberra, thetayc, invsimpson</em>, just to name a few ;). A comparison 
         <li>Community B is more even, because each species has the same abundance.</li>
       </ol>
 
-      <p><img src="../../images/richness-evenness.png" alt="illustration of richness and evenness. " loading="lazy" /></p>
+      <p><img src="../../images/richness-evenness.png" alt="illustration of richness and evenness. " width="1400" height="1053" loading="lazy" /></p>
     </blockquote>
 
   </blockquote>
@@ -2060,7 +2065,7 @@ ochiai, canberra, thetayc, invsimpson</em>, just to name a few ;). A comparison 
 the other if the species are very dissimilar in one of the samples (have high phylogenetic distance), but very
 closely related to each other in the second sample.</p>
 
-  <p><img src="../../images/phylogenetic-distance.png" alt="illustration of phylogenetic distance. " width="50%" loading="lazy" /></p>
+  <p><img src="../../images/phylogenetic-distance.png" alt="illustration of phylogenetic distance. " width="970" height="535" loading="lazy" /></p>
 
   <p>Now, you do not need to know what all these different metrics are, but just remember that there is not a single
 definition of diversity and as always, the metric you choose to use may influence your results.</p>
@@ -2151,7 +2156,7 @@ skipping the low confidence and high confidence interval columns)</li>
 <p>View the rarefaction plot output. From this image can see that the rarefaction curves for all samples have started to level
 off so we are confident we cover a large part of our sample diversity:</p>
 
-<p><img src="../../images/rarefaction_curves.png" alt="Rarefaction curves. " loading="lazy" /></p>
+<p><img src="../../images/rarefaction_curves.png" alt="Rarefaction curves. " width="480" height="480" loading="lazy" /></p>
 
 <p>Finally, let’s use the <strong>Summary.single</strong> tool to generate a summary report.  The following step
 will randomly subsample down to 2389 sequences, repeat this process 1000 times, and report several metrics:</p>
@@ -2247,11 +2252,11 @@ heatmaps the red colors indicate communities that are more similar than those wi
 
 <p>For example this is the heatmap for the <code class="language-plaintext highlighter-rouge">thetayc</code> calculator (output <code class="language-plaintext highlighter-rouge">thetayc.0.03.lt.ave</code>):</p>
 
-<p><img src="../../images/heatmap.sim_thetayc.png" alt="Heatmap for the thetayc calculator. " loading="lazy" /></p>
+<p><img src="../../images/heatmap.sim_thetayc.png" alt="Heatmap for the thetayc calculator. " width="500" height="500" loading="lazy" /></p>
 
 <p>and the jclass calulator (output <code class="language-plaintext highlighter-rouge">jclass.0.03.lt.ave</code>):</p>
 
-<p><img src="../../images/heatmap.sim_jclass.png" alt="Heatmap for the jclass calculator. " loading="lazy" /></p>
+<p><img src="../../images/heatmap.sim_jclass.png" alt="Heatmap for the jclass calculator. " width="500" height="500" loading="lazy" /></p>
 
 <p>When generating Venn diagrams we are limited by the number of samples that we can analyze simultaneously.
 Let’s take a look at the Venn diagrams for the first 4 time points of female 3 using the <strong>Venn</strong> tool:</p>
@@ -2273,7 +2278,7 @@ Let’s take a look at the Venn diagrams for the first 4 time points of female 3
 
 <p>Examine the Venn diagram:</p>
 
-<p><img src="../../images/venn.png" alt="Venn diagram and table with shared OTUs. " loading="lazy" /></p>
+<p><img src="../../images/venn.png" alt="Venn diagram and table with shared OTUs. " width="800" height="853" loading="lazy" /></p>
 
 <p>This shows that there were a total of 180 OTUs observed between the 4 time points. Only 76 of those OTUs were
 shared by all four time points. We could look deeper at the shared file to see whether those OTUs were
@@ -2305,11 +2310,11 @@ of the others.</p>
 
 <p><code class="language-plaintext highlighter-rouge">thetayc.0.03.lt.ave</code>:</p>
 
-<p><img src="../../images/tree.thetayc.png" alt="Thetayc tree. " loading="lazy" /></p>
+<p><img src="../../images/tree.thetayc.png" alt="Thetayc tree. " width="800" height="790" loading="lazy" /></p>
 
 <p><code class="language-plaintext highlighter-rouge">jclass.0.03.lt.ave</code>:</p>
 
-<p><img src="../../images/tree.jclass.png" alt="Jclass tree. " loading="lazy" /></p>
+<p><img src="../../images/tree.jclass.png" alt="Jclass tree. " width="800" height="790" loading="lazy" /></p>
 
 <h1 id="visualisations">Visualisations</h1>
 
@@ -2353,7 +2358,7 @@ innermost ring labeled “Bacteroidetes” below:</p>
 clearly (16% in our case), click on this segment and the right-hand side will show you the percentages at
 any point in the hierarchy (here 5% of all)</p>
 
-    <p><img src="../../images/krona_lacto.png" alt="image showing view with Lactobacillus highlighted. " loading="lazy" /></p>
+    <p><img src="../../images/krona_lacto.png" alt="image showing view with Lactobacillus highlighted. " width="800" height="665" loading="lazy" /></p>
   </blockquote>
 </blockquote>
 
@@ -2428,57 +2433,48 @@ is given in the solution box. <br /></p>
   </blockquote>
 </blockquote>
 
-<h2 id="phinch">Phinch</h2>
+<!--
+## Phinch
 
-<p>We may now wish to further visualize our results. We can convert our <em>shared</em> file to the more widely used <code class="language-plaintext highlighter-rouge">biom</code> format and
-view it in a platform like <a href="http://www.phinch.org/">Phinch</a>.</p>
+We may now wish to further visualize our results. We can convert our *shared* file to the more widely used `biom` format and
+view it in a platform like [Phinch](http://www.phinch.org/).
 
-<blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-phinch"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Phinch</div>
-
-  <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mothur_make_biom/mothur_make_biom/1.39.5.0" title="Make.biom tool" aria-role="link"><strong>Make.biom</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/mothur_make_biom/mothur_make_biom/1.39.5.0</span></span> with the following parameters
-      <ul>
-        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“shared”</em>: the output from <strong>Sub.sample</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
-        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“constaxonomy”</em>: the <code class="language-plaintext highlighter-rouge">taxonomy</code> output from <strong>Classify.otu</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“metadata”</em>: the <code class="language-plaintext highlighter-rouge">mouse.dpw.metadata</code> file you uploaded at the start of this tutorial</li>
-      </ul>
-    </li>
-    <li><strong>View</strong> the file in Phinch
-      <ul>
-        <li>If you expand the the output biom dataset, you will see a link to view the file at Phinch</li>
-      </ul>
-
-      <p><img src="../../../../shared/images/viewatphinch.png" alt="Icon to view at Phinch. " loading="lazy" /></p>
-
-      <ul>
-        <li>Click on this link (“view biom at Phinch”)</li>
-      </ul>
-    </li>
-  </ol>
-
-  <p>This link will lead you to a Phinch server (hosted by Galaxy), which will automatically load your file, and
- where you can several interactive visualisations:
- <img src="../../../../shared/images/phinch_overviewpage.png" alt="Phinch overview. " loading="lazy" /></p>
-
-  <blockquote class="comment">
-    <div class="box-title comment-title" id="comment-no-link-to-phinch-on-your-dataset"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: No link to Phinch on your dataset?</div>
-
-    <p>If this visualisation link is not present on your Galaxy dataset, you can download the generated BIOM file from Galaxy,
-and upload it directly to the Phinch server at <a href="https://usegalaxy.eu/phinch/index.html">https://usegalaxy.eu/phinch/</a>. <br /><br /></p>
-
-    <p><strong>Important:</strong> After downloading, please change the file extension from <code class="language-plaintext highlighter-rouge">.biom1</code> to <code class="language-plaintext highlighter-rouge">.biom</code> before uploading to Phinch. <br /><br /></p>
-
-    <p><strong>Note:</strong> This link will visualize your data in Phinch version 1. Recently, Phinch have released version 2 as a desktop application.
-This file can also be visualized in Phinch2, but requires installation of Phinch to your local machine</p>
-  </blockquote>
-</blockquote>
+> <div class="box-title hands-on-title" id="hands-on-phinch"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Phinch</div>
+>
+> 1. <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mothur_make_biom/mothur_make_biom/1.39.5.0" title="Make.biom tool" aria-role="link"><strong>Make.biom</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/mothur_make_biom/mothur_make_biom/1.39.5.0</span></span> with the following parameters
+>   - <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> *"shared"*: the output from **Sub.sample** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
+>   - <i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> *"constaxonomy"*: the `taxonomy` output from **Classify.otu** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
+>   - <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> *"metadata"*: the `mouse.dpw.metadata` file you uploaded at the start of this tutorial
+>
+> 2. **View** the file in Phinch
+>   - If you expand the the output biom dataset, you will see a link to view the file at Phinch
+>
+>       <img src="../../../../shared/images/viewatphinch.png"  alt="Icon to view at Phinch. "  width="246" height=127 loading="lazy">
+>
+>    - Click on this link ("view biom at Phinch")
+>
+>  This link will lead you to a Phinch server (hosted by Galaxy), which will automatically load your file, and
+>  where you can several interactive visualisations:
+>  <img src="../../../../shared/images/phinch_overviewpage.png"  alt="Phinch overview. "  width="1088" height=780 loading="lazy">
+>
+> > <div class="box-title comment-title" id="comment-no-link-to-phinch-on-your-dataset"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: No link to Phinch on your dataset?</div>
+> >
+> > If this visualisation link is not present on your Galaxy dataset, you can download the generated BIOM file from Galaxy,
+> > and upload it directly to the Phinch server at [https://usegalaxy.eu/phinch/](https://usegalaxy.eu/phinch/index.html). <br><br>
+> >
+> > **Important:** After downloading, please change the file extension from `.biom1` to `.biom` before uploading to Phinch. <br><br>
+> >
+> > **Note:** This link will visualize your data in Phinch version 1. Recently, Phinch have released version 2 as a desktop application.
+> > This file can also be visualized in Phinch2, but requires installation of Phinch to your local machine
+> {: .comment}
+{: .hands_on}
+-->
 
 <h1 id="conclusion">Conclusion</h1>
 
 <p>Well done! <i class="fas fa-trophy" aria-hidden="true"></i><span class="visually-hidden">trophy</span> You have completed the basics of the Schloss lab’s <a href="https://www.mothur.org/wiki/MiSeq_SOP">Standard Operating Procedure for Illumina MiSeq data</a>. You have worked your way through the following pipeline:</p>
 
-<p><img src="../../images/mothur_sop_pipeline.jpg" alt="mothur sop tutorial pipeline. " width="50%" loading="lazy" /></p>
+<p><img src="../../images/mothur_sop_pipeline.jpg" alt="mothur sop tutorial pipeline. " width="954" height="1418" loading="lazy" /></p>
 
 
                 </section>
@@ -2554,6 +2550,9 @@ This file can also be visualized in Phinch2, but requires installation of Phinch
                             Saskia Hiltemann, Bérénice Batut, Dave Clements,  <b>16S Microbial Analysis with mothur (extended) (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html">https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -2575,12 +2574,12 @@ This file can also be visualized in Phinch2, but requires installation of Phinch
 
 <code id="citation-code">@misc{metagenomics-mothur-miseq-sop,
 author = "Saskia Hiltemann and Bérénice Batut and Dave Clements",
-title = "16S Microbial Analysis with mothur (extended) (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "16S Microbial Analysis with mothur (extended) (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/mothur-miseq-sop/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -2822,19 +2821,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00205">https://gxy.io/GTN:T00205</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00205">https://gxy.io/GTN:T00205</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -2854,7 +2853,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -2862,9 +2861,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

@@ -37,6 +37,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/simonbray/"
     }
   ],
+  "short_id": "T00054",
   "url": "/topics/computational-chemistry/tutorials/zauberkugel/tutorial.html",
   "topic_name": "computational-chemistry",
   "tutorial_name": "zauberkugel",
@@ -72,7 +73,8 @@
           "class": "Organization",
           "name": "Albert-Ludwigs-Universität Freiburg"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/zauberkugel/tutorial.json",
@@ -96,6 +98,7 @@
 
     ]
   },
+  "topic_name_human": "Computational chemistry",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

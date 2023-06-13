@@ -139,6 +139,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/cmonjeau/"
         }
       ],
+      "short_id": "S00046",
       "url": "/topics/dev/tutorials/conda_sys/slides.html",
       "topic_name": "dev",
       "tutorial_name": "conda_sys",
@@ -179,6 +180,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -209,15 +211,15 @@
       "layout": "tutorial_hands_on",
       "title": "ToolFactory: Generating Tools From Simple Scripts",
       "key_points": [
-        "The ToolFactory is a fully automated Galaxy tool generator for scientists and developers who routinely write command line scripts.",
+        "The ToolFactory is an automated Galaxy tool generator for scientists and developers who routinely write command line scripts.",
         "It can turn a working command line script into a proper Galaxy tool with a test in a few minutes.",
         "It automatically generates simple, complete Galaxy tools from information provided by filling in a normal Galaxy form in the familiar UI.",
-        "It is installed as a docker-galaxy-stable flavour - the ToolFactory Appliance.",
-        "The Appliance is a Galaxy server running in Docker, suited to any modern Linux workstation or high-end laptop.",
+        "It is installed as a self-configuring development code clone.",
+        "The Galaxy server is suited any modern Linux workstation or high-end laptop.",
         "Useful for learning about system administration or framework code, and for developing tools - all on your own private pop-up server."
       ],
       "objectives": [
-        "Learn why you might want to use the ToolFactory Appliance",
+        "Learn why you might want to use the ToolFactory development server",
         "Watch a video demonstration and explore the generated code - Hello Galaxy Training Network!",
         "Run it locally in Docker.",
         "Install and explore the simple examples provided.",
@@ -227,7 +229,6 @@
       "questions": [
         "What options exist for new-to-Galaxy developers to convert functioning command line scripts into Galaxy tools?",
         "Can any command line script I've written be wrapped as a Galaxy tool?",
-        "Can I make a tool from a script developed in a Galaxy Interactive Environment notebook?",
         "How can I get the ToolFactory working locally, since you tell me it should never be exposed on a public server?",
         "What is the difference between a hand-crafted tool and a ToolFactory generated one?"
       ],
@@ -290,6 +291,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00118",
       "url": "/topics/dev/tutorials/tool-generators/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-generators",
@@ -359,6 +361,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -447,6 +450,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "T00122",
       "url": "/topics/dev/tutorials/webhooks/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "webhooks",
@@ -487,6 +491,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -568,6 +573,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "S00049",
       "url": "/topics/dev/tutorials/interactive-tours/slides.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-tours",
@@ -608,6 +614,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -716,6 +723,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hmenager/"
         }
       ],
+      "short_id": "S00045",
       "url": "/topics/dev/tutorials/conda/slides.html",
       "topic_name": "dev",
       "tutorial_name": "conda",
@@ -756,6 +764,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -839,6 +848,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "S00047",
       "url": "/topics/dev/tutorials/containers/slides.html",
       "topic_name": "dev",
       "tutorial_name": "containers",
@@ -879,6 +889,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1047,6 +1058,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/lecorguille/"
         }
       ],
+      "short_id": "S00051",
       "url": "/topics/dev/tutorials/tool-integration/slides.html",
       "topic_name": "dev",
       "tutorial_name": "tool-integration",
@@ -1086,6 +1098,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1166,6 +1179,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yhoogstrate/"
         }
       ],
+      "short_id": "T00121",
       "url": "/topics/dev/tutorials/visualization-generic/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "visualization-generic",
@@ -1206,6 +1220,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1308,6 +1323,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "S00052",
       "url": "/topics/dev/tutorials/toolshed/slides.html",
       "topic_name": "dev",
       "tutorial_name": "toolshed",
@@ -1348,6 +1364,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1423,6 +1440,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
         }
       ],
+      "short_id": "S00043",
       "url": "/topics/dev/tutorials/architecture/slides.html",
       "topic_name": "dev",
       "tutorial_name": "architecture",
@@ -1477,6 +1495,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1575,6 +1594,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dannon/"
         }
       ],
+      "short_id": "T00120",
       "url": "/topics/dev/tutorials/visualization-charts/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "visualization-charts",
@@ -1615,6 +1635,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1721,6 +1742,7 @@
         }
       ],
       "subtopic": "advanced",
+      "short_id": "S00048",
       "url": "/topics/dev/tutorials/interactive-environments/slides.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-environments",
@@ -1761,6 +1783,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1828,6 +1851,7 @@
       "notebook": {
         "language": "python"
       },
+      "short_id": "T00111",
       "url": "/topics/dev/tutorials/bioblend-api/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "bioblend-api",
@@ -1868,6 +1892,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2004,6 +2029,7 @@
         }
       ],
       "subtopic": "core",
+      "short_id": "T00123",
       "url": "/topics/dev/tutorials/writing_tests/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "writing_tests",
@@ -2044,6 +2070,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2130,6 +2157,7 @@
         "API": "Application Programming Interface",
         "PR": "Pull Request"
       },
+      "short_id": "T00112",
       "url": "/topics/dev/tutorials/bioblend-dev/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "bioblend-dev",
@@ -2170,6 +2198,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2246,6 +2275,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bernt-matthias/"
         }
       ],
+      "short_id": "T00117",
       "url": "/topics/dev/tutorials/tool-from-scratch/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-from-scratch",
@@ -2345,6 +2375,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2375,8 +2406,8 @@
       "layout": "tutorial_hands_on",
       "title": "ToolFactory: Generating Tools From More Complex Scripts",
       "key_points": [
-        "The ToolFactory Appliance includes an automated form driven tool generator available as a pop-up Docker appliance.",
-        "It runs in a flavour of docker-galaxy-stable and produces new tools as Toolshed ready archives",
+        "The ToolFactory Appliance includes an automated form driven tool generator.",
+        "It produces new tools as Toolshed ready archives",
         "It was designed for scientists and developers who routinely write scripts for their analyses.",
         "It can quickly turn a working command line script into a working Galaxy tool.",
         "It generates tools from information entered on a Galaxy form in the familiar UI.",
@@ -2423,6 +2454,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fubar2/"
         }
       ],
+      "short_id": "T00119",
       "url": "/topics/dev/tutorials/tool-generators-advanced/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "tool-generators-advanced",
@@ -2493,6 +2525,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2596,6 +2629,7 @@
         }
       ],
       "subtopic": "core",
+      "short_id": "T00115",
       "url": "/topics/dev/tutorials/debugging/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "debugging",
@@ -2636,6 +2670,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2749,6 +2784,7 @@
         "Data flows from the external data resource to the Galaxy server without the need of \"downloading\" the data"
       ],
       "subtopic": "advanced",
+      "short_id": "T00114",
       "url": "/topics/dev/tutorials/data-source-integration/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "data-source-integration",
@@ -2789,6 +2825,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2871,6 +2908,7 @@
           ]
         }
       ],
+      "short_id": "T00113",
       "url": "/topics/dev/tutorials/core-contributing/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "core-contributing",
@@ -2911,6 +2949,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3057,6 +3096,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         }
       ],
+      "short_id": "T00116",
       "url": "/topics/dev/tutorials/interactive-tools/tutorial.html",
       "topic_name": "dev",
       "tutorial_name": "interactive-tools",
@@ -3097,6 +3137,7 @@
           }
         ]
       },
+      "topic_name_human": "Development in Galaxy",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

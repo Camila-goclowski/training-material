@@ -56,6 +56,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
     }
   ],
+  "short_id": "T00050",
   "url": "/topics/computational-chemistry/tutorials/htmd-analysis/tutorial.html",
   "topic_name": "computational-chemistry",
   "tutorial_name": "htmd-analysis",
@@ -113,7 +114,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     },
     {
       "workflow": "main_workflow.ga",
@@ -126,7 +128,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/htmd-analysis/tutorial.json",
@@ -181,6 +184,7 @@
       }
     ]
   },
+  "topic_name_human": "Computational chemistry",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

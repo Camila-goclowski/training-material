@@ -34,6 +34,7 @@
   },
   "subtopic": "eukaryote",
   "priority": 8,
+  "short_id": "S00067",
   "url": "/topics/genome-annotation/tutorials/crispr-screen/slides.html",
   "topic_name": "genome-annotation",
   "tutorial_name": "crispr-screen",
@@ -126,7 +127,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/crispr-screen/tutorial.json",
@@ -169,6 +171,7 @@
       }
     ]
   },
+  "topic_name_human": "Genome Annotation",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -272,7 +275,6 @@
     "lang": "en-AU",
     "neural": true
   },
-  "short_id": "S00067",
   "redirect_from": [
     "/short/genome-annotation/crispr-screen/slides",
     "/short/S00067"

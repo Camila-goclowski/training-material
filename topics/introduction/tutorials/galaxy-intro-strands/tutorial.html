@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,21 +32,25 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Introduction to Genomics and Galaxy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-02-02 12:10:56 +0000">
+<meta name="DC.date" content="2023-05-23 15:01:04 +0000">
 <meta name="DC.creator" content="Dave Clements">
 <meta name="DC.creator" content="Cristóbal Gallardo">
 
@@ -87,7 +92,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-02-02 12:10:56 +0000",
+  "dateModified": "2023-05-23 15:01:04 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Introduction to Genomics and Galaxy",
   "interactivityType": "mixed",
@@ -287,7 +292,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/introduction/tutorials/galaxy-intro-strands/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/introduction/tutorials/galaxy-intro-strands/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -334,13 +339,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -407,7 +412,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge contributor-tnabtaf"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tnabtaf?s=27" alt="Avatar">Dave Clements</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=27" alt="Avatar">Cristóbal Gallardo</a>
+		Authors: <a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge contributor-tnabtaf"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/tnabtaf?s=36" alt="Avatar">Dave Clements</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar">Cristóbal Gallardo</a>
 	</div>
 
 </div>
@@ -609,14 +614,15 @@ Sentry.init({
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 2, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 23, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00191">https://gxy.io/GTN:T00191</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00191">https://gxy.io/GTN:T00191</a> </div>
         
     </blockquote>
     </section>
@@ -657,10 +663,20 @@ Sentry.init({
     </ol>
   </li>
   <li><a href="#weve-got-the-data---whats-our-plan-for-answering-the-question" id="markdown-toc-weve-got-the-data---whats-our-plan-for-answering-the-question">We’ve got the data - what’s our plan for answering the question?</a>    <ol>
-      <li><a href="#results-and-final-steps" id="markdown-toc-results-and-final-steps">Results and final steps.</a></li>
+      <li><a href="#split-the-genes-into-forward-and-reverse-datasets" id="markdown-toc-split-the-genes-into-forward-and-reverse-datasets">Split the genes into forward and reverse datasets</a></li>
+      <li><a href="#check-for-overlaps" id="markdown-toc-check-for-overlaps">Check for overlaps</a></li>
+    </ol>
+  </li>
+  <li><a href="#results-and-final-steps" id="markdown-toc-results-and-final-steps">Results and final steps.</a>    <ol>
+      <li><a href="#combine-forward-and-reverse-overlapping-genes-into-one-dataset" id="markdown-toc-combine-forward-and-reverse-overlapping-genes-into-one-dataset">Combine forward and reverse overlapping genes into one dataset.</a></li>
+      <li><a href="#visualize-the-overlapping-genes" id="markdown-toc-visualize-the-overlapping-genes">Visualize the overlapping genes</a></li>
       <li><a href="#do-we-have-a-problem" id="markdown-toc-do-we-have-a-problem">Do we have a problem?</a></li>
       <li><a href="#walk-through-the-workflow-tutorial" id="markdown-toc-walk-through-the-workflow-tutorial">Walk through the workflow tutorial</a></li>
-      <li><a href="#rerun-analysis-with-exon-data" id="markdown-toc-rerun-analysis-with-exon-data">Rerun analysis with exon data</a></li>
+    </ol>
+  </li>
+  <li><a href="#rerun-analysis-with-exon-data" id="markdown-toc-rerun-analysis-with-exon-data">Rerun analysis with exon data</a>    <ol>
+      <li><a href="#get-the-exon-data" id="markdown-toc-get-the-exon-data">Get the exon data</a></li>
+      <li><a href="#rerun-the-analysis-this-time-on-exons" id="markdown-toc-rerun-the-analysis-this-time-on-exons">Rerun the analysis, this time on exons.</a></li>
       <li><a href="#are-we-done" id="markdown-toc-are-we-done">Are we done?</a></li>
     </ol>
   </li>
@@ -718,16 +734,16 @@ Sentry.init({
 
   <p>Graphically, the human genome can be shown as the chromosomes that are in it:</p>
 
-  <p><img src="../../images/human_genome_chroms.png" alt="Human genome consists of 23 (pairs of) chromosomes. " loading="lazy" /></p>
+  <p><img src="../../images/human_genome_chroms.png" alt="Human genome consists of 23 (pairs of) chromosomes. " width="794" height="329" loading="lazy" /></p>
 
   <p>And here’s a representation of a chromosome, strands, and genes on the chromosome.</p>
 
-  <p><img src="../../images/chromosome_strands_genes.png" alt="Chromosomes are double stranded and have forward and reverse strands; strands have genes on them. " loading="lazy" /></p>
+  <p><img src="../../images/chromosome_strands_genes.png" alt="Chromosomes are double stranded and have forward and reverse strands; strands have genes on them. " width="794" height="487" loading="lazy" /></p>
 </blockquote>
 
 <p>The question we are asking looks like:</p>
 
-<p><img src="../../images/do_genes_on_opposite_strands_ever_overlap.png" alt="Does a situation like this exist?" loading="lazy" /></p>
+<p><img src="../../images/do_genes_on_opposite_strands_ever_overlap.png" alt="Does a situation like this exist?" width="794" height="233" loading="lazy" /></p>
 
 <p><em>Non-overlapping genes are common.  How common are overlapping genes?</em></p>
 
@@ -744,7 +760,7 @@ Sentry.init({
 
 <p>The Galaxy interface consists of three main parts. The available tools are listed on the left, your analysis history is recorded on the right, and the central panel will show the home page, tool forms, and dataset content.</p>
 
-<p><img src="../../images/galaxy_interface.png" alt="Galaxy interface showing history panel on the right, tools panel on the left and main panel at the center. " loading="lazy" /></p>
+<p><img src="../../images/galaxy_interface.png" alt="Galaxy interface showing history panel on the right, tools panel on the left and main panel at the center. " width="1777" height="1290" loading="lazy" /></p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-start-with-an-empty-history"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Start with an empty history</div>
@@ -772,7 +788,7 @@ Sentry.init({
     <li>
       <p><em>Click</em> on the <strong>Get Data</strong> toolbox to expand it.</p>
 
-      <p><img src="../../images/getdata.PNG" alt="The Get Data toolbox. " loading="lazy" /></p>
+      <p><img src="../../images/getdata.PNG" alt="The Get Data toolbox. " width="289" height="397" loading="lazy" /></p>
     </li>
   </ol>
 
@@ -787,9 +803,9 @@ Sentry.init({
 
   <ol>
     <li>
-      <p><em>Click</em> on the tool <span class="tool" data-tool="ucsc_table_direct1" title="UCSC Main table browser tool" aria-role="link"><strong>UCSC Main table browser</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: ucsc_table_direct1</span></span> to go to UCSC.</p>
+      <p><em>Click</em> on the tool <span><strong>UCSC Main table browser</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span> to go to UCSC.</p>
 
-      <p><img src="../../images/101_01.png" alt="Click on UCSC Main table browser. " loading="lazy" /></p>
+      <p><img src="../../images/101_01.png" alt="Click on UCSC Main table browser. " width="346" height="160" loading="lazy" /></p>
     </li>
   </ol>
 
@@ -797,7 +813,7 @@ Sentry.init({
 
 <p>This will take you to the UCSC Table Browser:</p>
 
-<p><img src="../../images/ucsc_table_browser_w_default_settings.png" alt="UCSC table browser tool, first screen for genes. " loading="lazy" /></p>
+<p><img src="../../images/ucsc_table_browser_w_default_settings.png" alt="UCSC table browser tool, first screen for genes. " width="909" height="606" loading="lazy" /></p>
 
 <p>The <a href="https://genome.ucsc.edu/cgi-bin/hgTables">UCSC Table Browser</a> provides access to all the data that is shown in the <a href="https://genome.ucsc.edu/cgi-bin/hgGateway">UCSC Genome Browser</a> (see box below). If you are working on a species that UCSC supports (like human) then the Table Browser is a great place to get genomic data.</p>
 
@@ -864,14 +880,14 @@ Sentry.init({
         <li>In the text box next to <code class="language-plaintext highlighter-rouge">position</code> enter <code class="language-plaintext highlighter-rouge">chr22</code> (case matters).</li>
       </ul>
 
-      <p><img src="../../images/ucsc_tb_set_region_chr22.png" alt="Change the region. " loading="lazy" /></p>
+      <p><img src="../../images/ucsc_tb_set_region_chr22.png" alt="Change the region. " width="530" height="83" loading="lazy" /></p>
     </li>
     <li>
       <p><em>Click</em> the <strong>get output</strong> button.</p>
 
       <p>And, that doesn’t actually get us the output.  It sends us to a second UCSC page that asks us exactly what we want.</p>
 
-      <p><img src="../../images/ucsc_tb_2nd_page_whole_gene.png" alt="UCSC Table Browser 2nd page. " loading="lazy" /></p>
+      <p><img src="../../images/ucsc_tb_2nd_page_whole_gene.png" alt="UCSC Table Browser 2nd page. " width="1157" height="647" loading="lazy" /></p>
     </li>
     <li>
       <p>Under <strong>Create one BED record per</strong> make sure that <strong>Whole Gene</strong> is selected.</p>
@@ -900,25 +916,25 @@ Sentry.init({
       <td><strong>Grey</strong></td>
       <td>Clock</td>
       <td>Item is waiting to start (waiting for data transfer to start)</td>
-      <td><img src="../../images/status_queued.png" alt="Status: Queued. " loading="lazy" /></td>
+      <td><img src="../../images/status_queued.png" alt="Status: Queued. " width="250" height="38" loading="lazy" /></td>
     </tr>
     <tr>
       <td><strong>Yellow</strong></td>
       <td>Spinner</td>
       <td>Item is running (data is actively being transferred).</td>
-      <td><img src="../../images/status_running.png" alt="Status: Running. " loading="lazy" /></td>
+      <td><img src="../../images/status_running.png" alt="Status: Running. " width="250" height="38" loading="lazy" /></td>
     </tr>
     <tr>
       <td><strong>Green</strong></td>
       <td>None</td>
       <td>Item has finished successfully (data transfer complete).</td>
-      <td><img src="../../images/status_finished_success.png" alt="Status: Successfully finished. " loading="lazy" /></td>
+      <td><img src="../../images/status_finished_success.png" alt="Status: Successfully finished. " width="250" height="38" loading="lazy" /></td>
     </tr>
     <tr>
       <td><strong>Red</strong></td>
       <td>Cross</td>
       <td>The job has failed. There can be <a href="https://galaxyproject.org/support/tool-error/">many reasons</a>.</td>
-      <td><img src="../../images/status_failed.png" alt="Status: Failed. " loading="lazy" /></td>
+      <td><img src="../../images/status_failed.png" alt="Status: Failed. " width="250" height="38" loading="lazy" /></td>
     </tr>
   </tbody>
 </table>
@@ -934,7 +950,7 @@ Sentry.init({
 
 <p>This expands the dataset and shows you information about it, and a preview of its contents.</p>
 
-<p><img src="../../images/genes_human_chr22_preview.png" alt="Preview of the data from UCSC Table Browser. " loading="lazy" /></p>
+<p><img src="../../images/genes_human_chr22_preview.png" alt="Preview of the data from UCSC Table Browser. " width="545" height="351" loading="lazy" /></p>
 
 <p>From this preview we can obtain a huge amount of useful information:</p>
 <ol>
@@ -952,7 +968,7 @@ Sentry.init({
     <li>
       <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon to view the contents of the dataset. This displays all of the data.</p>
 
-      <p><img src="../../images/genes_human_chr22_dataset_view.png" alt="Full dataset in central panel. " loading="lazy" /></p>
+      <p><img src="../../images/genes_human_chr22_dataset_view.png" alt="Full dataset in central panel. " width="991" height="594" loading="lazy" /></p>
     </li>
     <li>
       <p>Use the side scroll bars to move through the file.</p>
@@ -1035,7 +1051,7 @@ Sentry.init({
     <li><strong>Name your history</strong> to be meaningful and easy to find.
       <ul>
         <li><em>Click</em> on the title of the history and enter something like <strong>Intro - Strands</strong> as the name.  Hit the <code class="language-plaintext highlighter-rouge">enter</code> key on your keyboard to save it.
-<img src="../../../../shared/images/rename_history.png" alt="Rename the history. " loading="lazy" /></li>
+<img src="../../../../shared/images/rename_history.png" alt="Rename the history. " width="270" height="320" loading="lazy" /></li>
       </ul>
     </li>
     <li><strong>Rename your dataset</strong>
@@ -1047,7 +1063,7 @@ Sentry.init({
 
       <p>Your history should now look something like this:</p>
 
-      <p><img src="../../images/genes_human_chr22_rename.png" alt="Rename dataset. " loading="lazy" /></p>
+      <p><img src="../../images/genes_human_chr22_rename.png" alt="Rename dataset. " width="903" height="355" loading="lazy" /></p>
     </li>
   </ol>
 </blockquote>
@@ -1066,7 +1082,7 @@ Sentry.init({
 
 <p>It turns out that all of these steps are easy in Galaxy!</p>
 
-<h3 id="split-the-genes-into-forward-and-reverse-datasets">Split the genes into forward and reverse datasets</h3>
+<h2 id="split-the-genes-into-forward-and-reverse-datasets">Split the genes into forward and reverse datasets</h2>
 
 <p>How might we do this?  Column 6 contains the strand information.  Can we split genes into two datasets based on the value of Column 6.  How?  Lets take a look at our available tools.  And <em>whoa! There are over 40 toolboxes, and several hundred tools.</em> How are we going to find a tool that can do the split?</p>
 
@@ -1085,7 +1101,7 @@ Sentry.init({
     <li>Take a look at the <strong>Syntax</strong> and <strong>Example</strong> sections to understand what the tool does.</li>
   </ol>
 
-  <p><img src="../../images/filter_tool_defaults.png" alt="The Filter Tool form. " loading="lazy" /></p>
+  <p><img src="../../images/filter_tool_defaults.png" alt="The Filter Tool form. " width="883" height="417" loading="lazy" /></p>
 </blockquote>
 
 <p>It doesn’t say anything about <strong>Filter</strong> being able to split a file into multiple files.  It does look like we can use Filter to get only genes on the forward strand, or only genes on the reverse strand.  We would have to run Filter twice, once for forward strand genes, and once for reverse strand genes. Let’s do that.</p>
@@ -1111,7 +1127,7 @@ Sentry.init({
     <li>
       <p>Finally, <em>click</em> the <strong>Execute</strong> button.</p>
 
-      <p><img src="../../images/filter_tool_forward_strand_genes_only.png" alt="Run the Filter tool to get only the forward strand genes. " loading="lazy" /></p>
+      <p><img src="../../images/filter_tool_forward_strand_genes_only.png" alt="Run the Filter tool to get only the forward strand genes. " width="724" height="337" loading="lazy" /></p>
     </li>
   </ul>
 
@@ -1175,7 +1191,7 @@ Sentry.init({
 
 <p>The number of genes in the <code class="language-plaintext highlighter-rouge">forward</code> plus <code class="language-plaintext highlighter-rouge">reverse</code> datasets should be the same as in the <code class="language-plaintext highlighter-rouge">Genes chr22</code> dataset.  If they aren’t can you figure out why?</p>
 
-<h3 id="check-for-overlaps">Check for overlaps</h3>
+<h2 id="check-for-overlaps">Check for overlaps</h2>
 
 <p>Genes are an example of a <em>genomic interval</em>.</p>
 
@@ -1219,7 +1235,7 @@ This looks like it might return whole genes, while <code class="language-plainte
         <li><em>Click</em> <strong>Run Tool</strong>.</li>
       </ul>
 
-      <p><img src="../../images/genes_human_intersect_strands.png" alt="Run Intersect. " loading="lazy" /></p>
+      <p><img src="../../images/genes_human_intersect_strands.png" alt="Run Intersect. " width="1195" height="515" loading="lazy" /></p>
     </li>
     <li>
       <p>Now repeat the intersect, but make the first dataset be the reverse genes, and the second be the forward genes.</p>
@@ -1228,7 +1244,7 @@ This looks like it might return whole genes, while <code class="language-plainte
   </ol>
 </blockquote>
 
-<h2 id="results-and-final-steps">Results and final steps.</h2>
+<h1 id="results-and-final-steps">Results and final steps.</h1>
 
 <p>At this point we <em>could</em> say that we have answered our question. Using dataset previews in the history panel, we can compare the number of genes in the <code class="language-plaintext highlighter-rouge">Overlapping forward</code> and <code class="language-plaintext highlighter-rouge">Overlapping reverse</code> datasets with the number of genes in the full <code class="language-plaintext highlighter-rouge">Genes chr22</code> dataset, and <em>conclude that overlapping genes on opposite strands are actually pretty common.</em></p>
 
@@ -1239,7 +1255,7 @@ This looks like it might return whole genes, while <code class="language-plainte
   <li><em>Visualize</em> our new dataset, just to double-check our results.</li>
 </ol>
 
-<h3 id="combine-forward-and-reverse-overlapping-genes-into-one-dataset">Combine forward and reverse overlapping genes into one dataset.</h3>
+<h2 id="combine-forward-and-reverse-overlapping-genes-into-one-dataset">Combine forward and reverse overlapping genes into one dataset.</h2>
 
 <p>What tool can we use to combine the two datasets into one?  Try <em>searching</em> for <code class="language-plaintext highlighter-rouge">combine</code> or <code class="language-plaintext highlighter-rouge">join</code> or <code class="language-plaintext highlighter-rouge">stack</code> in the tool search box.  You’ll find lots of tools, but none of them do what we want to do. <em>Some times you just have to manually look through toolboxes to find what you need.</em>  Where should we look?  It’s probably not <strong>Get Data</strong> or <strong>Send Data</strong>, but it could easily be in any of the next 4 toolboxes: <strong>Lift-Over, Collection Operations, Text Manipulation, or Datamash</strong>.</p>
 
@@ -1277,7 +1293,7 @@ This looks like it might return whole genes, while <code class="language-plainte
 
 <p>Once the concatenate operation is finished, preview the dataset in your history panel.  Does it have the expected number of genes in it?  If not, see if you can figure out what happened.</p>
 
-<h3 id="visualize-the-overlapping-genes">Visualize the overlapping genes</h3>
+<h2 id="visualize-the-overlapping-genes">Visualize the overlapping genes</h2>
 
 <p>Galaxy knows about several visualization options for lots of different dataset types, including BED.  Whenever you preview a dataset in the history panel, Galaxy provides links to these visualizations.  For BED files (which is the format we have), options include <strong>IGB, IGV,</strong> and <strong>UCSC main.</strong>  IGB and IGV are widely used desktop applications and eventually you may want to install one or both of them.  For now, let’s visualize the data at UCSC, using the UCSC <em>Genome</em> Browser.</p>
 
@@ -1288,12 +1304,13 @@ This looks like it might return whole genes, while <code class="language-plainte
     <li>Click on your <code class="language-plaintext highlighter-rouge">Overlapping genes</code> dataset in your history panel. This will show the dataset preview in the history panel.</li>
     <li>Click to expand the dataset, if it isn’t already, so that you can see the dataset metadata and additional actions like Visualize.</li>
     <li>Click on the <i class="fas fa-chart-bar" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> (<strong>Visualize</strong>) icon</li>
-    <li>Click on the <strong>display at UCSC main</strong> link.</li>
+    <li>Click on the <strong>display at UCSC (main)</strong> link that appears in the blue box at the top of the screen.
+<img src="/training-material/topics/introduction/images/101_displayucsc.png" alt="visualisation options are shown in Galaxy's middle panel. " width="457" height="370" loading="lazy" /></li>
   </ol>
 
   <p>This will launch a new window, showing UCSC’s Genome Browser with our dataset shown right at the top.  UCSC figures out that our first overlapping gene is ~11 million bases into chromosome 22, and it has landed us there.</p>
 
-  <p><img src="../../images/ucsc_gb_genes_strands_overlapping.png" alt="UCSC Genome Browser. " loading="lazy" /></p>
+  <p><img src="../../images/ucsc_gb_genes_strands_overlapping.png" alt="UCSC Genome Browser. " width="982" height="297" loading="lazy" /></p>
 </blockquote>
 
 <blockquote class="comment">
@@ -1320,12 +1337,12 @@ This looks like it might return whole genes, while <code class="language-plainte
   <ul>
     <li><em>Click</em> on the <strong>Scale</strong> track (the top track) just to the left of the start of the black boxes.</li>
     <li>Now <em>drag</em> the mouse across the Scale track to just to the right of the  black boxes and let go.
-<img src="../../images/ucsc_gb_zoom_by_drag.png" alt="Zoom by clicking and dragging on the Scale track. " loading="lazy" /></li>
+<img src="../../images/ucsc_gb_zoom_by_drag.png" alt="Zoom by clicking and dragging on the Scale track. " width="967" height="66" loading="lazy" /></li>
     <li>A window pops up describing several ways to interact with the browser.  Just <em>click</em> the <strong>Zoom In</strong> button at the bottom.</li>
     <li>This redraws the window, this time zoomed in to what you highlighted.</li>
     <li>Continue to zoom in until you have the set of linked black boxes you picked centered on the screen.</li>
     <li>Once you are as zoomed as you want to be, click on one of the linked boxes.  This will expand the track:
-<img src="../../images/ucsc_gb_zoom_to_1_gene.png" alt="One gene, fully zoomed and expanded. " loading="lazy" /></li>
+<img src="../../images/ucsc_gb_zoom_to_1_gene.png" alt="One gene, fully zoomed and expanded. " width="957" height="250" loading="lazy" /></li>
   </ul>
 </blockquote>
 
@@ -1372,7 +1389,7 @@ In humans (and in all plants and animals) the molecules that are built from gene
 
 <p>Run the <a href="/training-material/topics/galaxy-interface/tutorials/history-to-workflow/tutorial.html">Create a reusable workflow from a history</a> tutorial for how to do this, <em>and then come back here to run your newly created workflow with the exon data.</em></p>
 
-<h2 id="rerun-analysis-with-exon-data">Rerun analysis with exon data</h2>
+<h1 id="rerun-analysis-with-exon-data">Rerun analysis with exon data</h1>
 
 <p>We want to run the same analysis, but this time only look for overlaps that happen in <em>exons</em>, the parts of genes that produce stuff our body uses.  Before we start looking at exons, let’s start a new history, one that contains only the genes file we got from UCSC. We could go back to UCSC and refetch the file, but there is an easier way.</p>
 
@@ -1390,7 +1407,7 @@ In humans (and in all plants and animals) the molecules that are built from gene
     <li>Under <strong>Destination History</strong> enter an informative history name in the <strong>New history named:</strong> box.
       <ul>
         <li>For example, <code class="language-plaintext highlighter-rouge">Exon overlaps on opposite strands</code>
-<img src="../../images/copy_datasets_to_new_history.png" alt="Copy only the Genes chr22  dataset to the new history. " loading="lazy" /></li>
+<img src="../../images/copy_datasets_to_new_history.png" alt="Copy only the Genes chr22  dataset to the new history. " width="962" height="350" loading="lazy" /></li>
       </ul>
     </li>
     <li><em>Click</em> the <strong>Copy History Items</strong> button to create your new history.
@@ -1403,7 +1420,7 @@ In humans (and in all plants and animals) the molecules that are built from gene
   </ol>
 </blockquote>
 
-<h3 id="get-the-exon-data">Get the exon data</h3>
+<h2 id="get-the-exon-data">Get the exon data</h2>
 
 <p>And your new history appears in the history panel with the copied <em>genes</em> dataset.  What we need is <em>exons.</em> How can we get the exon information?  There are two relatively easy ways to get this information, one of which will be very familiar.</p>
 
@@ -1421,11 +1438,11 @@ In humans (and in all plants and animals) the molecules that are built from gene
 </blockquote>
 
 <p>If you got the data from UCSC it will look something like this:
-<img src="../../images/101_exons.png" alt="Contents of the exons dataset from UCSC. " loading="lazy" /></p>
+<img src="../../images/101_exons.png" alt="Contents of the exons dataset from UCSC. " width="632" height="278" loading="lazy" /></p>
 
 <p>Your history should now have two datasets: one describing entire genes, and one describing just the exons.</p>
 
-<h3 id="rerun-the-analysis-this-time-on-exons">Rerun the analysis, this time on exons.</h3>
+<h2 id="rerun-the-analysis-this-time-on-exons">Rerun the analysis, this time on exons.</h2>
 
 <p>When you did the <em>History to Workflow</em> tutorial you created a new workflow that was then added to your list of defined workflows.</p>
 
@@ -1532,6 +1549,9 @@ In humans (and in all plants and animals) the molecules that are built from gene
                             Dave Clements, Cristóbal Gallardo,  <b>Introduction to Genomics and Galaxy (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html">https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1553,12 +1573,12 @@ In humans (and in all plants and animals) the molecules that are built from gene
 
 <code id="citation-code">@misc{introduction-galaxy-intro-strands,
 author = "Dave Clements and Cristóbal Gallardo",
-title = "Introduction to Genomics and Galaxy (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Introduction to Genomics and Galaxy (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-strands/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1650,19 +1670,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00191">https://gxy.io/GTN:T00191</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00191">https://gxy.io/GTN:T00191</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -1682,7 +1702,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1690,9 +1710,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

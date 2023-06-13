@@ -132,6 +132,7 @@
       ],
       "level": "Intermediate",
       "subtopic": "workflows",
+      "short_id": "T00164",
       "url": "/topics/galaxy-interface/tutorials/workflow-parameters/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "workflow-parameters",
@@ -187,7 +188,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/workflow-parameters/tutorial.json",
@@ -251,6 +253,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -326,6 +329,7 @@
       },
       "level": "Intermediate",
       "subtopic": "workflows",
+      "short_id": "T00165",
       "url": "/topics/galaxy-interface/tutorials/workflow-reports/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "workflow-reports",
@@ -381,7 +385,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "workflow_reports_final_workflow.ga",
@@ -394,7 +399,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/workflow-reports/tutorial.json",
@@ -439,6 +445,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -625,6 +632,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bedroesb/"
         }
       ],
+      "short_id": "T00159",
       "url": "/topics/galaxy-interface/tutorials/upload-data-to-ena/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "upload-data-to-ena",
@@ -651,7 +659,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/upload-data-to-ena/tutorial.json",
@@ -668,6 +677,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -737,6 +747,7 @@
         }
       ],
       "subtopic": "analyse",
+      "short_id": "T00152",
       "url": "/topics/galaxy-interface/tutorials/intermine/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "intermine",
@@ -763,7 +774,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/intermine/tutorial.json",
@@ -798,6 +810,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -864,6 +877,7 @@
       ],
       "level": "Intermediate",
       "subtopic": "workflows",
+      "short_id": "T00163",
       "url": "/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "workflow-editor",
@@ -890,7 +904,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "subworkflow.ga",
@@ -903,7 +918,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/workflow-editor/tutorial.json",
@@ -959,6 +975,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1044,6 +1061,7 @@
         }
       ],
       "subtopic": "workflows",
+      "short_id": "T00162",
       "url": "/topics/galaxy-interface/tutorials/workflow-automation/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "workflow-automation",
@@ -1109,7 +1127,8 @@
               "identifier": "https://orcid.org/0000-0002-9464-6640",
               "name": "Wolfgang Maier"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/galaxy-interface/tutorials/workflow-automation/tutorial.json",
@@ -1151,6 +1170,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1257,6 +1277,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/afgane/"
         }
       ],
+      "short_id": "S00061",
       "url": "/topics/galaxy-interface/tutorials/galaxy-on-dockstore/slides.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "galaxy-on-dockstore",
@@ -1297,6 +1318,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1387,6 +1409,7 @@
         }
       ],
       "subtopic": "upload",
+      "short_id": "S00062",
       "url": "/topics/galaxy-interface/tutorials/get-data/slides.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "get-data",
@@ -1427,6 +1450,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1501,6 +1525,7 @@
           ]
         }
       ],
+      "short_id": "T00155",
       "url": "/topics/galaxy-interface/tutorials/ncbi-sarf/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "ncbi-sarf",
@@ -1628,6 +1653,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1758,6 +1784,7 @@
         }
       ],
       "subtopic": "cleanup",
+      "short_id": "T00147",
       "url": "/topics/galaxy-interface/tutorials/download-delete-data/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "download-delete-data",
@@ -1798,6 +1825,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1868,6 +1896,7 @@
         }
       ],
       "subtopic": "manage",
+      "short_id": "T00154",
       "url": "/topics/galaxy-interface/tutorials/name-tags/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "name-tags",
@@ -1908,6 +1937,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2024,6 +2054,7 @@
         }
       ],
       "subtopic": "analyse",
+      "short_id": "T00157",
       "url": "/topics/galaxy-interface/tutorials/rstudio/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "rstudio",
@@ -2064,6 +2095,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2125,6 +2157,7 @@
         }
       ],
       "subtopic": "analyse",
+      "short_id": "T00148",
       "url": "/topics/galaxy-interface/tutorials/galaxy-intro-jupyter/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "galaxy-intro-jupyter",
@@ -2165,6 +2198,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2251,6 +2285,7 @@
         }
       ],
       "subtopic": "upload",
+      "short_id": "T00161",
       "url": "/topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "upload-rules-advanced",
@@ -2291,6 +2326,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2356,6 +2392,7 @@
         ]
       },
       "subtopic": "analyse",
+      "short_id": "T00153",
       "url": "/topics/galaxy-interface/tutorials/jupyterlab/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "jupyterlab",
@@ -2401,6 +2438,7 @@
 
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2495,6 +2533,7 @@
         }
       ],
       "subtopic": "manage",
+      "short_id": "T00146",
       "url": "/topics/galaxy-interface/tutorials/collections/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "collections",
@@ -2603,6 +2642,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2696,6 +2736,7 @@
         ]
       },
       "subtopic": "histories",
+      "short_id": "T00150",
       "url": "/topics/galaxy-interface/tutorials/history/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "history",
@@ -2764,6 +2805,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2942,6 +2984,7 @@
         }
       ],
       "subtopic": "manage",
+      "short_id": "T00156",
       "url": "/topics/galaxy-interface/tutorials/processing-many-samples-at-once/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "processing-many-samples-at-once",
@@ -2982,6 +3025,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3056,6 +3100,7 @@
         }
       ],
       "subtopic": "histories",
+      "short_id": "T00158",
       "url": "/topics/galaxy-interface/tutorials/search/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "search",
@@ -3096,6 +3141,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3195,6 +3241,7 @@
         }
       ],
       "subtopic": "upload",
+      "short_id": "T00160",
       "url": "/topics/galaxy-interface/tutorials/upload-rules/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "upload-rules",
@@ -3268,6 +3315,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3333,6 +3381,7 @@
         }
       ],
       "subtopic": "workflows",
+      "short_id": "T00151",
       "url": "/topics/galaxy-interface/tutorials/history-to-workflow/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "history-to-workflow",
@@ -3373,6 +3422,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3430,6 +3480,7 @@
         }
       ],
       "subtopic": "manage",
+      "short_id": "T00149",
       "url": "/topics/galaxy-interface/tutorials/group-tags/tutorial.html",
       "topic_name": "galaxy-interface",
       "tutorial_name": "group-tags",
@@ -3470,6 +3521,7 @@
           }
         ]
       },
+      "topic_name_human": "Using Galaxy and Managing your Data",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

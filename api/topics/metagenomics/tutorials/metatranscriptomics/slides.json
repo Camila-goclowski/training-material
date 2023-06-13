@@ -29,6 +29,7 @@
     "pratikdjagtap",
     "shiltemann"
   ],
+  "short_id": "S00079",
   "url": "/topics/metagenomics/tutorials/metatranscriptomics/slides.html",
   "topic_name": "metagenomics",
   "tutorial_name": "metatranscriptomics",
@@ -146,7 +147,8 @@
           "identifier": "0000-0003-2982-388X",
           "name": "Paul Zierep"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/metagenomics/tutorials/metatranscriptomics/tutorial.json",
@@ -193,6 +195,7 @@
       }
     ]
   },
+  "topic_name_human": "Metagenomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,
@@ -340,7 +343,6 @@
   },
   "type": "tutorial",
   "logo": "GTN",
-  "short_id": "S00079",
   "redirect_from": [
     "/short/metagenomics/metatranscriptomics/slides",
     "/short/S00079"

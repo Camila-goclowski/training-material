@@ -48,6 +48,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/wm75/"
     }
   ],
+  "short_id": "T00236",
   "url": "/topics/sequence-analysis/tutorials/human-reads-removal/tutorial.html",
   "topic_name": "sequence-analysis",
   "tutorial_name": "human-reads-removal",
@@ -95,7 +96,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/sequence-analysis/tutorials/human-reads-removal/tutorial.json",
@@ -156,6 +158,7 @@
       }
     ]
   },
+  "topic_name_human": "Sequence analysis",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

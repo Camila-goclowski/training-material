@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -382,7 +387,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/data-science/tutorials/cli-advanced/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/data-science/tutorials/cli-advanced/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -429,13 +434,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/data-science/tutorials/cli-advanced/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/data-science/tutorials/cli-advanced/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/data-science/tutorials/cli-advanced/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/data-science/tutorials/cli-advanced/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/data-science/tutorials/cli-advanced/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/data-science/tutorials/cli-advanced/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -502,7 +507,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=27" alt="Avatar">The Carpentries</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=27" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=27" alt="Avatar">Bazante Sanders</a><a href="/training-material/hall-of-fame/erasmusplus/" class="contributor-badge contributor-erasmusplus"><img src="https://avatars.githubusercontent.com/erasmusplus?s=27" alt="Avatar">Erasmus+ Programme</a><a href="/training-material/hall-of-fame/avans-atgm/" class="contributor-badge contributor-avans-atgm"><img src="https://avatars.githubusercontent.com/avans-atgm?s=27" alt="Avatar">Avans Hogeschool</a>
+		Authors: <a href="/training-material/hall-of-fame/carpentries/" class="contributor-badge contributor-carpentries"><img src="https://avatars.githubusercontent.com/carpentries?s=36" alt="Avatar">The Carpentries</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a><a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Avatar">Bazante Sanders</a><a href="/training-material/hall-of-fame/erasmusplus/" class="contributor-badge contributor-erasmusplus"><img src="https://avatars.githubusercontent.com/erasmusplus?s=36" alt="Avatar">Erasmus+ Programme</a><a href="/training-material/hall-of-fame/avans-atgm/" class="contributor-badge contributor-avans-atgm"><img src="https://avatars.githubusercontent.com/avans-atgm?s=36" alt="Avatar">Avans Hogeschool</a>
 	</div>
 
 </div>
@@ -762,12 +767,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 24, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00074">https://gxy.io/GTN:T00074</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00074">https://gxy.io/GTN:T00074</a> </div>
         
     </blockquote>
     </section>
@@ -1178,7 +1184,7 @@ the calculation is ‘head of sort of line count of <code class="language-plaint
 
 <p>The redirection and pipes used in the last few commands are illustrated below:</p>
 
-<p><img src="../../images/carpentries-cli/redirects-and-pipes.svg" alt="Redirects and Pipes of different commands. " loading="lazy" /></p>
+<p><img src="../../images/carpentries-cli/redirects-and-pipes.svg" alt="Redirects and Pipes of different commands. " width="800" height="560" loading="lazy" /></p>
 
 <p><code class="language-plaintext highlighter-rouge">wc -l *.pdb</code> will direct the output to the shell. <code class="language-plaintext highlighter-rouge">wc -l *.pdb &gt; lengths</code> will
 direct output to the file lengths. <code class="language-plaintext highlighter-rouge">wc -l *.pdb | sort -n | head -n 1</code> will
@@ -1888,7 +1894,7 @@ As such we can check what commands <em>would be</em> run in the unmodified loop.
 shows what happens when the modified loop is executed, and demonstrates how the
 judicious use of <code class="language-plaintext highlighter-rouge">echo</code> is a good debugging technique.</p>
 
-<p><img src="../../images/carpentries-cli/shell_script_for_loop_flow_chart.svg" alt="The for loop 'for filename in *.dat; do echo cp $filename original-$filename; done' will successively assign the names of all '*.dat' files in your current directory to the variable '$filename' and then execute the command. With the files 'basilisk.dat', 'minotaur.dat' and 'unicorn.dat' in the current directory the loop will successively call the echo command three times and print three lines: 'cp basislisk.dat original-basilisk.dat', then 'cp minotaur.dat original-minotaur.dat' and finally 'cp unicorn.dat original-unicorn.dat'. " loading="lazy" /></p>
+<p><img src="../../images/carpentries-cli/shell_script_for_loop_flow_chart.svg" alt="The for loop 'for filename in *.dat; do echo cp $filename original-$filename; done' will successively assign the names of all '*.dat' files in your current directory to the variable '$filename' and then execute the command. With the files 'basilisk.dat', 'minotaur.dat' and 'unicorn.dat' in the current directory the loop will successively call the echo command three times and print three lines: 'cp basislisk.dat original-basilisk.dat', then 'cp minotaur.dat original-minotaur.dat' and finally 'cp unicorn.dat original-unicorn.dat'. " width="10" height="5" loading="lazy" /></p>
 
 <h2 id="nelles-pipeline-processing-files">Nelle’s Pipeline: Processing Files</h2>
 
@@ -2399,7 +2405,7 @@ Again,
 it has a lot of options;
 to show how the simplest ones work, we’ll use the directory tree shown below.</p>
 
-<p><img src="../../images/carpentries-cli/find-file-tree.svg" alt="A file tree under the directory 'writing' contians several sub-directories and files such that 'writing' contains directories 'data', 'thesis', 'tools' and a file 'haiku.txt'; 'writing/data' contains the files 'Little Women.txt', 'one.txt' and 'two.txt'; 'writing/thesis' contains the file 'empty-draft.md'; 'writing/tools' contains the directory 'old' and the files 'format' and 'stats'; and 'writing/tools/old' contains a file 'oldtool'. " loading="lazy" /></p>
+<p><img src="../../images/carpentries-cli/find-file-tree.svg" alt="A file tree under the directory 'writing' contians several sub-directories and files such that 'writing' contains directories 'data', 'thesis', 'tools' and a file 'haiku.txt'; 'writing/data' contains the files 'Little Women.txt', 'one.txt' and 'two.txt'; 'writing/thesis' contains the file 'empty-draft.md'; 'writing/tools' contains the directory 'old' and the files 'format' and 'stats'; and 'writing/tools/old' contains a file 'oldtool'. " width="172" height="139" loading="lazy" /></p>
 
 <p>Nelle’s <code class="language-plaintext highlighter-rouge">writing</code> directory contains one file called <code class="language-plaintext highlighter-rouge">haiku.txt</code> and three subdirectories:
 <code class="language-plaintext highlighter-rouge">thesis</code> (which contains a sadly empty file, <code class="language-plaintext highlighter-rouge">empty-draft.md</code>);
@@ -2704,6 +2710,9 @@ without thinking about them.’</p>
                             The Carpentries, Helena Rasche, Bazante Sanders, Erasmus+ Programme, Avans Hogeschool,  <b>Advanced CLI in Galaxy (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html">https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -2725,12 +2734,12 @@ without thinking about them.’</p>
 
 <code id="citation-code">@misc{data-science-cli-advanced,
 author = "The Carpentries and Helena Rasche and Bazante Sanders and Erasmus+ Programme and Avans Hogeschool",
-title = "Advanced CLI in Galaxy (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Advanced CLI in Galaxy (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/data-science/tutorials/cli-advanced/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -2912,19 +2921,19 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00074">https://gxy.io/GTN:T00074</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00074">https://gxy.io/GTN:T00074</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -2944,7 +2953,7 @@ tools: []
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -2952,9 +2961,13 @@ tools: []
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

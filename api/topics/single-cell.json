@@ -143,6 +143,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00255",
       "url": "/topics/single-cell/tutorials/scrna-scater-qc/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-scater-qc",
@@ -169,7 +170,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-scater-qc/tutorial.json",
@@ -206,6 +208,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -335,6 +338,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00240",
       "url": "/topics/single-cell/tutorials/bulk-music/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "bulk-music",
@@ -392,7 +396,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/bulk-music/tutorial.json",
@@ -423,6 +428,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -548,6 +554,7 @@
           ]
         }
       ],
+      "short_id": "T00245",
       "url": "/topics/single-cell/tutorials/scrna-case_alevin/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_alevin",
@@ -613,7 +620,8 @@
               "identifier": "0009-0001-2017-8805",
               "name": "Julia Jakiela"
             }
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "Generating-a-single-cell-matrix-using-Alevin.ga",
@@ -630,7 +638,8 @@
               "identifier": "0000-0002-8170-8806",
               "name": "Wendi Bacon"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_alevin/tutorial.json",
@@ -658,6 +667,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -883,6 +893,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00251",
       "url": "/topics/single-cell/tutorials/scrna-preprocessing/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-preprocessing",
@@ -909,7 +920,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "scrna_pp_celseq.ga",
@@ -922,7 +934,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-preprocessing/tutorial.json",
@@ -975,6 +988,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1164,6 +1178,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mtekman/"
         }
       ],
+      "short_id": "S00084",
       "url": "/topics/single-cell/tutorials/scrna-intro/slides.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-intro",
@@ -1242,6 +1257,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1333,6 +1349,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00253",
       "url": "/topics/single-cell/tutorials/scrna-raceid/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-raceid",
@@ -1359,7 +1376,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-raceid/tutorial.json",
@@ -1387,6 +1405,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1547,6 +1566,7 @@
           ]
         }
       ],
+      "short_id": "T00246",
       "url": "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_alevin-combine-datasets",
@@ -1614,7 +1634,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.json",
@@ -1645,6 +1666,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1794,6 +1816,7 @@
           "hrukkudyr"
         ]
       },
+      "short_id": "T00248",
       "url": "/topics/single-cell/tutorials/scrna-case_cell-cycle/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_cell-cycle",
@@ -1837,7 +1860,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_cell-cycle/tutorial.json",
@@ -1871,6 +1895,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2047,6 +2072,7 @@
         "bulk",
         "transcriptomics"
       ],
+      "short_id": "T00241",
       "url": "/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "bulk-music-2-preparescref",
@@ -2082,7 +2108,8 @@
               "identifier": "0000-0002-4181-2676",
               "name": "Mehmet Tekman"
             }
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "sc_metadata.ga",
@@ -2104,7 +2131,8 @@
               "identifier": "0000-0002-4181-2676",
               "name": "Mehmet Tekman"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/bulk-music-2-preparescref/tutorial.json",
@@ -2145,6 +2173,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2350,6 +2379,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00256",
       "url": "/topics/single-cell/tutorials/scrna-umis/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-umis",
@@ -2425,6 +2455,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2530,6 +2561,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00335",
       "url": "/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scatac-preprocessing-tenx",
@@ -2560,7 +2592,8 @@
               "identifier": "0000-0002-5192-126X",
               "name": "Pavankumar Videm"
             }
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "scATAC-seq-FASTQ-to-Count-Matrix.ga",
@@ -2577,7 +2610,8 @@
               "identifier": "0000-0002-5192-126X",
               "name": "Pavankumar Videm"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.json",
@@ -2608,6 +2642,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2780,6 +2815,7 @@
           ]
         }
       ],
+      "short_id": "T00242",
       "url": "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "bulk-music-3-preparebulk",
@@ -2815,7 +2851,8 @@
               "identifier": "0000-0002-4181-2676",
               "name": "Mehmet Tekman"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.json",
@@ -2853,6 +2890,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3081,9 +3119,18 @@
           "id": "nomadscientist",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
+        },
+        {
+          "name": "Pavankumar Videm",
+          "orcid": "0000-0002-5192-126X",
+          "joined": "2017-09",
+          "id": "pavanvidem",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/pavanvidem.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pavanvidem/"
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00252",
       "url": "/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-preprocessing-tenx",
@@ -3143,26 +3190,49 @@
       "slides": false,
       "workflows": [
         {
-          "workflow": "scrna_tenx.ga",
-          "tests": false,
-          "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/scrna_tenx.ga",
-          "path": "topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/scrna_tenx.ga",
+          "workflow": "scRNA-seq-Preprocessing-TenX.ga",
+          "tests": true,
+          "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/scRNA-seq-Preprocessing-TenX.ga",
+          "path": "topics/single-cell/tutorials/scrna-preprocessing-tenx/workflows/scRNA-seq-Preprocessing-TenX.ga",
           "wfid": "single-cell-scrna-preprocessing-tenx",
-          "wfname": "scrna_tenx",
-          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-preprocessing-tenx/versions/scrna_tenx",
-          "license": null,
+          "wfname": "scrna-seq-preprocessing-tenx",
+          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-preprocessing-tenx/versions/scrna-seq-preprocessing-tenx",
+          "license": "CC-BY-4.0",
           "creators": [
-
-          ]
+            {
+              "class": "Person",
+              "identifier": "0000-0002-8170-8806",
+              "name": "Wendi Bacon"
+            },
+            {
+              "class": "Person",
+              "identifier": "0000-0002-5192-126X",
+              "name": "Pavankumar Videm"
+            },
+            {
+              "class": "Person",
+              "identifier": "0000-0002-4181-2676",
+              "name": "Mehmet Tekman"
+            },
+            {
+              "class": "Person",
+              "identifier": "0000-0002-2799-424X",
+              "name": "Hans-Rudolf Hotz"
+            },
+            {
+              "class": "Person",
+              "identifier": "0000-0002-6833-9049",
+              "name": "Daniel Blankenberg"
+            }
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.json",
       "tools": [
-        "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy1",
         "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
         "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.9+galaxy1",
-        "toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.10b+galaxy3",
-        "toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.8a"
+        "toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.10b+galaxy3"
       ],
       "supported_servers": {
         "exact": [
@@ -3195,18 +3265,12 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
         "tools": [
-          {
-            "name": "dropletutils",
-            "owner": "iuc",
-            "revisions": "2c1200fba922",
-            "tool_panel_section_label": "Single Cell",
-            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
-          },
           {
             "name": "dropletutils",
             "owner": "iuc",
@@ -3227,17 +3291,10 @@
             "revisions": "13022c3d3076",
             "tool_panel_section_label": "Single Cell",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
-          },
-          {
-            "name": "rna_starsolo",
-            "owner": "iuc",
-            "revisions": "79b885ce78d7",
-            "tool_panel_section_label": "Single Cell",
-            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           }
         ]
       },
-      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: dropletutils\n  owner: iuc\n  revisions: 2c1200fba922\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: dropletutils\n  owner: iuc\n  revisions: a9caad671439\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: multiqc\n  owner: iuc\n  revisions: 75c93c70d094\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rna_starsolo\n  owner: iuc\n  revisions: 13022c3d3076\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rna_starsolo\n  owner: iuc\n  revisions: 79b885ce78d7\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: dropletutils\n  owner: iuc\n  revisions: a9caad671439\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: multiqc\n  owner: iuc\n  revisions: 75c93c70d094\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rna_starsolo\n  owner: iuc\n  revisions: 13022c3d3076\n  tool_panel_section_label: Single Cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
       "tours": false,
       "video": false,
       "translations": {
@@ -3331,6 +3388,7 @@
           ]
         }
       ],
+      "short_id": "T00247",
       "url": "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_basic-pipeline",
@@ -3387,7 +3445,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.json",
@@ -3424,6 +3483,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3658,6 +3718,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/astrovsky01/"
         }
       ],
+      "short_id": "S00085",
       "url": "/topics/single-cell/tutorials/scrna-plates-batches-barcodes/slides.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-plates-batches-barcodes",
@@ -3698,6 +3759,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3820,6 +3882,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00254",
       "url": "/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-scanpy-pbmc3k",
@@ -3875,7 +3938,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-scanpy-pbmc3k/tutorial.json",
@@ -3927,6 +3991,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4110,6 +4175,7 @@
           ]
         }
       ],
+      "short_id": "T00243",
       "url": "/topics/single-cell/tutorials/bulk-music-4-compare/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "bulk-music-4-compare",
@@ -4145,7 +4211,8 @@
               "identifier": "0000-0002-4181-2676",
               "name": "Mehmet Tekman"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/bulk-music-4-compare/tutorial.json",
@@ -4174,6 +4241,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4304,6 +4372,7 @@
         "language": "python",
         "snippet": "topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/preamble.md"
       },
+      "short_id": "T00244",
       "url": "/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_JUPYTER-trajectories",
@@ -4374,6 +4443,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4512,6 +4582,7 @@
           "epsrc-training-grant"
         ]
       },
+      "short_id": "T00249",
       "url": "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_monocle3-trajectories",
@@ -4567,7 +4638,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "Galaxy-Workflow-Monocle3_workflow.ga",
@@ -4580,7 +4652,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "Trajectory-analysis-using-Monocle3---full-tutorial-workflow.ga",
@@ -4597,7 +4670,8 @@
               "identifier": "0009-0001-2017-8805",
               "name": "Julia Jakiela"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.json",
@@ -4631,6 +4705,7 @@
 
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4891,6 +4966,7 @@
         }
       ],
       "gitter": "Galaxy-Training-Network/galaxy-single-cell",
+      "short_id": "T00250",
       "url": "/topics/single-cell/tutorials/scrna-plant/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-plant",
@@ -4947,7 +5023,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-plant/tutorial.json",
@@ -4987,6 +5064,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5127,6 +5205,7 @@
         "language": "r",
         "snippet": "topics/single-cell/tutorials/scrna-case_monocle3-rstudio/preamble.md"
       },
+      "short_id": "T00336",
       "url": "/topics/single-cell/tutorials/scrna-case_monocle3-rstudio/tutorial.html",
       "topic_name": "single-cell",
       "tutorial_name": "scrna-case_monocle3-rstudio",
@@ -5167,6 +5246,7 @@
           }
         ]
       },
+      "topic_name_human": "Single Cell",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

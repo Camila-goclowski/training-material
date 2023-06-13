@@ -156,6 +156,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/LeilyR/"
         }
       ],
+      "short_id": "T00140",
       "url": "/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "formation_of_super-structures_on_xi",
@@ -182,7 +183,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.json",
@@ -240,6 +242,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -445,6 +448,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/polkhe/"
         }
       ],
+      "short_id": "T00141",
       "url": "/topics/epigenetics/tutorials/hicexplorer/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "hicexplorer",
@@ -471,7 +475,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/hicexplorer/tutorial.json",
@@ -493,6 +498,7 @@
 
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -621,6 +627,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/heylf/"
         }
       ],
+      "short_id": "T00137",
       "url": "/topics/epigenetics/tutorials/atac-seq/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "atac-seq",
@@ -713,7 +720,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/atac-seq/tutorial.json",
@@ -735,7 +743,6 @@
         "toolshed.g2.bx.psu.edu/repos/iuc/pe_histogram/pe_histogram/1.0.1",
         "toolshed.g2.bx.psu.edu/repos/iuc/pygenometracks/pygenomeTracks/3.6",
         "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/1.16.5",
-        "ucsc_table_direct1",
         "wig_to_bigWig"
       ],
       "supported_servers": {
@@ -764,6 +771,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -975,6 +983,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erxleben/"
         }
       ],
+      "short_id": "T00143",
       "url": "/topics/epigenetics/tutorials/tal1-binding-site-identification/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "tal1-binding-site-identification",
@@ -1001,7 +1010,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/tal1-binding-site-identification/tutorial.json",
@@ -1062,6 +1072,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1269,6 +1280,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/fidelram/"
         }
       ],
+      "short_id": "T00138",
       "url": "/topics/epigenetics/tutorials/estrogen-receptor-binding-site-identification/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "estrogen-receptor-binding-site-identification",
@@ -1295,7 +1307,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "qc_mapping.ga",
@@ -1308,7 +1321,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/estrogen-receptor-binding-site-identification/tutorial.json",
@@ -1369,6 +1383,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1532,6 +1547,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dpryan79/"
         }
       ],
+      "short_id": "T00142",
       "url": "/topics/epigenetics/tutorials/methylation-seq/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "methylation-seq",
@@ -1558,7 +1574,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/epigenetics/tutorials/methylation-seq/tutorial.json",
@@ -1609,6 +1626,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1716,11 +1734,13 @@
       ],
       "contributors": [
         {
-          "name": "Katarzyna Murat",
+          "name": "Katarzyna Kamieniecka",
+          "orcid": "0009-0004-2454-5950",
           "joined": "2018-08",
-          "id": "kpbioteam",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/kpbioteam.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kpbioteam/"
+          "elixir_node": "uk",
+          "id": "kkamieniecka",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/kkamieniecka.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kkamieniecka/"
         },
         {
           "name": "Krzysztof Poterlowicz",
@@ -1728,11 +1748,12 @@
           "orcid": "0000-0001-6173-5674",
           "joined": "2017-09",
           "elixir_node": "uk",
-          "id": "kpoterlowicz",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/kpoterlowicz.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/kpoterlowicz/"
+          "id": "poterlowicz-lab",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/poterlowicz-lab.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/poterlowicz-lab/"
         }
       ],
+      "short_id": "T00139",
       "url": "/topics/epigenetics/tutorials/ewas-suite/tutorial.html",
       "topic_name": "epigenetics",
       "tutorial_name": "ewas-suite",
@@ -1773,6 +1794,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1826,6 +1848,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
         }
       ],
+      "short_id": "S00059",
       "url": "/topics/epigenetics/tutorials/introduction-chip-seq/slides.html",
       "topic_name": "epigenetics",
       "tutorial_name": "introduction-chip-seq",
@@ -1866,6 +1889,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1920,6 +1944,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/yvanlebras/"
         }
       ],
+      "short_id": "S00060",
       "url": "/topics/epigenetics/tutorials/introduction-dna-methylation/slides.html",
       "topic_name": "epigenetics",
       "tutorial_name": "introduction-dna-methylation",
@@ -1960,6 +1985,7 @@
           }
         ]
       },
+      "topic_name_human": "Epigenetics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

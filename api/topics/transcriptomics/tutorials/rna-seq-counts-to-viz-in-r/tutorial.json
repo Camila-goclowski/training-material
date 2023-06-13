@@ -99,6 +99,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/erasmusplus/"
     }
   ],
+  "short_id": "T00299",
   "url": "/topics/transcriptomics/tutorials/rna-seq-counts-to-viz-in-r/tutorial.html",
   "topic_name": "transcriptomics",
   "tutorial_name": "rna-seq-counts-to-viz-in-r",
@@ -171,6 +172,7 @@
 
     ]
   },
+  "topic_name_human": "Transcriptomics",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

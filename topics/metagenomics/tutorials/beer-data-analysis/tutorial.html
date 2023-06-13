@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -368,7 +373,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/metagenomics/tutorials/beer-data-analysis/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/metagenomics/tutorials/beer-data-analysis/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -415,13 +420,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -494,7 +499,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/plushz/" class="contributor-badge contributor-plushz"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/plushz?s=27" alt="Avatar">Polina Polunina</a><a href="/training-material/hall-of-fame/chensy96/" class="contributor-badge contributor-chensy96"><img src="https://avatars.githubusercontent.com/chensy96?s=27" alt="Avatar">Siyu Chen</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/teresa-m/" class="contributor-badge contributor-teresa-m"><img src="https://avatars.githubusercontent.com/teresa-m?s=27" alt="Avatar">Teresa Müller</a>
+			<a href="/training-material/hall-of-fame/plushz/" class="contributor-badge contributor-plushz"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/plushz?s=36" alt="Avatar">Polina Polunina</a><a href="/training-material/hall-of-fame/chensy96/" class="contributor-badge contributor-chensy96"><img src="https://avatars.githubusercontent.com/chensy96?s=36" alt="Avatar">Siyu Chen</a><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/teresa-m/" class="contributor-badge contributor-teresa-m"><img src="https://avatars.githubusercontent.com/teresa-m?s=36" alt="Avatar">Teresa Müller</a>
 		</td>
 	</tr>
 	
@@ -731,12 +736,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 2, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00200">https://gxy.io/GTN:T00200</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00200">https://gxy.io/GTN:T00200</a> </div>
         
     </blockquote>
     </section>
@@ -787,7 +793,7 @@ contact of molecular biology, data-analysis, and open science.</p>
     <li>Analyze the sequenced data in order to know which organisms this DNA is from</li>
   </ol>
 
-  <p><img src="./images/beerprocess.png" alt="The image represents a BeerDEcoded workshop. On the left, there is a beer glass. An arrow goes from the bottle to DNA with &quot;Extraction&quot; written on the below. An arrow goes from DNA to DNA sequences with &quot;Sequencing&quot; written on the below. An arrow goes from the DNA sequences to Yeasts with &quot;Data analysis&quot; written on the below. " loading="lazy" /></p>
+  <p><img src="./images/beerprocess.png" alt="The image represents a BeerDEcoded workshop. On the left, there is a beer glass. An arrow goes from the bottle to DNA with &quot;Extraction&quot; written on the below. An arrow goes from DNA to DNA sequences with &quot;Sequencing&quot; written on the below. An arrow goes from the DNA sequences to Yeasts with &quot;Data analysis&quot; written on the below. " width="1000" height="253" loading="lazy" /></p>
 
 </blockquote>
 
@@ -901,7 +907,7 @@ of yeasts from a bottle of beer.</p>
   <li>History of analysis and files on the right</li>
 </ul>
 
-<figure id="figure-1"><img src="/training-material/topics/introduction/images/galaxy_interface.png" alt="Galaxy interface screenshot showing history panel on the right, tools panel on the left, and main panel at the center. " width="1777" height="1290" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> The Galaxy interface</figcaption></figure>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="/training-material/topics/introduction/images/galaxy_interface.png" alt="Galaxy interface screenshot showing history panel on the right, tools panel on the left, and main panel at the center. " width="1777" height="1290" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> The Galaxy interface</figcaption></figure>
 
 <p>The first time you use Galaxy, there will be no files in your history panel.</p>
 
@@ -955,7 +961,7 @@ of yeasts from a bottle of beer.</p>
 </code></pre></div>          </div>
 
           <!--SNIPPET-->
-          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+          <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
           <p><!--END_SNIPPET--></p>
         </li>
       </ul>
@@ -1004,7 +1010,7 @@ of yeasts from a bottle of beer.</p>
 
   <p>Given the Basic Statistics table on the top of the page:</p>
 
-  <p><img src="./images/fastqc_top_table.png" alt="Screenshot of the FastQC Basic Statistics with filename, file type (Conventional base calls), encoding (Sanger / Illumina 1.9), total Sequences (1876), sequences flagged as poor quality (0), sequence length (130-2327) and %GC (29). " loading="lazy" /></p>
+  <p><img src="./images/fastqc_top_table.png" alt="Screenshot of the FastQC Basic Statistics with filename, file type (Conventional base calls), encoding (Sanger / Illumina 1.9), total Sequences (1876), sequences flagged as poor quality (0), sequence length (130-2327) and %GC (29). " width="628" height="284" loading="lazy" /></p>
 
   <ol>
     <li>How many sequences are in the FASTQ file?</li>
@@ -1025,7 +1031,7 @@ of yeasts from a bottle of beer.</p>
 
 <p><strong>FastQC</strong> provides information on various parameters, such as the range of quality values across all bases at each position:</p>
 
-<figure id="figure-2"><img src="./images/fastqc_1.png" alt="FastQC Per base sequence quality with scores below 20. " width="840" height="600" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Per base sequence quality. X-axis: position in the reads (in base pair). Y-axis: quality score, between 0 and 40 - the higher the score, the better the base call. For each position, a boxplot is drawn with: the median value, represented by the central red line;the inter-quartile range (25-75%), represented by the yellow box; the 10% and 90% values in the upper and lower whiskers; and the mean quality, represented by the blue line. The background of the graph divides the y-axis into very good quality scores (green), scores of reasonable quality (orange), and reads of poor quality (red).</figcaption></figure>
+<figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="./images/fastqc_1.png" alt="FastQC Per base sequence quality with scores below 20. " width="840" height="600" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Per base sequence quality. X-axis: position in the reads (in base pair). Y-axis: quality score, between 0 and 40 - the higher the score, the better the base call. For each position, a boxplot is drawn with: the median value, represented by the central red line;the inter-quartile range (25-75%), represented by the yellow box; the 10% and 90% values in the upper and lower whiskers; and the mean quality, represented by the blue line. The background of the graph divides the y-axis into very good quality scores (green), scores of reasonable quality (orange), and reads of poor quality (red).</figcaption></figure>
 
 <p>We can see that the quality of our sequencing data grows after the first few bases, stays around a score of 18 and then decreases again at the end of the sequences. MinION and Oxford Nanopore Technologies (ONT) are known to have a higher error rate compared to other sequencing techniques and platforms (<span class="citation"><a href="#delahaye2021sequencing">Delahaye and Nicolas 2021</a></span>).</p>
 
@@ -1416,7 +1422,7 @@ be sure it contains yeasts, i.e. fungi.</p>
 
 <p>Let’s take a look at the result.</p>
 
-<iframe id="krona" src="krona.html" frameborder="0" width="100%" height="900px"> <img src="./images/krona.png" alt="Krona chart with multi-layered pie chart representing the community profile with in the center the higher taxonomy levels (i.e. domain) and on the exterior the more detailed ones (i.e. species). " loading="lazy" /> </iframe>
+<iframe id="krona" src="krona.html" frameborder="0" width="100%" height="900px"> <img src="./images/krona.png" alt="Krona chart with multi-layered pie chart representing the community profile with in the center the higher taxonomy levels (i.e. domain) and on the exterior the more detailed ones (i.e. species). " width="2342" height="2248" loading="lazy" /> </iframe>
 
 <blockquote class="question">
   <div class="box-title question-title" id="question-6"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
@@ -1492,12 +1498,12 @@ be sure it contains yeasts, i.e. fungi.</p>
           <li>99% out of identified reads for Saccharomycetaceae family</li>
         </ul>
 
-        <p><img src="./images/krona_saccharomyces_1.png" alt="Krona chart with multi-layered pie chart representing the community profile with in the center the higher taxonomy levels (i.e. domain) and on the exterior the more detailed ones (i.e. species). *Saccharomyces* is highligthed with on the right the percentages of identified reads assigned to *Saccharomyces* for the different taxonomic levels. " loading="lazy" /></p>
+        <p><img src="./images/krona_saccharomyces_1.png" alt="Krona chart with multi-layered pie chart representing the community profile with in the center the higher taxonomy levels (i.e. domain) and on the exterior the more detailed ones (i.e. species). *Saccharomyces* is highligthed with on the right the percentages of identified reads assigned to *Saccharomyces* for the different taxonomic levels. " width="2342" height="2248" loading="lazy" /></p>
       </li>
       <li>
         <p>92% of <em>Saccharomyces</em> reads are assigned to <em>Saccharomyces cerevisiae</em>, 5% to <em>Saccharomyces paradoxus</em> and 3% to <em>Saccharomyces eubayanus</em>,.</p>
 
-        <p><img src="./images/krona_saccharomyces_2.png" alt="Krona chart with the community profile for *Saccharomyces* with the different species. " loading="lazy" /></p>
+        <p><img src="./images/krona_saccharomyces_2.png" alt="Krona chart with the community profile for *Saccharomyces* with the different species. " width="2342" height="2248" loading="lazy" /></p>
       </li>
     </ol>
   </blockquote>
@@ -1506,7 +1512,7 @@ be sure it contains yeasts, i.e. fungi.</p>
 
 <p>Microbiome of several beers, including Chimay beers, have been previously investigated by targeting specifically the fungi, in which we can find yeasts (<span class="citation"><a href="#sobel2017beerdecoded">Sobel <i>et al.</i> 2017</a></span>):</p>
 
-<figure id="figure-3"><img src="./images/beerdecoded.gif" alt="Heatmap with rows being type of beers and columns fungi species. For the rows, the name of beers are on the right and clustering tree on the left side of the heatmap. For the columns, the name of the species are on the bottom and the clustering tree on the top. The fungi species are sorted from the least abundant on the left to the most abundant on the right." width="1000" height="940" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Heatmap of the number of reads per internal transcribed spacer (ITS) sequencing of fungal species per beer. Source <span class="citation"><a href="#sobel2017beerdecoded">Sobel <i>et al.</i> 2017</a></span></figcaption></figure>
+<figure id="figure-3" style="max-width: 90%; margin:auto;"><img src="./images/beerdecoded.gif" alt="Heatmap with rows being type of beers and columns fungi species. For the rows, the name of beers are on the right and clustering tree on the left side of the heatmap. For the columns, the name of the species are on the bottom and the clustering tree on the top. The fungi species are sorted from the least abundant on the left to the most abundant on the right." width="1000" height="940" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Heatmap of the number of reads per internal transcribed spacer (ITS) sequencing of fungal species per beer. Source <span class="citation"><a href="#sobel2017beerdecoded">Sobel <i>et al.</i> 2017</a></span></figcaption></figure>
 
 <p>The species identified for Chimay beers are (from the most abundant to the least one):</p>
 <ul>
@@ -1932,6 +1938,9 @@ be sure it contains yeasts, i.e. fungi.</p>
                             Polina Polunina, Siyu Chen, Bérénice Batut, Teresa Müller,  <b>Identification of the micro-organisms in a beer using Nanopore sequencing (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html">https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1953,12 +1962,12 @@ be sure it contains yeasts, i.e. fungi.</p>
 
 <code id="citation-code">@misc{metagenomics-beer-data-analysis,
 author = "Polina Polunina and Siyu Chen and Bérénice Batut and Teresa Müller",
-title = "Identification of the micro-organisms in a beer using Nanopore sequencing (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "Identification of the micro-organisms in a beer using Nanopore sequencing (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/metagenomics/tutorials/beer-data-analysis/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -2068,19 +2077,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00200">https://gxy.io/GTN:T00200</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00200">https://gxy.io/GTN:T00200</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -2100,7 +2109,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -2108,9 +2117,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -290,7 +295,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/introduction/tutorials/galaxy-intro-short/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/introduction/tutorials/galaxy-intro-short/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -337,13 +342,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -416,7 +421,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=27" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=27" alt="Avatar">Nicola Soranzo</a>
+			<a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge contributor-annasyme"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/annasyme?s=36" alt="Avatar">Anna Syme</a><a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar">Nicola Soranzo</a>
 		</td>
 	</tr>
 	
@@ -428,7 +433,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=27" alt="Avatar">Bérénice Batut</a></td>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></td>
 	</tr>
 	
 
@@ -657,12 +662,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 9, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00190">https://gxy.io/GTN:T00190</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00190">https://gxy.io/GTN:T00190</a> </div>
         
     </blockquote>
     </section>
@@ -720,7 +726,7 @@ Sentry.init({
     <li>Log in or register</li>
   </ol>
 
-  <p><img src="../../images/galaxy-login.png" alt="Screenshot of Galaxy Australia with the register or login button highlighted. " loading="lazy" /></p>
+  <p><img src="../../images/galaxy-login.png" alt="Screenshot of Galaxy Australia with the register or login button highlighted. " width="2196" height="912" loading="lazy" /></p>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-different-galaxy-servers"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Different Galaxy servers</div>
@@ -743,7 +749,7 @@ Sentry.init({
   <li>History of analysis and files on the right</li>
 </ul>
 
-<p><img src="../../images/galaxy_interface.png" alt="Screenshot of the Galaxy interface with aforementioned structure. " loading="lazy" /></p>
+<p><img src="../../images/galaxy_interface.png" alt="Screenshot of the Galaxy interface with aforementioned structure. " width="1777" height="1290" loading="lazy" /></p>
 
 <p>The first time you use Galaxy, there will be no files in your history panel.</p>
 
@@ -760,13 +766,13 @@ Sentry.init({
     <li>
       <p>Click on <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (<strong>Edit</strong>) next to the history name (which by default is “Unnamed history”)</p>
 
-      <p><img src="../../../../shared/images/rename_history.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value. An input box is below it." width="250px" loading="lazy" /></p>
+      <p><img src="../../../../shared/images/rename_history.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value. An input box is below it." width="270" height="320" loading="lazy" /></p>
 
       <blockquote class="comment">
         <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment</div>
 
         <p>In some previous versions of Galaxy, you will need to click on the history name to rename it as shown here:
-<img src="../../../../shared/images/rename_history_old.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value." width="320px" loading="lazy" /></p>
+<img src="../../../../shared/images/rename_history_old.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value." width="256" height="165" loading="lazy" /></p>
       </blockquote>
     </li>
     <li>Type in a new name, for example, “My Analysis”</li>
@@ -790,11 +796,11 @@ Sentry.init({
     <li>
       <p>At the top of the <strong>Tools</strong> panel (on the left), click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload</strong></p>
 
-      <p><img src="../../images/upload-data.png" alt="upload data button shown in the galaxy interface. " loading="lazy" /></p>
+      <p><img src="../../images/upload-data.png" alt="upload data button shown in the galaxy interface. " width="276" height="205" loading="lazy" /></p>
 
       <p>This brings up a box:</p>
 
-      <p><img src="../../images/upload-box.png" alt="the complicated galaxy upload dialog, the 'regular' tab is active with a large textarea to paste subsequent URL. " loading="lazy" /></p>
+      <p><img src="../../images/upload-box.png" alt="the complicated galaxy upload dialog, the 'regular' tab is active with a large textarea to paste subsequent URL. " width="1792" height="1087" loading="lazy" /></p>
     </li>
     <li>Click <strong>Paste/Fetch data</strong></li>
     <li>
@@ -846,7 +852,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     <li>
       <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the dataset name, to look at the file content</p>
 
-      <p><img src="../../images/eye-icon.png" alt="galaxy history view showing a single dataset mutant_r1.fastq. Display link is being hovered." width="320px" loading="lazy" /></p>
+      <p><img src="../../images/eye-icon.png" alt="galaxy history view showing a single dataset mutant_r1.fastq. Display link is being hovered." width="580" height="549" loading="lazy" /></p>
     </li>
   </ol>
 </blockquote>
@@ -855,7 +861,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
 <p>This file contains DNA sequencing reads from a bacteria, in FASTQ format:</p>
 
-<figure id="figure-1"><img src="../../images/fastq.png" alt="preview of a fastq file showing the 4 line structure described in fig caption. 3 reads are shown." width="1088" height="428" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> A FastQ file of course has four lines per record: the record identifier (`@mutant-no_snps.gff-24960/`), the sequence (`AATG…`), the plus character (`+`), and then the quality scores for the sequence (`5??A…`).</figcaption></figure>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/fastq.png" alt="preview of a fastq file showing the 4 line structure described in fig caption. 3 reads are shown." width="1088" height="428" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> A FastQ file of course has four lines per record: the record identifier (`@mutant-no_snps.gff-24960/`), the sequence (`AATG…`), the plus character (`+`), and then the quality scores for the sequence (`5??A…`).</figcaption></figure>
 
 <h2 id="use-a-tool">Use a tool</h2>
 
@@ -904,7 +910,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
       <p>The information is displayed in the central panel</p>
 
-      <p><img src="../../images/fastqc-out.png" alt="Graph from fastqc's report. fastqc's images themselves are inaccessible, but this graph shows overall mostly green (good) sequences scores across the length of the read." width="620px" loading="lazy" /></p>
+      <p><img src="../../images/fastqc-out.png" alt="Graph from fastqc's report. fastqc's images themselves are inaccessible, but this graph shows overall mostly green (good) sequences scores across the length of the read." width="742" height="729" loading="lazy" /></p>
     </li>
   </ul>
 </blockquote>
@@ -967,7 +973,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
       <p>This expands the information about the file.</p>
 
-      <p><img src="../../images/filter-fastq1.png" alt="Diagram of how to locate the information. As above, clicking on the name expands the dataset, and an info section is shown with the filter settings. 1786 (14%) discarded." loading="lazy" /></p>
+      <p><img src="../../images/filter-fastq1.png" alt="Diagram of how to locate the information. As above, clicking on the name expands the dataset, and an info section is shown with the filter settings. 1786 (14%) discarded." width="623" height="696" loading="lazy" /></p>
     </li>
   </ol>
 
@@ -994,7 +1000,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     <li>
       <p>Click on the <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> icon (<strong>Run this job again</strong>) for the output dataset of <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
-      <p><img src="../../images/rerun.png" alt="A dataset is expanded showing the Run Job Again button highlighted. " loading="lazy" /></p>
+      <p><img src="../../images/rerun.png" alt="A dataset is expanded showing the Run Job Again button highlighted. " width="249" height="412" loading="lazy" /></p>
 
       <p>This brings up the tool interface in the central panel with the parameters set to the values used previously to generate this dataset.</p>
     </li>
@@ -1055,11 +1061,11 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     <li>
       <p>Click on <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) at the top of your history panel and select <strong>Extract workflow</strong>.</p>
 
-      <p><img src="../../images/history_menu_extract_workflow.png" alt="'Extract Workflow' entry in the history options menu. " loading="lazy" /></p>
+      <p><img src="../../images/history_menu_extract_workflow.png" alt="'Extract Workflow' entry in the history options menu. " width="247" height="327" loading="lazy" /></p>
 
       <p>The central panel will show the content of the history in reverse order (oldest on top), and you will be able to choose which steps to include in the workflow.</p>
 
-      <p><img src="../../images/intro_short_workflow_extract.png" alt="Selection of steps for Extract Workflow from history. All three of fastqc, filter by quality, and the second filter by quality are selected." loading="lazy" /></p>
+      <p><img src="../../images/intro_short_workflow_extract.png" alt="Selection of steps for Extract Workflow from history. All three of fastqc, filter by quality, and the second filter by quality are selected." width="1568" height="977" loading="lazy" /></p>
     </li>
     <li>
       <p>Replace the <strong>Workflow name</strong> to something more descriptive, for example: <code class="language-plaintext highlighter-rouge">QC and filtering</code>.</p>
@@ -1118,7 +1124,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     <li>
       <p>Click on <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) and then click on the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-columns</span> <strong>Show Histories side-by-side</strong></p>
 
-      <p><img src="../../images/galaxy_interface_history_switch.png" alt="History options menu dropdown showing you have 163 histories, and a show histories side-by-side button." width="320px" loading="lazy" /></p>
+      <p><img src="../../images/galaxy_interface_history_switch.png" alt="History options menu dropdown showing you have 163 histories, and a show histories side-by-side button." width="287" height="120" loading="lazy" /></p>
 
       <p>A new page will appear with all your histories displayed here.</p>
     </li>
@@ -1128,7 +1134,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
         <li>Drag it into the “Next Analysis” history</li>
       </ol>
 
-      <figure id="figure-2"><img src="../../images/copy-dataset.gif" alt="Gif of copying datasets between histories in the side-by-side history view. For now this feature is not keyboard accessible, it is a known issue." width="1280" height="720" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Copy a dataset between histories by dragging it</figcaption></figure>
+      <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/copy-dataset.gif" alt="Gif of copying datasets between histories in the side-by-side history view. For now this feature is not keyboard accessible, it is a known issue." width="1280" height="720" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Copy a dataset between histories by dragging it</figcaption></figure>
 
       <p>This makes a copy of the dataset in the new history (without actually using additional disk space).</p>
     </li>
@@ -1155,7 +1161,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
       <p>Here you have a list of all your workflows.
 Your newly created workflow should be listed at the top:</p>
 
-      <p><img src="../../images/intro_short_workflow_list.png" alt="Workflow list page showing a single workflow named QC and filtering." loading="lazy" /></p>
+      <p><img src="../../images/intro_short_workflow_list.png" alt="Workflow list page showing a single workflow named QC and filtering." width="2538" height="444" loading="lazy" /></p>
 
       <p>If you click on a workflow name, you can see all available actions for the workflow, e.g. edit, copy, rename, delete.</p>
     </li>
@@ -1164,7 +1170,7 @@ Your newly created workflow should be listed at the top:</p>
 
       <p>The central panel will change to allow you to configure and launch the workflow.</p>
 
-      <p><img src="../../images/intro_short_run_workflow.png" alt="Run workflow form with a single input: FASTQ reads. mutant_r1.fastq is selected as the input dataset for that parameter." loading="lazy" /></p>
+      <p><img src="../../images/intro_short_run_workflow.png" alt="Run workflow form with a single input: FASTQ reads. mutant_r1.fastq is selected as the input dataset for that parameter." width="1318" height="167" loading="lazy" /></p>
     </li>
     <li>
       <p>Check that the <em>“FASTQ reads”</em> input is set to the FASTQ dataset we have copied to the new history.</p>
@@ -1250,6 +1256,9 @@ Your newly created workflow should be listed at the top:</p>
                             Anna Syme, Nicola Soranzo,  <b>A short introduction to Galaxy (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html">https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1271,12 +1280,12 @@ Your newly created workflow should be listed at the top:</p>
 
 <code id="citation-code">@misc{introduction-galaxy-intro-short,
 author = "Anna Syme and Nicola Soranzo",
-title = "A short introduction to Galaxy (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "A short introduction to Galaxy (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1376,19 +1385,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00190">https://gxy.io/GTN:T00190</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00190">https://gxy.io/GTN:T00190</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -1408,7 +1417,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1416,9 +1425,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

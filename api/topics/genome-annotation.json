@@ -136,6 +136,7 @@
         }
       ],
       "subtopic": "prokaryote",
+      "short_id": "T00168",
       "url": "/topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-prokka",
@@ -227,7 +228,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-prokka/tutorial.json",
@@ -278,6 +280,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -448,6 +451,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 1,
+      "short_id": "T00178",
       "url": "/topics/genome-annotation/tutorials/repeatmasker/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "repeatmasker",
@@ -519,7 +523,8 @@
               "identifier": "https://orcid.org/0000-0003-0914-2470",
               "name": "Anthony Bretaudeau"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/repeatmasker/tutorial.json",
@@ -551,6 +556,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -644,6 +650,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/estebanpw/"
         }
       ],
+      "short_id": "T00176",
       "url": "/topics/genome-annotation/tutorials/hpc-for-lsgc/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "hpc-for-lsgc",
@@ -670,7 +677,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         },
         {
           "workflow": "GECKO_pairwise_comparison.ga",
@@ -683,7 +691,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/hpc-for-lsgc/tutorial.json",
@@ -715,6 +724,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -888,6 +898,7 @@
       "abbreviations": {
         "OGS": "Official Gene Set"
       },
+      "short_id": "T00169",
       "url": "/topics/genome-annotation/tutorials/apollo/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "apollo",
@@ -984,7 +995,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/apollo/tutorial.json",
@@ -1007,6 +1019,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1119,6 +1132,7 @@
         }
       ],
       "subtopic": "intro",
+      "short_id": "S00069",
       "url": "/topics/genome-annotation/tutorials/introduction/slides.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "introduction",
@@ -1159,6 +1173,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1225,6 +1240,7 @@
         }
       ],
       "subtopic": "prokaryote",
+      "short_id": "T00175",
       "url": "/topics/genome-annotation/tutorials/genome-annotation/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "genome-annotation",
@@ -1265,6 +1281,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1347,6 +1364,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 2,
+      "short_id": "T00172",
       "url": "/topics/genome-annotation/tutorials/funannotate/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "funannotate",
@@ -1418,7 +1436,8 @@
               "identifier": "https://orcid.org/0000-0003-0914-2470",
               "name": "Anthony Bretaudeau"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/funannotate/tutorial.json",
@@ -1469,6 +1488,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1719,6 +1739,7 @@
         "ORF": "Open Reading Frame"
       },
       "priority": 2,
+      "short_id": "T00174",
       "url": "/topics/genome-annotation/tutorials/gene-centric/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "gene-centric",
@@ -1749,7 +1770,8 @@
               "identifier": "0000-0002-5987-8032",
               "name": "Anton Nekrutenko"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/gene-centric/tutorial.json",
@@ -1784,6 +1806,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1946,6 +1969,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 3,
+      "short_id": "T00167",
       "url": "/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-maker-short",
@@ -1972,7 +1996,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-maker-short/tutorial.json",
@@ -2006,6 +2031,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2139,6 +2165,7 @@
       ],
       "subtopic": "prokaryote",
       "priority": 4,
+      "short_id": "T00179",
       "url": "/topics/genome-annotation/tutorials/tnseq/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "tnseq",
@@ -2165,7 +2192,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/tnseq/tutorial.json",
@@ -2200,6 +2228,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2334,6 +2363,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 4,
+      "short_id": "T00166",
       "url": "/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "annotation-with-maker",
@@ -2368,7 +2398,8 @@
               "class": "Organization",
               "name": "French National Institute for Agriculture, Food, and Environment (INRAE)"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.json",
@@ -2414,6 +2445,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2531,6 +2563,7 @@
       },
       "subtopic": "eukaryote",
       "priority": 6,
+      "short_id": "T00173",
       "url": "/topics/genome-annotation/tutorials/functional/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "functional",
@@ -2561,7 +2594,8 @@
               "identifier": "https://orcid.org/0000-0003-0914-2470",
               "name": "Anthony Bretaudeau"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/functional/tutorial.json",
@@ -2597,6 +2631,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2768,6 +2803,7 @@
       "abbreviations": {
         "OGS": "Official Gene Set"
       },
+      "short_id": "T00170",
       "url": "/topics/genome-annotation/tutorials/apollo-euk/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "apollo-euk",
@@ -2805,6 +2841,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2903,6 +2940,7 @@
       ],
       "subtopic": "eukaryote",
       "priority": 7,
+      "short_id": "T00177",
       "url": "/topics/genome-annotation/tutorials/lncrna/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "lncrna",
@@ -2933,7 +2971,8 @@
               "identifier": "https://orcid.org/0000-0001-7379-9173",
               "name": "Stéphanie Robin"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/lncrna/tutorial.json",
@@ -2954,6 +2993,7 @@
 
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3117,6 +3157,7 @@
       },
       "subtopic": "eukaryote",
       "priority": 8,
+      "short_id": "T00171",
       "url": "/topics/genome-annotation/tutorials/crispr-screen/tutorial.html",
       "topic_name": "genome-annotation",
       "tutorial_name": "crispr-screen",
@@ -3209,7 +3250,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/genome-annotation/tutorials/crispr-screen/tutorial.json",
@@ -3252,6 +3294,7 @@
           }
         ]
       },
+      "topic_name_human": "Genome Annotation",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

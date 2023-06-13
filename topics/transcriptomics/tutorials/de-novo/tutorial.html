@@ -17,11 +17,12 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@2dea2e26753582aeea3dc90b0862d11716e2b8b5",
+  release: "galaxy-training-network@5dfffa20beac5d975ef9b8fa1887f634380575b8",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-  tracesSampleRate: 0.01,
+  sampleRate: 0.1,
+  tracesSampleRate: 0.1,
   // Capture Replay for no sessions by default
-  replaysSessionSampleRate: 0,
+  replaysSessionSampleRate: 0.01,
   // plus for 1% of sessions with an error
   replaysOnErrorSampleRate: 0.01,
   // PII OFF
@@ -31,15 +32,19 @@ Sentry.init({
 </script>
 
         
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
-        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
-        <link rel="stylesheet" href="/training-material/assets/fontawesome/css/all.css">
-        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
         <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon">
         <link rel="alternate" type="application/atom+xml" href="/training-material/feed.xml">
         <link rel="canonical" href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/de-novo/tutorial.html">
-	<link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
+        <link rel="manifest" href="/training-material/manifest.json">
+        <meta name="theme-color" content="#2c3143"/>
+
+
+
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
@@ -369,7 +374,7 @@ Sentry.init({
     </a>
     <div class="dropdown-menu dropdown-menu-right">
 
-        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/maintopics/transcriptomics/tutorials/de-novo/tutorial.md" title="Edit on GitHub">
+        <a class="dropdown-item" href="https://github.com/galaxyproject/training-material/edit/main/topics/transcriptomics/tutorials/de-novo/tutorial.md" title="Edit on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> Edit on GitHub
         </a>
 
@@ -416,13 +421,13 @@ Sentry.init({
 
             <div id="archive-selector">
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/transcriptomics/tutorials/de-novo/tutorial.html" title="Version 2021-12-01">2021-12-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-12-01/topics/transcriptomics/tutorials/de-novo/tutorial.html">2021-12-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/transcriptomics/tutorials/de-novo/tutorial.html" title="Version 2021-11-01">2021-11-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-11-01/topics/transcriptomics/tutorials/de-novo/tutorial.html">2021-11-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/transcriptomics/tutorials/de-novo/tutorial.html" title="Version 2021-10-01">2021-10-01</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/2021-10-01/topics/transcriptomics/tutorials/de-novo/tutorial.html">2021-10-01</a>
             
-                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/" title="Older Versions">Older Versions</a>
+                <a class="btn btn-warning" href="https://training.galaxyproject.org/archive/">Older Versions</a>
             </div>
 
         </div>
@@ -495,7 +500,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/malloryfreeberg/" class="contributor-badge contributor-malloryfreeberg"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/malloryfreeberg?s=27" alt="Avatar">Mallory Freeberg</a><a href="/training-material/hall-of-fame/moheydarian/" class="contributor-badge contributor-moheydarian"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/moheydarian?s=27" alt="Avatar">Mo Heydarian</a>
+			<a href="/training-material/hall-of-fame/malloryfreeberg/" class="contributor-badge contributor-malloryfreeberg"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/malloryfreeberg?s=36" alt="Avatar">Mallory Freeberg</a><a href="/training-material/hall-of-fame/moheydarian/" class="contributor-badge contributor-moheydarian"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/moheydarian?s=36" alt="Avatar">Mo Heydarian</a>
 		</td>
 	</tr>
 	
@@ -507,7 +512,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/jxtx/" class="contributor-badge contributor-jxtx"><img src="https://avatars.githubusercontent.com/jxtx?s=27" alt="Avatar">James Taylor</a></td>
+			<a href="/training-material/hall-of-fame/jxtx/" class="contributor-badge contributor-jxtx"><img src="https://avatars.githubusercontent.com/jxtx?s=36" alt="Avatar">James Taylor</a></td>
 	</tr>
 	
 
@@ -806,12 +811,13 @@ Sentry.init({
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 28, 2022 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
+		
             
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Tutorial Content is licensed under Creative Commons Attribution 4.0 International License</a>.
              The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
-        <div><strong>Short Link:</strong> <a href="https://gxy.io/GTN:T00289">https://gxy.io/GTN:T00289</a> </div>
+        <div><strong><i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>:</strong> <a href="https://gxy.io/GTN:T00289">https://gxy.io/GTN:T00289</a> </div>
         
     </blockquote>
     </section>
@@ -906,7 +912,7 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
       <p>You will need to fetch the link to the annotation file yourself ;)</p>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Open the Galaxy Upload Manager (<i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>   </li>   <li>Select <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-importing-via-links"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-importing-via-links" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Importing via links<span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Copy the link location</li>   <li>     <p>Click <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload Data</strong> at the top of the tool panel</p>   </li>   <li>Select <i class="fa fa-edit" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-edit</span> <strong>Paste/Fetch Data</strong></li>   <li>     <p>Paste the link(s) into the text field</p>   </li>   <li>     <p>Press <strong>Start</strong></p>   </li>   <li><strong>Close</strong> the window</li> </ul> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
   </ol>
@@ -973,7 +979,7 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
           </ol>
         </blockquote>
       </blockquote>
-      <p><img src="../../images/transcriptomics_images/BeforeAndAfterTrimming.png" alt="Before and after trimming comparison. " loading="lazy" /></p>
+      <p><img src="../../images/transcriptomics_images/BeforeAndAfterTrimming.png" alt="Before and after trimming comparison. " width="960" height="540" loading="lazy" /></p>
     </li>
     <li>
       <p><strong>Trimmomatic</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run <code class="language-plaintext highlighter-rouge">Trimmomatic</code> on the remaining forward/reverse read pairs with the same parameters.</p>
@@ -1372,29 +1378,29 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
   <li>
     <p>Histogram of <em>p</em>-values for all tests</p>
 
-    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_histogram3.png" alt="DESeq2 histogram. " loading="lazy" /></p>
+    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_histogram3.png" alt="DESeq2 histogram. " width="1050" height="1050" loading="lazy" /></p>
   </li>
   <li>
     <p><a href="https://en.wikipedia.org/wiki/MA_plot">MA plot</a>: global view of the relationship between the expression change of conditions (log ratios, M), the average expression strength of the genes (average mean, A), and the ability of the algorithm to detect differential gene expression. The genes that passed the significance threshold (adjusted p-value &lt; 0.1) are colored in red.</p>
 
-    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_MAplot3.png" alt="MA plot. " loading="lazy" /></p>
+    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_MAplot3.png" alt="MA plot. " width="1050" height="1050" loading="lazy" /></p>
   </li>
   <li>
     <p>Principal Component Analysis (<a href="https://en.wikipedia.org/wiki/Principal_component_analysis">PCA</a>) and the first two axes</p>
 
-    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_PCA3.png" alt="Principal component analysis output. " loading="lazy" /></p>
+    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_PCA3.png" alt="Principal component analysis output. " width="1050" height="1050" loading="lazy" /></p>
 
     <p>Each replicate is plotted as an individual data point. This type of plot is useful for visualizing the overall effect of experimental covariates and batch effects.</p>
   </li>
   <li>
     <p>Heatmap of sample-to-sample distance matrix: overview over similarities and dissimilarities between samples</p>
 
-    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_heatmap3.png" alt="Heatmap of sample-to-sample distance matrix. " loading="lazy" /></p>
+    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_heatmap3.png" alt="Heatmap of sample-to-sample distance matrix. " width="1050" height="1050" loading="lazy" /></p>
   </li>
   <li>
     <p>Dispersion estimates: gene-wise estimates (black), the fitted values (red), and the final maximum a posteriori estimates used in testing (blue)</p>
 
-    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_dispersion3.png" alt="Dispersion estimates. " loading="lazy" /></p>
+    <p><img src="/training-material/topics/transcriptomics/images/transcriptomics_images/Deseq2_dispersion3.png" alt="Dispersion estimates. " width="1050" height="1050" loading="lazy" /></p>
 
     <p>This dispersion plot is typical, with the final estimates shrunk from the gene-wise estimates towards the fitted estimates. Some gene-wise estimates are flagged as outliers and not shrunk towards the fitted value. The amount of shrinkage can be more or less than seen here, depending on the sample size, the number of coefficients, the row mean and the variability of the gene-wise estimates.</p>
   </li>
@@ -1443,7 +1449,7 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
         <li>Name your visualization someting descriptive under “Browser name:”</li>
         <li>Choose “Mouse Dec. 2011 (GRCm38/mm10) (mm10)” as the “Reference genome build (dbkey)</li>
         <li>Click “Create” to initiate your Trackster session
-<img src="../../images/transcriptomics_images/Trackster_opening_window.png" alt="Trackster opening window. " loading="lazy" /></li>
+<img src="../../images/transcriptomics_images/Trackster_opening_window.png" alt="Trackster opening window. " width="1264" height="361" loading="lazy" /></li>
       </ul>
     </li>
     <li><strong>Viz</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Click “Add datasets to visualization”
@@ -1482,7 +1488,7 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
       <p><i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Repeat the previous step on the other three bigWig files representing the minus strand.</p>
     </li>
     <li><i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Adjust the track height of the bigWig files to be consistent for each set of plus strand and minus strand tracks.
-<img src="../../images/transcriptomics_images/Hoxb13_locus_screenshot.png" alt="Adjusting the track height. " loading="lazy" /></li>
+<img src="../../images/transcriptomics_images/Hoxb13_locus_screenshot.png" alt="Adjusting the track height. " width="1754" height="716" loading="lazy" /></li>
     <li><i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Direct Trackster to the coordinates: chr11:96191452-96206029, what do you see?</li>
   </ol>
 
@@ -1506,7 +1512,7 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
 
 <p>In this tutorial, we have analyzed RNA sequencing data to extract useful information, such as which genes are expressed in the G1E and megakaryocyte cellular states and which of these genes are differentially expressed between the two cellular states. In addition, we identified unannotated genes that are expressed in a cell-state dependent manner and at a locus with relevance to differentiation and development. To identify these transcripts, we analyzed RNA sequence datasets using a de novo transcriptome reconstruction RNA-seq data analysis approach. This approach can be summed up with the following scheme:</p>
 
-<p><img src="../../images/transcriptomics_images/schematic_for_RNAseq_de_novo_tutorial.png" alt="RNAseq de novo tutorial workflow. " loading="lazy" /></p>
+<p><img src="../../images/transcriptomics_images/schematic_for_RNAseq_de_novo_tutorial.png" alt="RNAseq de novo tutorial workflow. " width="960" height="540" loading="lazy" /></p>
 
                 </section>
 
@@ -1562,6 +1568,9 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
                             Mallory Freeberg, Mo Heydarian,  <b>De novo transcriptome reconstruction with RNA-Seq (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/de-novo/tutorial.html">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/de-novo/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
+                        Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
+                        </li>
+                        <li>
                         Batut et al., 2018 <b>Community-Driven Data Analysis Training for Biology</b> Cell Systems <a href="https://doi.org/10.1016%2Fj.cels.2018.05.012">10.1016/j.cels.2018.05.012</a>
                         </li>
                     </ol>
@@ -1583,12 +1592,12 @@ https://zenodo.org/record/583140/files/RefSeq_reference_GTF_%28DSv2%29
 
 <code id="citation-code">@misc{transcriptomics-de-novo,
 author = "Mallory Freeberg and Mo Heydarian",
-title = "De novo transcriptome reconstruction with RNA-Seq (Galaxy Training Materials)",
-year = "",
-month = "",
-day = ""
-url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/de-novo/tutorial.html}",
-note = "[Online; accessed TODAY]"
+	title = "De novo transcriptome reconstruction with RNA-Seq (Galaxy Training Materials)",
+	year = "",
+	month = "",
+	day = ""
+	url = "\url{https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/de-novo/tutorial.html}",
+	note = "[Online; accessed TODAY]"
 }
 @article{Hiltemann_2023,
 	doi = {10.1371/journal.pcbi.1010752},
@@ -1713,19 +1722,19 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/2dea2e26753582aeea3dc90b0862d11716e2b8b5">2dea2e2</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/5dfffa20beac5d975ef9b8fa1887f634380575b8">5dfffa2</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
 				
 				<p>
-					Resource <abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00289">https://gxy.io/GTN:T00289</a>
+					Resource <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:T00289">https://gxy.io/GTN:T00289</a>
 				</p>
 				
 				<p>
+					<i>This Material</i>:
 					
-						This material licensed under
-					
+					is licensed under
 					<a rel="license" href="https://spdx.org/licenses/CC-BY-4.0">
 						Creative Commons Attribution 4.0 International License
 					</a>
@@ -1745,7 +1754,7 @@ tools:
 </footer>
 
         <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-        <script src="/training-material/assets/js/popper.min.js"></script>
+	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
         <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
         <script src="/training-material/assets/js/details-element-polyfill.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -1753,9 +1762,13 @@ tools:
         <script src="/training-material/assets/js/main.js"></script>
         <script src="/training-material/assets/js/clipboard.min.js"></script>
         <script>
-        var snippets=document.querySelectorAll('div.highlight');
-        [].forEach.call(snippets,function(snippet){
-            snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+        document.querySelectorAll('div.highlight').forEach((snippet) => {
+                // Google translate has additional #text nodes mixed in with
+                // the pre for some reason.
+                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
+                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
+                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+                }
         });
 
         var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{

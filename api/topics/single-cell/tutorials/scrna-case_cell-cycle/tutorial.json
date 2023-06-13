@@ -39,6 +39,7 @@
       "hrukkudyr"
     ]
   },
+  "short_id": "T00248",
   "url": "/topics/single-cell/tutorials/scrna-case_cell-cycle/tutorial.html",
   "topic_name": "single-cell",
   "tutorial_name": "scrna-case_cell-cycle",
@@ -82,7 +83,8 @@
       "license": null,
       "creators": [
 
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/single-cell/tutorials/scrna-case_cell-cycle/tutorial.json",
@@ -116,6 +118,7 @@
       }
     ]
   },
+  "topic_name_human": "Single Cell",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

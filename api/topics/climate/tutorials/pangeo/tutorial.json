@@ -40,6 +40,7 @@
       "page": "https://training.galaxyproject.org/training-material/hall-of-fame/annefou/"
     }
   ],
+  "short_id": "T00044",
   "url": "/topics/climate/tutorials/pangeo/tutorial.html",
   "topic_name": "climate",
   "tutorial_name": "pangeo",
@@ -101,7 +102,8 @@
           "name": "Anne Fouilloux",
           "url": "https://github.com/annefou"
         }
-      ]
+      ],
+      "test_results": null
     }
   ],
   "api": "https://training.galaxyproject.org/training-material/api/topics/climate/tutorials/pangeo/tutorial.json",
@@ -135,6 +137,7 @@
 
     ]
   },
+  "topic_name_human": "Climate",
   "admin_install": {
     "install_tool_dependencies": true,
     "install_repository_dependencies": true,

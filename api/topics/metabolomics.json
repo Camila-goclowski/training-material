@@ -100,6 +100,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/"
         }
       ],
+      "short_id": "T00195",
       "url": "/topics/metabolomics/tutorials/lcms/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "lcms",
@@ -126,7 +127,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/metabolomics/tutorials/lcms/tutorial.json",
@@ -172,6 +174,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -327,6 +330,7 @@
           "hexylena"
         ]
       },
+      "short_id": "T00344",
       "url": "/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "gc_ms_with_xcms",
@@ -357,7 +361,8 @@
               "email": "mailto:GalaxyToolsDevelopmentandDeployment@space.muni.cz",
               "name": "RECETOX"
             }
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.json",
@@ -386,6 +391,7 @@
 
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -611,6 +617,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/foellmelanie/"
         }
       ],
+      "short_id": "T00199",
       "url": "/topics/metabolomics/tutorials/msi-finding-nglycans/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "msi-finding-nglycans",
@@ -637,7 +644,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/metabolomics/tutorials/msi-finding-nglycans/tutorial.json",
@@ -686,6 +694,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -818,6 +827,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/MarenStillger/"
         }
       ],
+      "short_id": "T00198",
       "url": "/topics/metabolomics/tutorials/msi-analyte-distribution/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "msi-analyte-distribution",
@@ -844,7 +854,8 @@
           "license": null,
           "creators": [
 
-          ]
+          ],
+          "test_results": null
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/metabolomics/tutorials/msi-analyte-distribution/tutorial.json",
@@ -889,6 +900,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1014,6 +1026,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/"
         }
       ],
+      "short_id": "T00197",
       "url": "/topics/metabolomics/tutorials/lcms-preprocessing/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "lcms-preprocessing",
@@ -1064,6 +1077,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1201,6 +1215,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/cecilecanlet/"
         }
       ],
+      "short_id": "S00076",
       "url": "/topics/metabolomics/tutorials/introduction/slides.html",
       "topic_name": "metabolomics",
       "tutorial_name": "introduction",
@@ -1241,6 +1256,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1306,6 +1322,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/jsaintvanne/"
         }
       ],
+      "short_id": "T00194",
       "url": "/topics/metabolomics/tutorials/gcms/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "gcms",
@@ -1354,6 +1371,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1453,6 +1471,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/workflow4metabolomics/"
         }
       ],
+      "short_id": "T00196",
       "url": "/topics/metabolomics/tutorials/lcms-dataprocessing/tutorial.html",
       "topic_name": "metabolomics",
       "tutorial_name": "lcms-dataprocessing",
@@ -1497,6 +1516,7 @@
           }
         ]
       },
+      "topic_name_human": "Metabolomics",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,

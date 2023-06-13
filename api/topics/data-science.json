@@ -213,6 +213,7 @@
         "SQL",
         "R"
       ],
+      "short_id": "T00110",
       "url": "/topics/data-science/tutorials/sql-r/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-r",
@@ -253,6 +254,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -367,6 +369,7 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
         }
       ],
+      "short_id": "T00073",
       "url": "/topics/data-science/tutorials/bash-variant-calling/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "bash-variant-calling",
@@ -407,6 +410,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -568,6 +572,7 @@
       "tags": [
         "bash"
       ],
+      "short_id": "T00074",
       "url": "/topics/data-science/tutorials/cli-advanced/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "cli-advanced",
@@ -608,6 +613,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -712,6 +718,7 @@
         "SQL",
         "Python"
       ],
+      "short_id": "T00109",
       "url": "/topics/data-science/tutorials/sql-python/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-python",
@@ -752,6 +759,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -837,6 +845,7 @@
           "erasmusplus"
         ]
       },
+      "short_id": "T00103",
       "url": "/topics/data-science/tutorials/r-basics/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "r-basics",
@@ -909,6 +918,7 @@
 
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1132,6 +1142,7 @@
       "tags": [
         "bash"
       ],
+      "short_id": "T00076",
       "url": "/topics/data-science/tutorials/cli-basics/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "cli-basics",
@@ -1172,6 +1183,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1328,6 +1340,7 @@
       "tags": [
         "SQL"
       ],
+      "short_id": "T00106",
       "url": "/topics/data-science/tutorials/sql-advanced/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-advanced",
@@ -1378,6 +1391,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1462,6 +1476,7 @@
           "erasmusplus"
         ]
       },
+      "short_id": "T00072",
       "url": "/topics/data-science/tutorials/bash-git/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "bash-git",
@@ -1502,6 +1517,7 @@
 
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1733,6 +1749,7 @@
       "tags": [
         "SQL"
       ],
+      "short_id": "T00107",
       "url": "/topics/data-science/tutorials/sql-basic/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-basic",
@@ -1783,6 +1800,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -1843,6 +1861,7 @@
           ]
         }
       ],
+      "short_id": "T00079",
       "url": "/topics/data-science/tutorials/git-cli/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "git-cli",
@@ -1883,6 +1902,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2007,6 +2027,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00083",
       "url": "/topics/data-science/tutorials/python-basics/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-basics",
@@ -2047,6 +2068,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2161,6 +2183,7 @@
         "SciWMS": "Scientific Workflow Management System",
         "DAG": "Directed Acyclic Graph"
       },
+      "short_id": "T00105",
       "url": "/topics/data-science/tutorials/snakemake/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "snakemake",
@@ -2201,6 +2224,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2314,6 +2338,7 @@
         "game",
         "SQL"
       ],
+      "short_id": "T00108",
       "url": "/topics/data-science/tutorials/sql-game/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-game",
@@ -2354,6 +2379,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2455,6 +2481,7 @@
         "game",
         "bash"
       ],
+      "short_id": "T00075",
       "url": "/topics/data-science/tutorials/cli-bashcrawl/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "cli-bashcrawl",
@@ -2495,6 +2522,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2587,6 +2615,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00094",
       "url": "/topics/data-science/tutorials/python-math/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-math",
@@ -2627,6 +2656,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2738,6 +2768,7 @@
       "abbreviations": {
         "DRY": "Don't Repeat Yourself"
       },
+      "short_id": "T00089",
       "url": "/topics/data-science/tutorials/python-functions/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-functions",
@@ -2778,6 +2809,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -2882,6 +2914,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00081",
       "url": "/topics/data-science/tutorials/python-advanced-np-pd/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-advanced-np-pd",
@@ -2922,6 +2955,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3070,6 +3104,7 @@
       "tags": [
         "R"
       ],
+      "short_id": "T00102",
       "url": "/topics/data-science/tutorials/r-advanced/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "r-advanced",
@@ -3141,6 +3176,7 @@
 
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3244,6 +3280,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00096",
       "url": "/topics/data-science/tutorials/python-plotting/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-plotting",
@@ -3284,6 +3321,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3394,6 +3432,7 @@
         "R"
       ],
       "license": "MIT",
+      "short_id": "T00104",
       "url": "/topics/data-science/tutorials/r-dplyr/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "r-dplyr",
@@ -3434,6 +3473,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3540,6 +3580,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00099",
       "url": "/topics/data-science/tutorials/python-types/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-types",
@@ -3580,6 +3621,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3686,6 +3728,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00091",
       "url": "/topics/data-science/tutorials/python-iterables/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-iterables",
@@ -3726,6 +3769,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3830,6 +3874,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00088",
       "url": "/topics/data-science/tutorials/python-flow/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-flow",
@@ -3870,6 +3915,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -3982,6 +4028,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00093",
       "url": "/topics/data-science/tutorials/python-loops/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-loops",
@@ -4022,6 +4069,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4119,6 +4167,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00087",
       "url": "/topics/data-science/tutorials/python-files/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-files",
@@ -4159,6 +4208,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4254,6 +4304,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00086",
       "url": "/topics/data-science/tutorials/python-exceptions/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-exceptions",
@@ -4294,6 +4345,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4400,6 +4452,7 @@
       "abbreviations": {
         "ORF": "Open Reading Frame"
       },
+      "short_id": "T00084",
       "url": "/topics/data-science/tutorials/python-basics-recap/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-basics-recap",
@@ -4440,6 +4493,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4510,6 +4564,7 @@
         ]
       },
       "priority": 10,
+      "short_id": "T00082",
       "url": "/topics/data-science/tutorials/python-argparse/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-argparse",
@@ -4550,6 +4605,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4665,6 +4721,7 @@
       "notebook": {
         "language": "bash"
       },
+      "short_id": "T00101",
       "url": "/topics/data-science/tutorials/python-venv/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-venv",
@@ -4705,6 +4762,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4821,6 +4879,7 @@
       "notebook": {
         "language": "bash"
       },
+      "short_id": "T00085",
       "url": "/topics/data-science/tutorials/python-conda/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-conda",
@@ -4861,6 +4920,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -4975,6 +5035,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00100",
       "url": "/topics/data-science/tutorials/python-typing/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-typing",
@@ -5015,6 +5076,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5153,6 +5215,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00098",
       "url": "/topics/data-science/tutorials/python-testing/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-testing",
@@ -5193,6 +5256,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5343,6 +5407,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00090",
       "url": "/topics/data-science/tutorials/python-glob/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-glob",
@@ -5383,6 +5448,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5478,6 +5544,7 @@
         "language": "python",
         "pyolite": true
       },
+      "short_id": "T00097",
       "url": "/topics/data-science/tutorials/python-subprocess/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-subprocess",
@@ -5518,6 +5585,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5593,6 +5661,7 @@
       "abbreviations": {
         "PEP": "Python Enhancement Proposal"
       },
+      "short_id": "T00092",
       "url": "/topics/data-science/tutorials/python-linting/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-linting",
@@ -5633,6 +5702,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
@@ -5746,6 +5816,7 @@
       "abbreviations": {
         "GIL": "Global Interpreter Lock"
       },
+      "short_id": "T00095",
       "url": "/topics/data-science/tutorials/python-multiprocessing/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-multiprocessing",
@@ -5786,6 +5857,7 @@
           }
         ]
       },
+      "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
