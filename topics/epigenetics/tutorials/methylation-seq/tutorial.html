@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -63,7 +65,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: DNA Methylation data analysis">
         <meta property="og:description" content="DNA methylation is an epigenetic mechanism used by higher...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -295,13 +297,13 @@ Sentry.init({
   "mentions": [
 
   ],
-  "abstract": "> <div class=\"box-title agenda-title\" id=\"agenda\">Agenda</div>"
+  "abstract": "> <div class="box-title agenda-title" id="agenda">Agenda</div>"
 }
         </script>
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -436,7 +438,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -473,14 +475,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-epigenetics">
     <h1 data-toc-skip>DNA Methylation data analysis</h1>
@@ -490,7 +485,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/joachimwolff/" class="contributor-badge contributor-joachimwolff"><img src="https://avatars.githubusercontent.com/joachimwolff?s=36" alt="Avatar">Joachim Wolff</a><a href="/training-material/hall-of-fame/dpryan79/" class="contributor-badge contributor-dpryan79"><img src="https://avatars.githubusercontent.com/dpryan79?s=36" alt="Avatar">Devon Ryan</a>
+		Authors: <a href="/training-material/hall-of-fame/joachimwolff/" class="contributor-badge contributor-joachimwolff"><img src="https://avatars.githubusercontent.com/joachimwolff?s=36" alt="Avatar" width="36" height="36">Joachim Wolff</a><a href="/training-material/hall-of-fame/dpryan79/" class="contributor-badge contributor-dpryan79"><img src="https://avatars.githubusercontent.com/dpryan79?s=36" alt="Avatar" width="36" height="36">Devon Ryan</a>
 	</div>
 
 </div>
@@ -569,6 +564,8 @@ Sentry.init({
                     
                         
                     
+                        
+                    
                 
                     
                         
@@ -586,6 +583,8 @@ Sentry.init({
                                 
                             
                             </li>
+                        
+                    
                         
                     
                         
@@ -777,7 +776,7 @@ Sentry.init({
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
                 <blockquote class="agenda">
-  <div class="box-title agenda-title" id="agenda">Agenda</div>
+  <div class="box-title agenda-title" id="agenda-1">Agenda</div>
 
   <p>In this tutorial, we will deal with:</p>
 
@@ -801,7 +800,7 @@ Sentry.init({
 <p>We will start by loading the example dataset which will be used for the tutorial into Galaxy</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-the-data-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Get the data into Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-get-the-data-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get the data into Galaxy</div>
 
   <ol>
     <li>
@@ -835,7 +834,7 @@ https://zenodo.org/record/557099/files/subset_2.fastq
 <p>The first step in any analysis should always be quality control. We will use the FastQC tool to asses the quality of our reads and determine if we need to perform any data cleaning before proceeding with our analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Quality Control</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality Control</div>
 
   <ol>
     <li><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -853,7 +852,7 @@ https://zenodo.org/record/557099/files/subset_2.fastq
       <p><img src="../../images/fastqc.png" alt="FastQC webpage results. " width="1065" height="771" loading="lazy" /></p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
           <li>Note the GC distribution and percentage of “T” and “C”. Why is this so weird?</li>
@@ -861,7 +860,7 @@ https://zenodo.org/record/557099/files/subset_2.fastq
         </ol>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <ol>
             <li>The attentive audience of the theory part knows: Every C-meth stays a C and every normal C becomes a T during the bisulfite conversion.</li>
             <li>Yes it is. Always be careful and have the specific characteristics of your data in mind during the interpretation of FastQC results.</li>
@@ -876,7 +875,7 @@ https://zenodo.org/record/557099/files/subset_2.fastq
 <h1 id="alignment">Alignment</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapping-with-bwameth"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Mapping with bwameth</div>
+  <div class="box-title hands-on-title" id="hands-on-mapping-with-bwameth"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapping with bwameth</div>
 
   <p>We will map now the imported dataset against a reference genome.</p>
 
@@ -889,12 +888,12 @@ Compute now the alignment. Please notice that depending on your system this comp
       </ul>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>Why we need other alignment tools for bisulfite sequencing data?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <p>You may have noticed that all the C’s are C-meth’s and a T can be a T or a C. A mapper for methylation data needs to find out what is what.</p>
         </blockquote>
       </blockquote>
@@ -906,7 +905,7 @@ Compute now the alignment. Please notice that depending on your system this comp
 <h1 id="methylation-bias-and-metric-extraction">Methylation bias and metric extraction</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-methylation-bias"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Methylation bias</div>
+  <div class="box-title hands-on-title" id="hands-on-methylation-bias"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Methylation bias</div>
 
   <p>In this step we will have a look at the distribution of the methylation and will look at a possible bias.</p>
 
@@ -922,7 +921,7 @@ Compute now the alignment. Please notice that depending on your system this comp
       <p><img src="../../images/methylation_bias_example_data.png" alt="Methylation bias example. " width="660" height="660" loading="lazy" /></p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
           <li>Consider the <code class="language-plaintext highlighter-rouge">original top strand</code> output. Is there a methylation bias?</li>
@@ -930,7 +929,7 @@ Compute now the alignment. Please notice that depending on your system this comp
         </ol>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <ol>
             <li>The distribution of the methylation is more or less equal. Only at the start and the end we could trim a bit but a +- 5% variation is acceptable.</li>
             <li>To trim the reads we would include for the first strand only the positions 0 to 145, for the second 6 to 149.</li>
@@ -943,7 +942,7 @@ Compute now the alignment. Please notice that depending on your system this comp
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-methylation-extraction-with-methyldackel"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Methylation extraction with MethylDackel</div>
+  <div class="box-title hands-on-title" id="hands-on-methylation-extraction-with-methyldackel"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Methylation extraction with MethylDackel</div>
 
   <p>We will extract the methylation on the resulting BAM file of the alignment step. We need this to create a methylation level plot in the next step.</p>
 
@@ -965,7 +964,7 @@ Compute now the alignment. Please notice that depending on your system this comp
 <h1 id="visualization">Visualization</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
 
   <p>In this step we want to visualize the methylation level around all TSS of our data. When located at gene promoters, DNA methylation is usually a repressive mark.</p>
 
@@ -976,7 +975,7 @@ Compute now the alignment. Please notice that depending on your system this comp
           <p>Use the result of MethylDackel to transform it to a bigWig file.</p>
 
           <blockquote class="tip">
-            <div class="box-title tip-title" id="tip-database-edit"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-database-edit" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Database edit<span class="fold-unfold fa fa-minus-square"></span></button></div>
+            <div class="box-title tip-title" id="tip-database-edit"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-database-edit" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Database edit<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
             <p>It can happen that you can not select the correct input file. In this case you have to add meta information about the used genome to the file.</p>
             <ul>
@@ -1014,18 +1013,18 @@ Compute now the alignment. Please notice that depending on your system this comp
       </ul>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-3"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>The execution fails. Do you have an idea why?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-3"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-3" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <p>A conversion to bigWig would fail right now, probably with some error message like <code class="language-plaintext highlighter-rouge">hashMustFindVal: '1' not found</code>. The reason is the source of the reference genome which was used. There is ensembl and UCSC as sources which differ in naming the chromosomes. Ensembl is using just numbers e.g. 1 for chromosome one. UCSC is using chr1 for the same. Be careful with this especially if you have data from different sources. We need to convert this.</p>
         </blockquote>
       </blockquote>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-ucsc-ensembl-convert"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: UCSC - Ensembl convert</div>
+        <div class="box-title comment-title" id="comment-ucsc-ensembl-convert"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: UCSC - Ensembl convert</div>
 
         <ul>
           <li>Download the <code class="language-plaintext highlighter-rouge">Replace information file</code> for hg38 chromosome: <a href="https://raw.githubusercontent.com/dpryan79/ChromosomeMappings/master/GRCh38_ensembl2UCSC.txt">Download</a> and import it to Galaxy.</li>
@@ -1050,7 +1049,7 @@ Compute now the alignment. Please notice that depending on your system this comp
 <h1 id="metilene">Metilene</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-metilene"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Metilene</div>
+  <div class="box-title hands-on-title" id="hands-on-metilene"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Metilene</div>
 
   <p>With metilene it is possible to detect differentially methylated regions (DMRs) which is a necessary prerequisite for characterizing different epigenetic states.</p>
 
@@ -1066,12 +1065,12 @@ Compute now the alignment. Please notice that depending on your system this comp
       <p>More information about metilene can be found here: https://www.bioinf.uni-leipzig.de/Software/metilene</p>
 
       <blockquote class="question">
-        <div class="box-title question-title" id="question-4"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-4"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <p>Have a look at the produced pdf document. What is the data showing?</p>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <p>It shows the distribution of DMR differences, DMR length in nucleotides and number CpGs, DMR differences vs. q-values, mean methylation group 1 vs. mean methylation group 2 and DMR length in nucleotides vs. length in CpGs</p>
         </blockquote>
       </blockquote>
@@ -1285,7 +1284,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1316,41 +1315,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

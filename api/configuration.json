@@ -116,7 +116,7 @@
   "github_repository": "https://github.com/galaxyproject/training-material",
   "github_repository_branch": "main",
   "gitter_url": "https://gitter.im/Galaxy-Training-Network/Lobby",
-  "logo": "assets/images/GTN.png",
+  "logo": "assets/images/GTNLogo1000.png",
   "small_logo": "assets/images/GTN-60px.png",
   "help_url": "https://help.galaxyproject.org/",
   "other_languages": {
@@ -126,6 +126,28 @@
     "es": "Español",
     "pt": "Português",
     "ar": "العربية"
+  },
+  "javascript_bundles": {
+    "theme": {
+      "preload": true,
+      "resources": [
+        "assets/js/theme.js"
+      ],
+      "timestamp": 1692219109
+    },
+    "main": {
+      "preload": true,
+      "resources": [
+        "assets/js/jquery.slim.min.js",
+        "assets/js/popper.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/bootstrap-toc.min.js",
+        "assets/js/clipboard.min.js",
+        "assets/js/list.min.js",
+        "assets/js/main.js"
+      ],
+      "timestamp": 1692219109
+    }
   },
   "figurify": {
     "skip_empty": true,
@@ -263,16 +285,11 @@
     "video-slides": "far fa-play-circle",
     "zenodo_link": "far fa-copy"
   },
-  "announcement": {
-    "class": "success",
-    "title": "GTN Celebrates Pride Month",
-    "text": "June is pride month in many countries around the world! The GTN is celebrating it by remembering the story of Alan L. Hart, a trans doctor who pioneered the use of x-ray photography in tuberculosis detection.\n\n[Read about Alan L. Hart's contribution to M. Tuberculosis](/training-material/news/2023/06/01/hart.html){: .btn.btn-primary}\n<a href=\"#\" class=\"btn btn-success\" onclick=\"setTheme('progress')\">Activate the GTN Theme!</a>\n\n<strong>Note:</strong> You can change your theme any time via the 'Extras' menu at the top!\n"
-  },
   "serving": false,
   "boxify": {
   },
-  "git_revision": "fbddb69c6b78d00ea18400ca7bec74d2b5006510",
-  "git_revision_short": "fbddb69",
+  "git_revision": "a20023d4520db76364bfad637810cad968628355",
+  "git_revision_short": "a20023d",
   "gtn_fork": "Camila-goclowski",
   "git_tags": [
     "2019-02-07",

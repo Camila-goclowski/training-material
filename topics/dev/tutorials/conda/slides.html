@@ -19,7 +19,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -336,7 +336,7 @@ class: center, middle, inverse
 
 
 
-<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" class="cover-logo"/>
+<img src="/training-material/assets/images/GTNLogo1000.png" alt="Galaxy Training Network" class="cover-logo"/>
 
 
 # Tool Dependencies and Conda
@@ -345,14 +345,17 @@ class: center, middle, inverse
 <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar">Nicola Soranzo</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar">John Chilton</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/hmenager/" class="contributor-badge contributor-hmenager"><img src="https://avatars.githubusercontent.com/hmenager?s=36" alt="Avatar">Hervé Ménager</a>
+		Authors: <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar" width="36" height="36">Nicola Soranzo</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar" width="36" height="36">John Chilton</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar" width="36" height="36">Björn Grüning</a><a href="/training-material/hall-of-fame/hmenager/" class="contributor-badge contributor-hmenager"><img src="https://avatars.githubusercontent.com/hmenager?s=36" alt="Avatar" width="36" height="36">Hervé Ménager</a>
 	</div>
 
 </div>
 
 
 <!-- modified date -->
-<div class="footnote" style="bottom: 8em;"><i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated: </div>
+<div class="footnote" style="bottom: 8em;">
+  <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Updated:  &nbsp;
+  <i class="fas fa-fingerprint" aria-hidden="true"></i><span class="visually-hidden">purl</span><abbr title="Persistent URL">PURL</abbr>: <a href="https://gxy.io/GTN:S00045">gxy.io/GTN:S00045</a>
+</div>
 
 
 <!-- other slide formats (video and plain-text) -->
@@ -790,20 +793,20 @@ The following line indicates the seqtk package was found:
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 ![Cartoon of people jumping.](../../images/exercise.png)
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-1&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### The Goal
 - Use the Planemo commands `conda_install`, `conda_env`, and `test` to practice the Galaxy tool dependency development lifecycle.
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-2&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Steps
 
@@ -879,13 +882,13 @@ only one that will be used by Galaxy by default.
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-3&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 ![Cartoon of people jumping.](../../images/exercise.png)
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-4&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### The Goal
 - Find the correct package and version for a tool in a best practice channel.
@@ -893,7 +896,7 @@ only one that will be used by Galaxy by default.
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-5&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Steps
 
@@ -1172,13 +1175,13 @@ cache.
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-6&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 ![Cartoon of people jumping.](../../images/exercise.png)
 
 ---
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-7&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### The Goal
 - Implement and test a local Conda recipe.
@@ -1188,7 +1191,7 @@ cache.
 
 class: left
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-8&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Before
 
@@ -1206,7 +1209,7 @@ This directory contains the outline of a tool for [fleeqtk](https://github.com/j
 
 class: left
 
-&lt;div class=&quot;box-title hands-on-title&quot; id=&quot;hands-on-hands-on-9&quot;&gt;&lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot; &gt;&lt;/i&gt; Hands-on: Hands-on&lt;/div&gt;
+&lt;hands-on-title&gt;Hands-on&lt;/hands-on-title&gt;
 
 #### Steps
 
@@ -1559,7 +1562,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar">Nicola Soranzo</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar">John Chilton</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar">Björn Grüning</a><a href="/training-material/hall-of-fame/hmenager/" class="contributor-badge contributor-hmenager"><img src="https://avatars.githubusercontent.com/hmenager?s=36" alt="Avatar">Hervé Ménager</a>
+		Authors: <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Avatar" width="36" height="36">Nicola Soranzo</a><a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar" width="36" height="36">John Chilton</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Avatar" width="36" height="36">Björn Grüning</a><a href="/training-material/hall-of-fame/hmenager/" class="contributor-badge contributor-hmenager"><img src="https://avatars.githubusercontent.com/hmenager?s=36" alt="Avatar" width="36" height="36">Hervé Ménager</a>
 	</div>
 
 </div>
@@ -1567,7 +1570,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
 
-<img src="/training-material/assets/images/GTN.png" alt="Galaxy Training Network" style="height: 100px;"/>
+<img src="/training-material/assets/images/GTNLogo1000.png" alt="Galaxy Training Network" style="height: 100px;"/>
 
 
 </div>

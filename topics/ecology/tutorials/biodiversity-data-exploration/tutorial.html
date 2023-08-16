@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,18 +39,20 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Biodiversity data exploration">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2022-10-28 13:12:31 +0000">
+<meta name="DC.date" content="2023-06-27 15:40:57 +0000">
 <meta name="DC.creator" content="Olivier Norvez">
 <meta name="DC.creator" content="Marie Josse">
 <meta name="DC.creator" content="Coline Royaux">
@@ -65,7 +67,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Biodiversity data exploration">
         <meta property="og:description" content="Learn to analyse Ecological data through Galaxy.">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -94,7 +96,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2022-10-28 13:12:31 +0000",
+  "dateModified": "2023-06-27 15:40:57 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Biodiversity data exploration",
   "interactivityType": "mixed",
@@ -296,7 +298,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -431,7 +433,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -468,14 +470,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-ecology">
     <h1 data-toc-skip>Biodiversity data exploration</h1>
@@ -485,7 +480,30 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/onorvez/" class="contributor-badge contributor-onorvez"><img src="https://avatars.githubusercontent.com/onorvez?s=36" alt="Avatar">Olivier Norvez</a><a href="/training-material/hall-of-fame/Marie59/" class="contributor-badge contributor-Marie59"><img src="https://avatars.githubusercontent.com/Marie59?s=36" alt="Avatar">Marie Josse</a><a href="/training-material/hall-of-fame/colineroyaux/" class="contributor-badge contributor-colineroyaux"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/colineroyaux?s=36" alt="Avatar">Coline Royaux</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar">Yvan Le Bras</a>
+		
+<table class="contributions">
+	
+	<tr>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/onorvez/" class="contributor-badge contributor-onorvez"><img src="https://avatars.githubusercontent.com/onorvez?s=36" alt="Avatar" width="36" height="36">Olivier Norvez</a><a href="/training-material/hall-of-fame/Marie59/" class="contributor-badge contributor-Marie59"><img src="https://avatars.githubusercontent.com/Marie59?s=36" alt="Avatar" width="36" height="36">Marie Josse</a><a href="/training-material/hall-of-fame/colineroyaux/" class="contributor-badge contributor-colineroyaux"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/colineroyaux?s=36" alt="Avatar" width="36" height="36">Coline Royaux</a><a href="/training-material/hall-of-fame/yvanlebras/" class="contributor-badge contributor-yvanlebras"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/yvanlebras?s=36" alt="Avatar" width="36" height="36">Yvan Le Bras</a>
+		</td>
+	</tr>
+	
+
+
+	
+
+	
+
+	
+
+	
+
+	
+</table>
+
+
 	</div>
 
 </div>
@@ -689,7 +707,7 @@ Sentry.init({
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 28, 2022 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 27, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -719,7 +737,7 @@ Sentry.init({
 <p>We’ll be using Reef Life Survey (RLS) data extracted from the Australian Ocean Data Network (AODN) portal. We’ll use a subset done directly on the AODN data portal (https://portal.aodn.org.au/) on this dataset “IMOS - National Reef Monitoring Network Sub-Facility - Global reef fish abundance and biomass”. We decided to use data only on the Mollusca phylum from the east coast of Australia between 2008 and 2021. We’ll explore this dataset in the view of making statistical analyses so we will check the homoscedasticity and normality of the variables, see if some variables are correlated, how the data is distributed through space and time, etc … And finally, we’ll explore Beta diversity through the computation of the SCBD and LCBD (Species and Local Contribution to Beta Diversity).</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-definitions-of-scbd-and-lcbd"><button class="gtn-boxify-button details" type="button" aria-controls="details-definitions-of-scbd-and-lcbd" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Definitions of SCBD and LCBD<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-definitions-of-scbd-and-lcbd"><button class="gtn-boxify-button details" type="button" aria-controls="details-definitions-of-scbd-and-lcbd" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Definitions of SCBD and LCBD<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>Species Contribution to Beta Diversity: degree of variation for individual species across the study area.</p>
 
@@ -772,7 +790,7 @@ Sentry.init({
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial and give it a name (example: “RLS for biodiversity data exploration tutorial”)
@@ -814,7 +832,7 @@ metadata of the dataframe in the first lines before the dataframe so you’ll ha
 <p>In order to clean unnecessary informations from the table we will now cut a few columns and change the format of time information.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clean-your-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Clean your data</div>
+  <div class="box-title hands-on-title" id="hands-on-clean-your-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clean your data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0" title="Advanced cut columns from a table (cut) tool" aria-role="link"><strong>Advanced cut columns from a table (cut)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0</span></span>
@@ -851,7 +869,7 @@ with following parameters :
 <h2 id="homoscedasticity-and-normality-analysis">Homoscedasticity and normality analysis</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-here-we-will-check-homogeneity-of-variances-levene-test-for-every-species-and-represent-it-through-multiple-boxplots-and-the-normal-distribution-kolmogorov-smirnov-test-represented-by-a-distribution-histogram-and-a-q-q-plot"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Here we will check homogeneity of variances (Levene test) for every species and represent it through multiple boxplots and the normal distribution (Kolmogorov-Smirnov test) represented by a distribution histogram and a Q-Q plot.</div>
+  <div class="box-title hands-on-title" id="hands-on-here-we-will-check-homogeneity-of-variances-levene-test-for-every-species-and-represent-it-through-multiple-boxplots-and-the-normal-distribution-kolmogorov-smirnov-test-represented-by-a-distribution-histogram-and-a-q-q-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Here we will check homogeneity of variances (Levene test) for every species and represent it through multiple boxplots and the normal distribution (Kolmogorov-Smirnov test) represented by a distribution histogram and a Q-Q plot.</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_homogeneity_normality/ecology_homogeneity_normality/0.0.0" title="Homoscedasticity and normality tool" aria-role="link"><strong>Homoscedasticity and normality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_homogeneity_normality/ecology_homogeneity_normality/0.0.0</span></span> with the following parameters:
@@ -877,7 +895,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="autocorrelation-in-your-data">Autocorrelation in your data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-autocorrelation"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Autocorrelation</div>
+  <div class="box-title hands-on-title" id="hands-on-autocorrelation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Autocorrelation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0" title="Variables exploration tool" aria-role="link"><strong>Variables exploration</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0</span></span> with the following parameters:
@@ -905,7 +923,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="check-collinearity-in-your-data">Check collinearity in your data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collinearity-between-numerical-variables"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Collinearity between numerical variables</div>
+  <div class="box-title hands-on-title" id="hands-on-collinearity-between-numerical-variables"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Collinearity between numerical variables</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0" title="Variables exploration tool" aria-role="link"><strong>Variables exploration</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0</span></span> with the following parameters:
@@ -932,7 +950,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-abundance-repartition-through-space">Visualize abundance repartition through space</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-abundance-map-in-the-environment"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Abundance map in the environment</div>
+  <div class="box-title hands-on-title" id="hands-on-abundance-map-in-the-environment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Abundance map in the environment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="link"><strong>Presence-absence and abundance</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0</span></span> with the following parameters:
@@ -961,7 +979,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-number-of-locations-where-each-taxons-are-present">Visualize the number of locations where each taxons are present</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-presence-count-of-taxons-barplot"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Presence count of taxons (barplot)</div>
+  <div class="box-title hands-on-title" id="hands-on-presence-count-of-taxons-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Presence count of taxons (barplot)</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="link"><strong>Presence-absence and abundance</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0</span></span> with the following parameters:
@@ -986,7 +1004,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-rarefaction-curves-of-your-species">Visualize the rarefaction curves of your species</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rarefaction-curve-of-species"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Rarefaction curve of species</div>
+  <div class="box-title hands-on-title" id="hands-on-rarefaction-curve-of-species"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rarefaction curve of species</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="link"><strong>Presence-absence and abundance</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0</span></span> with the following parameters:
@@ -1013,7 +1031,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-dispersion-of-a-numeric-variable-and-the-correlation-between-species-absence">Visualize the dispersion of a numeric variable and the correlation between species absence</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-boxplot-of-dispersion-and-correlation-of-absence"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Boxplot of dispersion and correlation of absence</div>
+  <div class="box-title hands-on-title" id="hands-on-boxplot-of-dispersion-and-correlation-of-absence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Boxplot of dispersion and correlation of absence</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_stat_presence_abs/ecology_stat_presence_abs/0.0.0" title="Statistics on presence-absence tool" aria-role="link"><strong>Statistics on presence-absence</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_stat_presence_abs/ecology_stat_presence_abs/0.0.0</span></span> with the following parameters:
@@ -1039,7 +1057,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="local-and-species-contribution-to-beta-diversity-scbd-and-lcbd">Local and Species Contribution to Beta Diversity (SCBD and LCBD)</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_beta_diversity/ecology_beta_diversity/0.0.0" title="Local Contributions to Beta Diversity (LCBD) tool" aria-role="link"><strong>Local Contributions to Beta Diversity (LCBD)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/ecology_beta_diversity/ecology_beta_diversity/0.0.0</span></span> with the following parameters:
@@ -1080,7 +1098,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="bonus-spatial-coordinates-anonymization">Bonus! Spatial coordinates anonymization</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/tool_anonymization/tool_anonymization/0.0.0" title="Spatial coordinates anonymization tool" aria-role="link"><strong>Spatial coordinates anonymization</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/ecology/tool_anonymization/tool_anonymization/0.0.0</span></span> with the following parameters:
@@ -1195,6 +1213,30 @@ author = "Olivier Norvez and Marie Josse and Coline Royaux and Yvan Le Bras",
                 </blockquote>
 
                 
+                
+<div markdown="1">
+<h2 id="funding">Funding</h2>
+<p>These individuals or organisations provided funding support for the development of this resource</p>
+
+<div class="row">
+
+	<div class="col-md-3 col-xs-12">
+		
+		<img class="funder-avatar" src="https://www.erasmusplus.nl/assets/images/logo.png" alt="Logo">
+		
+		<a href="/training-material/hall-of-fame/erasmusplus/" class="btn btn-secondary">See Funder Profile</a>
+	</div>
+	<div class="col-md-9 col-xs-12">
+		<p>This project (<a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717"><code class="language-plaintext highlighter-rouge">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.
+<img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg" alt="eu flag with the text: with the support of the erasmus programme of the european union" /></p>
+
+	</div>
+
+</div>
+</div>
+
+
+                
 
 
 <script>
@@ -1290,7 +1332,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1321,41 +1363,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

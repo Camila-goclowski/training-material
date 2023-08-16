@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -63,7 +65,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Using Workflow Parameters">
         <meta property="og:description" content="A collection of microtutorials explaining various feature...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -224,7 +226,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -359,7 +361,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -396,14 +398,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-galaxy-interface">
     <h1 data-toc-skip>Using Workflow Parameters</h1>
@@ -413,7 +408,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge contributor-mvdbeek"><img src="https://avatars.githubusercontent.com/mvdbeek?s=36" alt="Avatar">Marius van den Beek</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+		Authors: <a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge contributor-mvdbeek"><img src="https://avatars.githubusercontent.com/mvdbeek?s=36" alt="Avatar" width="36" height="36">Marius van den Beek</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 	</div>
 
 </div>
@@ -601,7 +596,7 @@ To make a workflow reusable with slightly different settings you can define and 
 can be added.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-integer-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Import integer workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-import-integer-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import integer workflow</div>
 
   <ol>
     <li>Click on Workflow in the top menu</li>
@@ -628,7 +623,7 @@ that allows the user to set this parameter when running the workflow.</p>
 <figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/connection-module.png" alt="Button for selecting connections. " width="532" height="248" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> The new button for creating a workflow parameter connection. When you click this, it will add a new 'input' to the tool that can be connected, just like other tools in workflows.</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-updating-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Updating the Workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-updating-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Updating the Workflow</div>
 
   <ol>
     <li>
@@ -694,7 +689,7 @@ E. coli UTI89 O18:K1:H7. UPEC)
 <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/workflow_integer_param.gif" alt="Animation of simple integer workflow parameter. " width="775" height="393" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Integer workflow parameter</figcaption></figure>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-parameter-reuse"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-parameter-reuse" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Parameter Reuse<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-parameter-reuse"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-parameter-reuse" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Parameter Reuse<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>You can connect a parameter to multiple steps or to multiple parameters within a step, everywhere you need to use it.</p>
 </blockquote>
@@ -709,7 +704,7 @@ If we want to make the <code class="language-plaintext highlighter-rouge">foo</c
 compose this text parameter using the <code class="language-plaintext highlighter-rouge">Compose text parameter value</code> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compose-a-text-parameter"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Compose a text parameter</div>
+  <div class="box-title hands-on-title" id="hands-on-compose-a-text-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compose a text parameter</div>
   <ol>
     <li>
       <p>Create a new workflow</p>
@@ -761,7 +756,7 @@ compose this text parameter using the <code class="language-plaintext highlighte
 <p>You’ve now built a workflow with a parameterised input! It’s time to test it out.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Running the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the workflow</div>
 
   <ol>
     <li>
@@ -796,7 +791,7 @@ compose this text parameter using the <code class="language-plaintext highlighte
 In this example we will construct a workflow where we calculate the sum of all values in a dataset and then divide the values in this dataset by the sum calculated in the previous step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-construct-workflow-with-parameters-read-from-a-dataset"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Construct Workflow with Parameters read from a dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-construct-workflow-with-parameters-read-from-a-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Construct Workflow with Parameters read from a dataset</div>
 
   <ol>
     <li>Create a new workflow</li>
@@ -848,7 +843,7 @@ In this example we will construct a workflow where we calculate the sum of all v
 <p>With this you’re ready to run the workflow!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Running the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the workflow</div>
 
   <ol>
     <li>
@@ -888,7 +883,7 @@ result of dividing the value in the first column by the sum of all values in
 the first column.</p>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-you-can-try-many-different-parameter-values-at-once"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-you-can-try-many-different-parameter-values-at-once" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: You can try many different parameter values at once<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-you-can-try-many-different-parameter-values-at-once"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-you-can-try-many-different-parameter-values-at-once" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: You can try many different parameter values at once<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <ul>
     <li>Often times you need to try a couple of different parameter values and pick the best one.
@@ -1060,7 +1055,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1091,41 +1086,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

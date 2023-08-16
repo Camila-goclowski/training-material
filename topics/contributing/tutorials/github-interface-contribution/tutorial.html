@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -62,7 +64,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Contributing with GitHub via its interface">
         <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -199,7 +201,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -334,7 +336,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -371,14 +373,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-contributing">
     <h1 data-toc-skip>Contributing with GitHub via its interface</h1>
@@ -388,7 +383,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a>
+		Authors: <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a>
 	</div>
 
 </div>
@@ -581,7 +576,7 @@ Sentry.init({
 <p>The GitHub repository for the training material is: <a href="https://github.com/galaxyproject/training-material">https://github.com/galaxyproject/training-material</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-familiarization-with-github"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Familiarization with GitHub</div>
+  <div class="box-title hands-on-title" id="hands-on-familiarization-with-github"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Familiarization with GitHub</div>
 
   <ol>
     <li>
@@ -608,7 +603,7 @@ Sentry.init({
 <p>This <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file is where we collect the information (name, email, etc) about the different contributors to display them on our <a href="/training-material/hall-of-fame.html">Hall of Fame</a>. You will add your information there. But first you need to sign in to GitHub to be able to change this file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sign-in-to-github"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Sign in to GitHub</div>
+  <div class="box-title hands-on-title" id="hands-on-sign-in-to-github"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sign in to GitHub</div>
 
   <ol>
     <li>
@@ -628,7 +623,7 @@ Sentry.init({
 <p>You can now modify the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file to add your information there</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-edit-a-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Edit a file</div>
+  <div class="box-title hands-on-title" id="hands-on-edit-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Edit a file</div>
 
   <ol>
     <li>Open the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file on GitHub</li>
@@ -657,7 +652,7 @@ Sentry.init({
           <p>Fill the box “Update CONTRIBUTORS.yaml” with “Add &lt; GitHub username &gt; as contributor” (replace &lt; GitHub username &gt; by your GitHub username)</p>
 
           <blockquote class="comment">
-            <div class="box-title comment-title" id="comment-commit-messages"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Commit messages</div>
+            <div class="box-title comment-title" id="comment-commit-messages"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Commit messages</div>
             <p>This a commit message: a description explaining why a particular change was made. Theses messages capture the history of the changes, so other contributors can understand what have been done and why</p>
           </blockquote>
         </li>
@@ -680,7 +675,7 @@ Sentry.init({
 <p>Without realizing it, GitHub let you create your first branch (named here <code class="language-plaintext highlighter-rouge">patch-1</code>) and add a changement on this branch.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-branching"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Branching</div>
+  <div class="box-title comment-title" id="comment-branching"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Branching</div>
   <p>Branching is the way to work on different versions of a repository at one time. By default your repository has one branch named <code class="language-plaintext highlighter-rouge">main</code> which is considered to be the definitive branch. When you create a branch off the main branch, you’re making a copy, or snapshot, of <code class="language-plaintext highlighter-rouge">main</code> as it was at that point in time.</p>
 
   <p>By changing a file in this branch, it will diverge from the <code class="language-plaintext highlighter-rouge">main</code> branch. It will contain data that is only on this new branch.</p>
@@ -695,7 +690,7 @@ Sentry.init({
 <figure id="figure-4" style="max-width: 90%; margin:auto;"><img src="../../images/github_pr_interface.png" alt="Pull request form. " width="1237" height="1094" loading="lazy" /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Pull request form</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-edit-a-file-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Edit a file</div>
+  <div class="box-title hands-on-title" id="hands-on-edit-a-file-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Edit a file</div>
 
   <ol>
     <li>Open and read the <a href="https://github.com/galaxyproject/training-material/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file</li>
@@ -713,7 +708,7 @@ Sentry.init({
           <p>This message is a good way to introduce yourself and to explain the message you made. Be kind and descriptive. It helps the reviewers to understand why you did your changes and if it should be intergrated into the <code class="language-plaintext highlighter-rouge">main</code> branch (and then website).</p>
 
           <blockquote class="comment">
-            <div class="box-title comment-title" id="comment-pull-request-messages"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Pull request messages</div>
+            <div class="box-title comment-title" id="comment-pull-request-messages"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Pull request messages</div>
             <p>GitHub uses <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, a simple Markup language, to render the Pull request messages. You can then add bold test, lists, images, etc.</p>
           </blockquote>
         </li>
@@ -733,7 +728,7 @@ Sentry.init({
       <p><img src="../../images/PR_create_menu.png" alt="Create pull request dropdown in the GitHub interface is shown, the draft pull request button option is highlighted. " width="362" height="239" loading="lazy" /></p>
 
       <blockquote class="details">
-        <div class="box-title details-title" id="details-quot-draft-pull-requests-quot"><button class="gtn-boxify-button details" type="button" aria-controls="details-quot-draft-pull-requests-quot" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: &quot;Draft pull requests&quot;<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title details-title" id="details-quot-draft-pull-requests-quot"><button class="gtn-boxify-button details" type="button" aria-controls="details-quot-draft-pull-requests-quot" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: &quot;Draft pull requests&quot;<span class="fold-unfold fa fa-minus-square"></span></button></div>
         <p><a href="https://github.blog/2019-02-14-introducing-draft-pull-requests/#tag-your-work-in-progress">Creating a pull request as a draft</a> serves as an indication that you are still working on the content.
  Reviewers may comment on the current state and give general feedback, but they will know that they are not looking at the final version of your contribution.</p>
 
@@ -757,7 +752,7 @@ Sentry.init({
 <p>One of the reviewers of your pull request asked you to add your name after your GitHub username in the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-update-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Update a Pull Request</div>
+  <div class="box-title hands-on-title" id="hands-on-update-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Update a Pull Request</div>
 
   <ol>
     <li>Go to the list of pull request tab on GitHub</li>
@@ -808,7 +803,7 @@ Reviewers can now approve and merge your pull request.</p>
 <p>Because this was just a practice pull request, let’s close it again.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-close-the-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Close the Pull Request</div>
+  <div class="box-title hands-on-title" id="hands-on-close-the-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Close the Pull Request</div>
 
   <p>Once you have run through all these steps, please close the pull request again.</p>
 
@@ -828,7 +823,7 @@ Reviewers can now approve and merge your pull request.</p>
 <p>With this tutorial, you learn how to use GitHub to change a file, create a pull request and then contribute to the training material. What you have learned here can be applied to any file.</p>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-more-about-github"><button class="gtn-boxify-button details" type="button" aria-controls="details-more-about-github" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: More about GitHub<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-more-about-github"><button class="gtn-boxify-button details" type="button" aria-controls="details-more-about-github" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: More about GitHub<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>Via the GitHub interface, you can also go further: create file, branch directly, etc.
 To learn that, we recommend you to read the <a href="https://guides.github.com/activities/hello-world/">GitHub guide</a></p>
 </blockquote>
@@ -1113,7 +1108,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1144,41 +1139,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

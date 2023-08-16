@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -62,7 +64,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: From small to large-scale genome comparison">
         <meta property="og:description" content="Genome annotation is a multi-level process that includes ...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -234,7 +236,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -369,7 +371,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -406,14 +408,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxy-genome-annotation/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-genome-annotation">
     <h1 data-toc-skip>From small to large-scale genome comparison</h1>
@@ -423,7 +418,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/estebanpw/" class="contributor-badge contributor-estebanpw"><img src="https://avatars.githubusercontent.com/estebanpw?s=36" alt="Avatar">Esteban Perez-Wohlfeil</a>
+		Authors: <a href="/training-material/hall-of-fame/estebanpw/" class="contributor-badge contributor-estebanpw"><img src="https://avatars.githubusercontent.com/estebanpw?s=36" alt="Avatar" width="36" height="36">Esteban Perez-Wohlfeil</a>
 	</div>
 
 </div>
@@ -743,7 +738,7 @@ Sentry.init({
 <p>First we will be uploading the data to Galaxy so that we can run our tools on it.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mycoplasma-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Mycoplasma data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-mycoplasma-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mycoplasma data upload</div>
 
   <ol>
     <li>
@@ -788,14 +783,14 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
 <p>If you were successful, both sequences should now be available as <code class="language-plaintext highlighter-rouge">.fasta</code> datasets in your history.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
     <li>What do you think about the size of the sequences in regards to the difficulty of comparing them? (You can check the size of the files by clicking on the information icon)</li>
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <ol>
       <li>It always depends on the focus of our study. For instance, if we were looking for optimal alignments, two 1 MB sequences are indeed large enough to make most approaches either fail or take a decent amount of time and resources. On the other hand, if we were looking for seed-based local alignments (e.g. <code class="language-plaintext highlighter-rouge">GECKO</code> or <code class="language-plaintext highlighter-rouge">BLAST</code> (<span class="citation"><a href="#BLAST">Altschul <i>et al.</i> 1990</a></span>) ), the comparison would require merely seconds (check the slides for more information).</li>
     </ol>
@@ -811,7 +806,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
 <p>We will now run a comparison between <em>Mycoplasma hyopneumoniae 232</em> and <em>Mycoplasma hyopneumoniae 7422</em> in Galaxy using <code class="language-plaintext highlighter-rouge">GECKO</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-comparing-two-mycoplasmas-with-gecko"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Comparing two mycoplasmas with GECKO</div>
+  <div class="box-title hands-on-title" id="hands-on-comparing-two-mycoplasmas-with-gecko"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Comparing two mycoplasmas with GECKO</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gecko/gecko/1.2" title="GECKO tool" aria-role="link"><strong>GECKO</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/gecko/gecko/1.2</span></span> with the following parameters
       <ul>
@@ -825,7 +820,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
     </li>
     <li>Check out the files that have been generated, i.e. the <code class="language-plaintext highlighter-rouge">CSV</code> and the <code class="language-plaintext highlighter-rouge">Alignments</code> file.
       <blockquote class="question">
-        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+        <div class="box-title question-title" id="question-1"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
           <li>What information is provided in the <code class="language-plaintext highlighter-rouge">CSV</code> file?</li>
@@ -834,7 +829,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
         </ol>
 
         <blockquote class="solution">
-          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+          <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
           <ol>
             <li>The <code class="language-plaintext highlighter-rouge">CSV</code> file contains a summary of the detected High-Scoring Segment Pairs (HSPs) or alignments. The file is divided in a few rows of metadata (e.g. containing the sequence names) and one row per alignment detected. Check out the <code class="language-plaintext highlighter-rouge">GECKO</code> help (bottom of the tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> page to know what each column does!</li>
             <li>The <code class="language-plaintext highlighter-rouge">Alignments</code> file contains the actual regions of the query and reference sequence for each alignment detected. With this file, you can investigate individual alignments, find mutations and differences between the sequences, extract the aligned part, etc.</li>
@@ -844,7 +839,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
       </blockquote>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-note-about-parameters"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note about parameters</div>
+        <div class="box-title comment-title" id="comment-note-about-parameters"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note about parameters</div>
         <ol>
           <li>Besides the <code class="language-plaintext highlighter-rouge">minimum length</code> and <code class="language-plaintext highlighter-rouge">minimum similarity</code> parameters, which are applied as a filter after the comparison is completed, the <code class="language-plaintext highlighter-rouge">k-mer seed size</code> is an internal parameter that regulates the number of seeds that can be found. A smaller <code class="language-plaintext highlighter-rouge">k-mer</code> size will translate into detecting more seeds, which are starting points for alignments.</li>
           <li>Notice that this parameter must be taken into account depending on the type of sequence that we are working with. For example, if we set <code class="language-plaintext highlighter-rouge">k-mer seed size</code> to <code class="language-plaintext highlighter-rouge">32</code>, then <code class="language-plaintext highlighter-rouge">GECKO</code> will attempt to find alignments that start with 32 consecutive, equally aligned base pairs between the two sequences. If your sequences are far away from each other (in terms of evolutionary distance) then it will be very hard to find such 32 consecutive base pairs!</li>
@@ -861,7 +856,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
 <p>We will now use additional tools to post-process our alignments. Consider the case where you are interested in a set of DNA repeats located at a given position in the sequences.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-note-about-interactive-exploration-of-alignments"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note about interactive exploration of alignments</div>
+  <div class="box-title comment-title" id="comment-note-about-interactive-exploration-of-alignments"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note about interactive exploration of alignments</div>
   <p>In a different scenario where e.g. you do not know what to look for or need to find the location of particular alignments, and you need an interactive exploration, you can also use <code class="language-plaintext highlighter-rouge">GECKO-MGV</code> to ease the process. <code class="language-plaintext highlighter-rouge">GECKO-MGV</code>generates a visual representation where you can zoom in and out of the alignments, select and export as FASTA, etc., find more in the <code class="language-plaintext highlighter-rouge">GECKO-MGV</code> article (<span class="citation"><a href="#diaz2019combining">Diaz-del-Pino <i>et al.</i> 2019</a></span>) or run it with a dockerized container from <a href="https://github.com/estebanpw/docker-geckomgv">here</a>.</p>
 </blockquote>
 
@@ -874,7 +869,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
 <h3 id="extracting-repeat-alignments-and-running-multiple-sequence-alignment">Extracting repeat alignments and running Multiple Sequence Alignment</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-multiple-sequence-alignment-of-a-set-of-repeats"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Multiple Sequence Alignment of a set of repeats</div>
+  <div class="box-title hands-on-title" id="hands-on-multiple-sequence-alignment-of-a-set-of-repeats"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Multiple Sequence Alignment of a set of repeats</div>
   <ol>
     <li>Search for the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2" title="Text reformatting with AWK tool" aria-role="link"><strong>Text reformatting with AWK</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2</span></span> and run it with the following parameters
       <ul>
@@ -883,7 +878,7 @@ https://zenodo.org/record/4485547/files/mycoplasma-7422.fasta
       </ul>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-note-about-awk"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note about AWK</div>
+        <div class="box-title comment-title" id="comment-note-about-awk"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note about AWK</div>
         <p>Although the AWK script looks a bit threatening, it is very simple:</p>
         <ul>
           <li>The <code class="language-plaintext highlighter-rouge">BEGIN{FS=" "}</code> tells it to separate fields by a space.</li>
@@ -992,7 +987,7 @@ sequence@_19610_25551_      CTTCTTT-----
 <h2 id="preparing-the-data-1">Preparing the data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-chromosome-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Chromosome data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-chromosome-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Chromosome data upload</div>
 
   <ol>
     <li>
@@ -1031,7 +1026,7 @@ https://zenodo.org/record/4485547/files/triticum_aestivum_chr1.fasta
       <p><!--END_SNIPPET--></p>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-note-on-the-name-of-the-chromosomes"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note on the name of the chromosomes</div>
+        <div class="box-title comment-title" id="comment-note-on-the-name-of-the-chromosomes"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note on the name of the chromosomes</div>
         <p>Please notice that these chromosomes are not labelled as “chromosome 1” at their original sources. We have renamed them for simplicity.</p>
       </blockquote>
     </li>
@@ -1040,14 +1035,14 @@ https://zenodo.org/record/4485547/files/triticum_aestivum_chr1.fasta
 </blockquote>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true"></i> Question</div>
+  <div class="box-title question-title" id="question-2"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
     <li>We already discussed the mycoplasma sequences in regards to their size. What do you think about the size of the two chromosomes that we will be comparing now from a computational standpoint?</li>
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <ol>
       <li>Chromosome-like sequences are arguably some of the largest DNA sequences you can find. Regarding the comparison, optimal chromosome comparison typically requires either large clusters to be run or special hardware accelerators (such as GPUs). On the other hand, for seed-based local alignment we can still use common approaches, but they will take a considerable amount of time. Finally, if we use alignment-free methods such as <code class="language-plaintext highlighter-rouge">CHROMEISTER</code>, we can perform a comparison in few minutes (check the slides for more information) instead of hours.</li>
     </ol>
@@ -1059,7 +1054,7 @@ https://zenodo.org/record/4485547/files/triticum_aestivum_chr1.fasta
 <h2 id="running-the-comparison-1">Running the comparison</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-comparing-two-plant-chromosomes-with-chromeister"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Comparing two plant chromosomes with CHROMEISTER</div>
+  <div class="box-title hands-on-title" id="hands-on-comparing-two-plant-chromosomes-with-chromeister"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Comparing two plant chromosomes with CHROMEISTER</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/chromeister/chromeister/1.5.a" title="CHROMEISTER tool" aria-role="link"><strong>CHROMEISTER</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: toolshed.g2.bx.psu.edu/repos/iuc/chromeister/chromeister/1.5.a</span></span> with the following parameters
       <ul>
@@ -1084,7 +1079,7 @@ https://zenodo.org/record/4485547/files/triticum_aestivum_chr1.fasta
       </ul>
 
       <blockquote class="comment">
-        <div class="box-title comment-title" id="comment-about-parameters"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: About parameters</div>
+        <div class="box-title comment-title" id="comment-about-parameters"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: About parameters</div>
 
         <p>Some of the parameters used in <code class="language-plaintext highlighter-rouge">CHROMEISTER</code> are similar to those in <code class="language-plaintext highlighter-rouge">GECKO</code>, but others are new, in particular:</p>
         <ol>
@@ -1113,7 +1108,7 @@ https://zenodo.org/record/4485547/files/triticum_aestivum_chr1.fasta
 </ul>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-note-on-the-comparison-plot"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Note on the comparison plot</div>
+  <div class="box-title comment-title" id="comment-note-on-the-comparison-plot"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Note on the comparison plot</div>
   <p>Notice that the comparison plot is only an approximation. It is aimed at showing the general location and direction of syntenies. For example, if <code class="language-plaintext highlighter-rouge">CHROMEISTER</code> was run with parameter <strong>Output dotplot size</strong> equal to <code class="language-plaintext highlighter-rouge">1000</code>, then each pixel in the plot contains the averaged information of nearly 500,000 base pairs! Thus, any block can contain lots of smaller rearrangements, mutations, inversions, etc., that are ignored for the sake of providing a clean overview of the general alignment direction in a pairwise comparison.</p>
 </blockquote>
 
@@ -1342,7 +1337,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1373,41 +1368,8 @@ tools:
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -63,7 +65,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Contributing a New Feature to Galaxy Core">
         <meta property="og:description" content="Galaxy is an open-source project. Everyone can contribute...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -277,7 +279,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -412,7 +414,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -449,14 +451,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/dev'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-dev">
     <h1 data-toc-skip>Contributing a New Feature to Galaxy Core</h1>
@@ -466,7 +461,7 @@ Sentry.init({
     <div markdown="0">
 
 	<div class="contributors-line">
-		Authors: <a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar">John Chilton</a><a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/jdavcs?s=36" alt="Avatar">John Davis</a>
+		Authors: <a href="/training-material/hall-of-fame/jmchilton/" class="contributor-badge contributor-jmchilton"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jmchilton?s=36" alt="Avatar" width="36" height="36">John Chilton</a><a href="/training-material/hall-of-fame/jdavcs/" class="contributor-badge contributor-jdavcs"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/jdavcs?s=36" alt="Avatar" width="36" height="36">John Davis</a>
 	</div>
 
 </div>
@@ -806,7 +801,7 @@ Sentry.init({
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Setup your local Galaxy instance</div>
+  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setup your local Galaxy instance</div>
 
   <ol>
     <li>Use GitHub UI to fork Galaxy’s repository at <code class="language-plaintext highlighter-rouge">galaxyproject/galaxy</code>.</li>
@@ -814,7 +809,7 @@ Sentry.init({
       <p>Clone your forked repository to a local path, further referred to as <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code> and <code class="language-plaintext highlighter-rouge">cd</code> into <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code>. Note that we specify the tutorial branch with the <code class="language-plaintext highlighter-rouge">-b</code> option:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your-username&gt;/galaxy GALAXY_ROOT
 <span class="nb">cd </span>GALAXY_ROOT
 </code></pre></div>        </div>
@@ -824,7 +819,7 @@ Sentry.init({
       <p>Before we can use Galaxy, we need to create a virtual environment and install the required dependencies. This is generally done with the <code class="language-plaintext highlighter-rouge">common_startup.sh</code> script:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash scripts/common_startup.sh <span class="nt">--dev-wheels</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -835,7 +830,7 @@ Sentry.init({
       <p>Activate your new virtual environment:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> .venv/bin/activate
 </code></pre></div>        </div>
       </blockquote>
@@ -846,7 +841,7 @@ Sentry.init({
       <p>Finally, let’s create a new branch for your edits:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> my-feature
 </code></pre></div>        </div>
       </blockquote>
@@ -855,13 +850,13 @@ Sentry.init({
 
       <blockquote class="code-2col">
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch
 </code></pre></div>          </div>
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output</div>
+          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  dev
 <span class="k">*</span> my-feature
 </code></pre></div>          </div>
@@ -880,7 +875,7 @@ schema, which cannot be applied to a database that has not been initialized.</p>
 for the first time):</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh run.sh
 </code></pre></div>        </div>
       </blockquote>
@@ -888,7 +883,7 @@ for the first time):</p>
       <p>or you may run the following script (faster):</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh create_db.sh
 </code></pre></div>        </div>
       </blockquote>
@@ -903,13 +898,13 @@ for the first time):</p>
 
 <p>The mapping between objects and the database is defined in <code class="language-plaintext highlighter-rouge">lib/galaxy/model/__init__.py</code> via “declarative mapping”, which means that models are defined as Python classes together with the database metadata that describes the database table corresponding to each class. For example, the definition of the JobParameter class includes the database table name:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">__tablename__</span> <span class="o">=</span> <span class="s">"job_parameter"</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">__tablename__</span> <span class="o">=</span> <span class="sh">"</span><span class="s">job_parameter</span><span class="sh">"</span>
 </code></pre></div></div>
 
 <p>and four <code class="language-plaintext highlighter-rouge">Column</code> attributes that correspond to table columns with the same names:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">job_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="nc">ForeignKey</span><span class="p">(</span><span class="s">"job.id"</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">job_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="nc">ForeignKey</span><span class="p">(</span><span class="sh">"</span><span class="s">job.id</span><span class="sh">"</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">name</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="nc">String</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
 <span class="n">value</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="n">TEXT</span><span class="p">)</span>
 </code></pre></div></div>
@@ -917,7 +912,7 @@ for the first time):</p>
 <p>Associations between objects are usually defined with the <code class="language-plaintext highlighter-rouge">relationship</code> construct. For example, the <code class="language-plaintext highlighter-rouge">UserAddress</code> model has an association with the <code class="language-plaintext highlighter-rouge">User</code> model and is defined with the <code class="language-plaintext highlighter-rouge">relationship</code> construct as the <code class="language-plaintext highlighter-rouge">user</code> attribute.</p>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-about-mapping"><i class="far fa-question-circle" aria-hidden="true"></i> Question: about Mapping</div>
+  <div class="box-title question-title" id="question-about-mapping"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: about Mapping</div>
 
   <ol>
     <li>What should be the SQLAlchemy model named corresponding to the table <code class="language-plaintext highlighter-rouge">user_favorite_extension</code> based on <a href="https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/model/__init__.py">other examples</a>?</li>
@@ -926,7 +921,7 @@ for the first time):</p>
   </ol>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <ol>
       <li><code class="language-plaintext highlighter-rouge">UserFavoriteExtension</code></li>
       <li><code class="language-plaintext highlighter-rouge">galaxy_user</code></li>
@@ -960,19 +955,19 @@ for the first time):</p>
 
 <p>To define an attribute that is a foreign key, you need to reference the associated table + its primary key column using the <code class="language-plaintext highlighter-rouge">ForeignKey</code> construct (the datatype will be derived from that column, so you don’t have to include it):</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bar_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="nc">ForeignKey</span><span class="p">(</span><span class="s">"bar.id"</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bar_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="nc">ForeignKey</span><span class="p">(</span><span class="sh">"</span><span class="s">bar.id</span><span class="sh">"</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>To define a relationship between tables, you need to set it on <em>both</em> tables:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Order</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="err">…</span>
-    <span class="n">items</span> <span class="o">=</span> <span class="nf">relationship</span><span class="p">(</span><span class="s">"Item"</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s">"order"</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="nf">relationship</span><span class="p">(</span><span class="sh">"</span><span class="s">Item</span><span class="sh">"</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="sh">"</span><span class="s">order</span><span class="sh">"</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="err">…</span>
-    <span class="n">order_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="nc">ForeignKey</span><span class="p">(</span><span class="s">"order.id"</span><span class="p">)</span>
-    <span class="n">awesome_order</span> <span class="o">=</span> <span class="nf">relationship</span><span class="p">(</span><span class="s">"Order"</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s">"items"</span><span class="p">)</span>
+    <span class="n">order_id</span> <span class="o">=</span> <span class="nc">Column</span><span class="p">(</span><span class="nc">ForeignKey</span><span class="p">(</span><span class="sh">"</span><span class="s">order.id</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">awesome_order</span> <span class="o">=</span> <span class="nf">relationship</span><span class="p">(</span><span class="sh">"</span><span class="s">Order</span><span class="sh">"</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="sh">"</span><span class="s">items</span><span class="sh">"</span><span class="p">)</span>
     <span class="c1"># relationship not named "order" to avoid confusion: this is NOT the table name for Order
 </span></code></pre></div></div>
 
@@ -1029,12 +1024,12 @@ for the first time):</p>
 </ol>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-about-generating-a-revision-template"><i class="far fa-question-circle" aria-hidden="true"></i> Question:  about generating a revision template</div>
+  <div class="box-title question-title" id="question-about-generating-a-revision-template"><i class="far fa-question-circle" aria-hidden="true" ></i> Question:  about generating a revision template</div>
 
   <p>What command should you run to generate a revision template?</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh run_alembic.sh revision <span class="nt">--head</span><span class="o">=</span>gxy@head <span class="nt">-m</span> <span class="s2">"Add user_favorite_extentions table"</span>
 </code></pre></div>    </div>
     <p>The title of the revision is an example only.</p>
@@ -1093,12 +1088,12 @@ do that here.</p>
 </blockquote>
 
 <blockquote class="question">
-  <div class="box-title question-title" id="question-about-running-the-migration"><i class="far fa-question-circle" aria-hidden="true"></i> Question: about running the migration</div>
+  <div class="box-title question-title" id="question-about-running-the-migration"><i class="far fa-question-circle" aria-hidden="true" ></i> Question: about running the migration</div>
 
   <p>What command should you run to upgrade your database to include the new table?</p>
 
   <blockquote class="solution">
-    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh manage_db.sh upgrade
 </code></pre></div>    </div>
   </blockquote>
@@ -1238,7 +1233,7 @@ for the current user.</p>
 <p>Verify this test fails when running stand-alone.</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./run_tests.sh <span class="nt">-api</span> lib/galaxy_test/api/test_users.py::UsersApiTestCase::test_favorite_extensions
 </code></pre></div>  </div>
 </blockquote>
@@ -1382,7 +1377,7 @@ implement <code class="language-plaintext highlighter-rouge">get_favorite_extens
 with <code class="language-plaintext highlighter-rouge">add_favorite_extension</code> before finishing with <code class="language-plaintext highlighter-rouge">delete_favorite_extension</code>.</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-8"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./run_tests.sh <span class="nt">-api</span> lib/galaxy_test/api/test_users.py::UsersApiTestCase::test_favorite_extensions
 </code></pre></div>  </div>
 </blockquote>
@@ -1879,7 +1874,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1910,41 +1905,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

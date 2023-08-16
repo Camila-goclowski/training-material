@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,18 +39,20 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Principles of learning and how they apply to training and teaching">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-06-13 08:03:23 +0000">
+<meta name="DC.date" content="2023-06-17 12:22:05 +0000">
 <meta name="DC.creator" content="Bérénice Batut">
 <meta name="DC.creator" content="Fotis E. Psomopoulos">
 <meta name="DC.creator" content="Allegra Via">
@@ -67,7 +69,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Principles of learning and how they apply to training and...">
         <meta property="og:description" content="Galaxy is a great solution to train the bioinformatics co...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -96,7 +98,7 @@ Sentry.init({
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-06-13 08:03:23 +0000",
+  "dateModified": "2023-06-17 12:22:05 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Principles of learning and how they apply to training and teaching",
   "interactivityType": "mixed",
@@ -313,7 +315,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -448,7 +450,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -485,14 +487,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'Galaxy-Training-Network/Lobby'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-contributing">
     <h1 data-toc-skip>Principles of learning and how they apply to training and teaching</h1>
@@ -508,7 +503,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/allegravia/" class="contributor-badge contributor-allegravia"><img src="https://avatars.githubusercontent.com/allegravia?s=36" alt="Avatar">Allegra Via</a><a href="/training-material/hall-of-fame/ppalagi/" class="contributor-badge contributor-ppalagi"><img src="https://avatars.githubusercontent.com/ppalagi?s=36" alt="Avatar">Patricia Palagi</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/elixir-goblet-ttt/" class="contributor-badge contributor-elixir-goblet-ttt"><img src="https://avatars.githubusercontent.com/elixir-goblet-ttt?s=36" alt="Avatar">ELIXIR Goblet Train the Trainers</a>
+			<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a><a href="/training-material/hall-of-fame/fpsom/" class="contributor-badge contributor-fpsom"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/fpsom?s=36" alt="Avatar" width="36" height="36">Fotis E. Psomopoulos</a><a href="/training-material/hall-of-fame/allegravia/" class="contributor-badge contributor-allegravia"><img src="https://avatars.githubusercontent.com/allegravia?s=36" alt="Avatar" width="36" height="36">Allegra Via</a><a href="/training-material/hall-of-fame/ppalagi/" class="contributor-badge contributor-ppalagi"><img src="https://avatars.githubusercontent.com/ppalagi?s=36" alt="Avatar" width="36" height="36">Patricia Palagi</a><a href="/training-material/hall-of-fame/gallardoalba/" class="contributor-badge contributor-gallardoalba"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/gallardoalba?s=36" alt="Avatar" width="36" height="36">Cristóbal Gallardo</a><a href="/training-material/hall-of-fame/elixir-goblet-ttt/" class="contributor-badge contributor-elixir-goblet-ttt"><img src="https://avatars.githubusercontent.com/elixir-goblet-ttt?s=36" alt="Avatar" width="36" height="36">ELIXIR Goblet Train the Trainers</a>
 		</td>
 	</tr>
 	
@@ -667,7 +662,7 @@ Sentry.init({
         </ul>
         
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 13, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 17, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -709,7 +704,7 @@ Sentry.init({
 <p>Since this material cannot cover the broad literature on the subject of learning we strongly invite you to commit to read at least one book on how learning works (<span class="citation"><a href="#ambrose2010learning">Ambrose <i>et al.</i> 2010</a></span>, <span class="citation"><a href="#smallTeaching2021">Lang 2021</a></span>), have a look at the <a href="http://swcarpentry.github.io/instructor-training/">Software Carpentry Instructor training materials</a> and explore the material available through the <a href="https://elixir-europe.org/platforms/training/train-the-traine://elixir-europe.org/platforms/training/train-the-trainer">ELIXIR Train-the-Trainer course</a>.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-sources"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Sources</div>
+  <div class="box-title comment-title" id="comment-sources"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Sources</div>
 
   <p>This tutorial is significantly based on <span class="citation"><a href="#via2020course">Via <i>et al.</i> 2020</a></span>, session one
 of ELIXIR-GOBLET Train the Trainer curriculum.</p>
@@ -807,7 +802,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 -->
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-learning-metaphors-icon-time-5-min"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Learning metaphors - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 5 min</div>
+  <div class="box-title hands-on-title" id="hands-on-learning-metaphors-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Learning metaphors - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min</div>
 
   <ol>
     <li>Think about the following metaphors “A mind is a fire to be kindled”. How this metaphors may affect your way of teaching?</li>
@@ -858,7 +853,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <p>In the following sections we will explore the most important learning theories.</p>
 
 <blockquote class="comment">
-  <div class="box-title comment-title" id="comment-principal-learning-theories"><i class="far fa-comment-dots" aria-hidden="true"></i> Comment: Principal learning theories</div>
+  <div class="box-title comment-title" id="comment-principal-learning-theories"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Principal learning theories</div>
 
   <p>We will briefly describe the key ideas from each of these perspectives and explain how you can use them in your classroom to support learners’ learning.</p>
 
@@ -872,21 +867,19 @@ So how can we now use the knowledge we have gathered during this time in the cou
 
   <h4 id="cognitivist-learning-theory">Cognitivist Learning Theory</h4>
 
-  <p>Diverse authors agree that, in order to implement adequate online teaching practices, it is necessary to take into account the characteristics of mental processes [30] [6].</p>
+  <p>Diverse authors agree that, in order to implement adequate online teaching practices, it is necessary to take into account the characteristics of mental processes (<span class="citation"><a href="#Wu1998">Wu <i>et al.</i> 1998</a></span>, <span class="citation"><a href="#Chandler2004">Chandler 2004</a></span>).</p>
 
-  <p><strong>Cognitivism</strong> emerged in the 1950s as a response to Behaviorism, which was deemed inadequate in explaining cognition. <strong>Cognitive Learning Theory</strong> aims to describe the links between cognitive structures -defined as the mental representations of objects or ideas- and the learning process [31][32], with a special focus on the processing of information.</p>
+  <p><strong>Cognitivism</strong> emerged in the 1950s as a response to Behaviorism, which was deemed inadequate in explaining cognition. <strong>Cognitive Learning Theory</strong> aims to describe the links between cognitive structures -defined as the mental representations of objects or ideas- and the learning process (<span class="citation"><a href="#Qin2009">Qin 2009</a></span>, <span class="citation"><a href="#vanderVeer1988">van der Veer and Felt 1988</a></span>), with a special focus on the processing of information. Two important theories derive from this one: <strong>Information Processing Theory</strong> and <strong>Cognitive load theory</strong>:</p>
 
-  <p>Two important theories derive from this one: <strong>Information Processing Theory</strong> and <strong>Cognitive load theory</strong>:</p>
+  <p>The <strong>Information Processing Theory</strong> describes learning as the result of sequential processing of information, which involve three types of memory: immediate memory, working memory and long term memory (<span class="citation"><a href="#Gentner2014">Gentner and Stevens 2014</a></span>). According to this theory, adequate learning resources require to assume two key elements: firstly, the fact that working memory is limited; and secondly, that the interaction between working and long term memory plays an important role in the construction and transferability of knowledge (<span class="citation"><a href="#Chandler2004">Chandler 2004</a></span>, <span class="citation"><a href="#Herring1993">Herring 1993</a></span>, <span class="citation"><a href="#Yilmaz2011">Yilmaz 2011</a></span>).</p>
 
-  <p>The <strong>Information Processing Theory</strong> describes learning as the result of sequential processing of information, which involve three types of memory: immediate memory, working memory and long term memory [33]. According to this theory, adequate learning resources require to assume two key elements: firstly, the fact that working memory is limited; and secondly, that the interaction between working and long term memory plays an important role in the construction and transferability of knowledge [6] [13] [34].</p>
-
-  <p>On the other hand, <strong>Cognitive Load Theory</strong> seeks specifically to address the efficiency with which information is processed. It states that the verbal and visual information is processed by independent cognitive structures, both of them with a limited capacity [35] [36] [37] [38] [39]. An interesting concept derived from this theory is the cognitive overload, which refers to those situations in which the information flow exceeds the learner’s processing capacity, resulting in an inhibition of the learning process [40] [41].</p>
+  <p>On the other hand, <strong>Cognitive Load Theory</strong> seeks specifically to address the efficiency with which information is processed. It states that the verbal and visual information is processed by independent cognitive structures, both of them with a limited capacity (<span class="citation"><a href="#Fori2012">Forišek and Steinová 2012</a></span>, <span class="citation"><a href="#Via2013">Via <i>et al.</i> 2013</a></span>, <span class="citation"><a href="#Kats2010">Kats 2010</a></span>, <span class="citation"><a href="#Wright2010">Wright <i>et al.</i> 2010</a></span>). An interesting concept derived from this theory is the cognitive overload, which refers to those situations in which the information flow exceeds the learner’s processing capacity, resulting in an inhibition of the learning process (<span class="citation"><a href="#Aidi2009">Aidi 2009</a></span>).</p>
 
   <h4 id="constructivist-learning-theory">Constructivist Learning Theory</h4>
 
   <p><strong>Constructivism</strong> holds that learning is essentially active; a person who learns something new incorporates it into their previous experiences and their own mental structures. Each new piece of information is assimilated and deposited into a network of previously existing knowledge and experiences  (<span class="citation"><a href="#Abbot1999">Abbot and Ryand 1999</a></span>). All these ideas have been taken from different nuances, and two authors stand out: Jean Piaget with <strong>psychological constructivism</strong> and Lev Vigotsky with <strong>social constructivism</strong>.</p>
 
-  <p><strong>Psychological constructivism</strong> maintains the idea that the individual, both through cognitive and social aspects of knowledge as well as affective ones, is not a mere product of the environment or a simple result of his or her internal dispositions, but a construction of his or her own that is produced day by day as a result of the interaction between these two factors. The driving force of this activity would be cognitive conflict; in any constructivist activity there must be a circumstance that shakes the previous structures of knowledge and forces a rearrangement of the old knowledge in order to assimilate the new.</p>
+  <p>From the perspective of <strong>psychological constructivism</strong>, learning is fundamentally a personal matter. It maintains the idea that the individual, both through cognitive and social aspects of knowledge as well as affective ones, is not a mere product of the environment or a simple result of his or her internal dispositions, but a construction of his or her own that is produced day by day as a result of the interaction between these two factors. The driving force of this activity would be cognitive conflict; in any constructivist activity there must be a circumstance that shakes the previous structures of knowledge and forces a rearrangement of the old knowledge in order to assimilate the new.</p>
 
   <p>According to the <strong>social approach of Lev Vigotsky</strong>, learning is that process in which the individual assimilates certain historical-cultural experience at the same time as he/she appropriates it, which requires an active subject who gives meaning to this experience, transforming it into his/her subjectivity (<span class="citation"><a href="#RodrguezRuiz2005">Ruiz Mayra Rodrı́guez and Garcı́a Emilio Garcı́a-Merás 2005</a></span>).</p>
 
@@ -905,7 +898,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-how-do-you-go-about-learning-something-new-how-do-you-approach-learning-new-things-icon-time-5-min"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: How do you go about learning something new? / How do you approach learning new things? - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 5 min</div>
+  <div class="box-title hands-on-title" id="hands-on-how-do-you-go-about-learning-something-new-how-do-you-approach-learning-new-things-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How do you go about learning something new? / How do you approach learning new things? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min</div>
 
   <ul>
     <li>Order the following approaches (from the most to the less effective one) for you when you want to learn something new
@@ -991,7 +984,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 </ul>
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-the-carpentries"><button class="gtn-boxify-button details" type="button" aria-controls="details-the-carpentries" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: The Carpentries<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-the-carpentries"><button class="gtn-boxify-button details" type="button" aria-controls="details-the-carpentries" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: The Carpentries<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p><a href="https://carpentries.org/">The Carpentries</a> was started by Greg Wilson and Brent Gorda and they coined the term “The Carpentries” for enabling researchers to do “computational thinking” and use tools of computation effectively.</p>
 
@@ -1013,7 +1006,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 	* How much effort to remember a full poem-->
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-how-short-is-your-short-term-memory-icon-time-10-min"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: How short is your short term memory? - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 10 min</div>
+  <div class="box-title hands-on-title" id="hands-on-how-short-is-your-short-term-memory-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-10-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How short is your short term memory? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 10 min</div>
 
   <p>Based on <span class="citation"><a href="#Willingham2009">Willingham 2009</a></span>.</p>
 
@@ -1022,7 +1015,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
       <p>Read the following letter combination:</p>
 
       <blockquote class="solution">
-        <div class="box-title solution-title" id="solution-hide"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-hide" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution: Hide<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title solution-title" id="solution-hide"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-hide" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution: Hide<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
         <p><code class="language-plaintext highlighter-rouge">APH D BDN A CKG B DCI A</code></p>
 
@@ -1038,7 +1031,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
       <p>Read the following letter combination</p>
 
       <blockquote class="solution">
-        <div class="box-title solution-title" id="solution-hide-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-hide-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true"></i> Solution: Hide<span class="fold-unfold fa fa-minus-square"></span></button></div>
+        <div class="box-title solution-title" id="solution-hide-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-hide-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> Solution: Hide<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
         <p><code class="language-plaintext highlighter-rouge">A   PHD   B   DNA   C   KGB   D   CIA</code></p>
 
@@ -1085,7 +1078,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 -->
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-how-can-you-avoid-to-overload-learners-working-memory-icon-details-5-min-groups-of-2-3-persons"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: How can you avoid to overload learners working memory?  - *<i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> 5 min - Groups of 2/3 persons*</div>
+  <div class="box-title hands-on-title" id="hands-on-how-can-you-avoid-to-overload-learners-working-memory-i-class-quot-fas-fa-info-circle-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-details-span-5-min-groups-of-2-3-persons"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How can you avoid to overload learners working memory?  - *<i class=&quot;fas fa-info-circle&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>details</span> 5 min - Groups of 2/3 persons*</div>
 
   <ul>
     <li>Discuss one thing a teacher could do to avoid overloading their students’ working memory</li>
@@ -1122,7 +1115,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <p>Split-attention occurs when learners are required to <strong>split their attention</strong> between <strong>at least two sources of information</strong> that have been separated either spatially or temporally</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extraneous-cognitive-load-icon-time-10-min-groups-of-2-3-persons"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Extraneous cognitive load - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 10 min - Groups of 2/3 persons</div>
+  <div class="box-title hands-on-title" id="hands-on-extraneous-cognitive-load-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-10-min-groups-of-2-3-persons"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extraneous cognitive load - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 10 min - Groups of 2/3 persons</div>
 
   <ul>
     <li>Pick one task you teach in your lessons/courses</li>
@@ -1175,7 +1168,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-how-do-you-understand-the-6-strategies-for-effective-learning-icon-time-15-min-groups-of-2-persons"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: How do you understand the 6 strategies for effective learning? - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 15 min - Groups of 2 persons</div>
+  <div class="box-title hands-on-title" id="hands-on-how-do-you-understand-the-6-strategies-for-effective-learning-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-15-min-groups-of-2-persons"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How do you understand the 6 strategies for effective learning? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 15 min - Groups of 2 persons</div>
 
   <ul>
     <li>Pick up one strategy per group</li>
@@ -1252,7 +1245,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 </ul>
 
 <!-- 
-> <div class="box-title hands-on-title" id="hands-on-how-do-you-understand-the-7-principles-of-learning-icon-time-15-min-groups-of-2-3-person"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How do you understand the 7 principles of learning?  - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 15 min - Groups of 2/3 person</div>
+> <div class="box-title hands-on-title" id="hands-on-how-do-you-understand-the-7-principles-of-learning-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-15-min-groups-of-2-3-person"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How do you understand the 7 principles of learning?  - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 15 min - Groups of 2/3 person</div>
 >
 > * Read and reflect together the principles
 > * Pick one principle that is not (fully) clear to you
@@ -1261,7 +1254,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 {: .hands_on}-->
 
 <blockquote class="details">
-  <div class="box-title details-title" id="details-resources-to-learn-more-about-the-cognitive-learning-theory"><button class="gtn-boxify-button details" type="button" aria-controls="details-resources-to-learn-more-about-the-cognitive-learning-theory" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Resources to learn more about the Cognitive Learning Theory<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title details-title" id="details-resources-to-learn-more-about-the-cognitive-learning-theory"><button class="gtn-boxify-button details" type="button" aria-controls="details-resources-to-learn-more-about-the-cognitive-learning-theory" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Resources to learn more about the Cognitive Learning Theory<span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <p>There is a great deal of literature on how learning works.</p>
 
@@ -1309,7 +1302,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 </blockquote>
 
 <!-- 
-> <div class="box-title hands-on-title" id="hands-on-what-is-learning-in-your-opinion-experience-how-does-learning-occur-icon-time-5-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: What is learning in your opinion/experience? How does learning occur? - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 5 min</div>
+> <div class="box-title hands-on-title" id="hands-on-what-is-learning-in-your-opinion-experience-how-does-learning-occur-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-5-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: What is learning in your opinion/experience? How does learning occur? - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 5 min</div>
 >
 > _Break-out_ room (2 ppl per room)
 >
@@ -1360,7 +1353,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
   </li>
 </ul>
 
-<h2 id="critical-learning-theory-the-hidden-curriculum">Critical Learning Theory: The Hidden Curriculum</h2>
+<h2 id="critical-learning-theory-the-hidden-curriculum-theory">Critical Learning Theory: The Hidden Curriculum Theory</h2>
 
 <p>The concept of hidden curriculum refers to the learning that is incorporated by students though these aspects do not appear explicitly in the official curriculum, relying on the organisational aspects of classroom life that are generally not perceived by either students or teachers (<span class="citation"><a href="#Giroux2018">Giroux 2004</a></span>).</p>
 
@@ -1410,7 +1403,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
 -->
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-teaching-or-training-icon-time-15-min"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Teaching or training?  - <i class="fas fa-hourglass-half" aria-hidden="true"></i><span class="visually-hidden">time</span> 15 min</div>
+  <div class="box-title hands-on-title" id="hands-on-teaching-or-training-i-class-quot-fas-fa-hourglass-half-quot-aria-hidden-quot-true-quot-i-span-class-quot-visually-hidden-quot-time-span-15-min"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Teaching or training?  - <i class=&quot;fas fa-hourglass-half&quot; aria-hidden=&quot;true&quot;></i><span class=&quot;visually-hidden&quot;>time</span> 15 min</div>
 
   <ul>
     <li>Based on your experience, what are the differences between teaching and training?</li>
@@ -1472,7 +1465,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                 <p>Check your understanding with these quizzes</p>
                     
                     <h2>Learning metaphors</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/learning_metaphors.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1483,7 +1476,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                     </ul>
                     
                     <h2>How can you avoid to overload learners working memory?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/overloading_short_term_memory.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1494,7 +1487,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                     </ul>
                     
                     <h2>How short is your short term memory?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1505,7 +1498,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                     </ul>
                     
                     <h2>Teaching or training?</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1516,7 +1509,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                     </ul>
                     
                     <h2>Identify observable and non observable actions (verbs)</h2>
-                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar">Bérénice Batut</a></div>
+                    <div class="contributors-line"><a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge contributor-bebatut"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bebatut?s=36" alt="Avatar" width="36" height="36">Bérénice Batut</a></div>
                     <ul>
                         <li>
                             <a href="/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/verbs.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.
@@ -1535,14 +1528,26 @@ So how can we now use the knowledge we have gathered during this time in the cou
                 <h1 id="bibliography">References</h1>
                 <ol class="bibliography"><li id="Marcuse1964">Marcuse, H., 1964 <b>One-Dimensional Man</b>. <i>Routledge</i>. <a href="https://doi.org/10.4324/9780203995211">10.4324/9780203995211</a></li>
 <li id="Anders1980">Anders, G., 1980 <b>Die Antiquiertheit des Menschen, Bd. I: Über die Seele im Zeitalter der zweiten industriellen Revolution</b>. <i>C.H.Beck</i>. <a href="https://www.chbeck.de/anders-antiquiertheit-menschen-bd-i-ueber-seele-zeitalter-zweiten-industriellen-revolution/product/11782">https://www.chbeck.de/anders-antiquiertheit-menschen-bd-i-ueber-seele-zeitalter-zweiten-industriellen-revolution/product/11782</a></li>
+<li id="vanderVeer1988">Veer, G. C. van der, and M. A. M. Felt, 1988 <b>Development of Mental Models of an Office System: A Field Study on an Introductory Course</b>. Human-Computer Interaction 250–272. <a href="https://doi.org/10.1007/978-3-642-73402-1_16">10.1007/978-3-642-73402-1_16</a></li>
+<li id="Herring1993">Herring, M. C., 1993 <b>Design and training for implementation of constructivist-based distance learning environments</b>. <a href="https://doi.org/10.31274/rtd-180813-13483">10.31274/rtd-180813-13483</a></li>
 <li id="Moreira1997">Moreira, M. A., 1997 <b>Meaningful learning: a subjacent concept</b>. Actas del Encuentro Internacional sobre el Aprendizaje Significativo 19–44. <a href="https://www.if.ufrgs.br/ moreira/apsigsubesp.pdf">https://www.if.ufrgs.br/ moreira/apsigsubesp.pdf</a></li>
+<li id="Wu1998">Wu, C.-C., N. B. Dale, and L. J. Bethel, 1998 <b>Conceptual models and cognitive learning styles in teaching recursion</b>. ACM SIGCSE Bulletin 30: 292–296. <a href="https://doi.org/10.1145/274790.274315">10.1145/274790.274315</a></li>
 <li id="Abbot1999">Abbot, J., and T. Ryand, 1999 <b> Constructing knowledge, reconstructing schooling</b>. Educational Leadership 57: 66–69. <a href="http://www.savie.ca/sage/articles/1080_000_abbott_1999.pdf">http://www.savie.ca/sage/articles/1080_000_abbott_1999.pdf</a></li>
+<li id="Chandler2004">Chandler, P., 2004 <b>The crucial role of cognitive processes in the design of dynamic visualizations</b>. Learning and Instruction 14: 353–357. <a href="https://doi.org/10.1016/j.learninstruc.2004.06.009">10.1016/j.learninstruc.2004.06.009</a></li>
 <li id="Giroux2018">Giroux, H., 2004 <b>Educational foundations: An anthology of critical readings</b>. <i>SAGE Publications</i>. <a href="https://doi.org/10.1177/01614681061080052">10.1177/01614681061080052</a></li>
 <li id="Olivo2005">Olivo, G., 2005 <b>El enigma de la docilidad: Sobre la implicación de la Escuela en el exterminio global de la dissention y de la diferencia</b>. <i>Virus Editorial</i>. <a href="https://www.viruseditorial.net/ca/libreria/libros/84/el-enigma-de-la-docilidad">https://www.viruseditorial.net/ca/libreria/libros/84/el-enigma-de-la-docilidad</a></li>
 <li id="RodrguezRuiz2005">Ruiz Mayra Rodrı́guez, and Garcı́a Emilio Garcı́a-Merás, 2005 <b>Las estrategias de aprendizaje y sus particulariades en lenguas extranjeras</b>. Revista Iberoamericana de Educación 36: 1–10. <a href="https://doi.org/10.35362/rie3642807">10.35362/rie3642807</a></li>
+<li id="Aidi2009">Aidi, X., 2009 <b>Cognitive Overload and Its Countermeasures from the Angle of Information Processing</b>. 2009 Third International Symposium on Intelligent Information Technology Application. <a href="https://doi.org/10.1109/iita.2009.278">10.1109/iita.2009.278</a></li>
+<li id="Qin2009">Qin, H., 2009 <b>Teaching computational thinking through bioinformatics to biology students</b>. Proceedings of the 40th ACM technical symposium on Computer science education. <a href="https://doi.org/10.1145/1508865.1508932">10.1145/1508865.1508932</a></li>
 <li id="Willingham2009">Willingham, D. T., 2009 <b>Why Don’t Students Like School?: A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for Your Classroom.</b> <i>Jossey-Bass</i>. <a href="https://books.google.ie/books?hl=en&lr=&id=zCQqEAAAQBAJ&oi=fnd&pg=PR1&dq=Why+Don%27t+Students+Like+School%3F:+A+Cognitive+Scientist+&ots=Hha3EFloDF&sig=ECJXgc3ZScpu73cXhezfl7qwcF4&redir_esc=y#v=onepage&q=Why%20Don’t%20Students%20Like%20School%3F%3A%20A%20Cognitive%20Scientist&f=false">https://books.google.ie/books?hl=en&lr=&id=zCQqEAAAQBAJ&oi=fnd&pg=PR1&dq=Why+Don%27t+Students+Like+School%3F:+A+Cognitive+Scientist+&ots=Hha3EFloDF&sig=ECJXgc3ZScpu73cXhezfl7qwcF4&redir_esc=y#v=onepage&q=Why%20Don’t%20Students%20Like%20School%3F%3A%20A%20Cognitive%20Scientist&f=false</a></li>
 <li id="ambrose2010learning">Ambrose, S. A., M. W. Bridges, M. DiPietro, M. C. Lovett, and M. K. Norman, 2010 <b>How learning works: Seven research-based principles for smart teaching</b>. <i>John Wiley &amp; Sons</i>.</li>
+<li id="Kats2010">Kats, Y. (Ed.), 2010 <b>Learning Management System Technologies and Software Solutions for Online Teaching</b>. <i>IGI Global</i>. <a href="https://doi.org/10.4018/978-1-61520-853-1">10.4018/978-1-61520-853-1</a></li>
+<li id="Wright2010">Wright, V. A., B. W. Vaughan, T. Laurent, R. Lopez, C. Brooksbank <i>et al.</i>, 2010 <b>Bioinformatics training: selecting an appropriate learning content management system–an example from the European Bioinformatics Institute</b>. Briefings in Bioinformatics 11: 552–562. <a href="https://doi.org/10.1093/bib/bbq023">10.1093/bib/bbq023</a></li>
+<li id="Yilmaz2011">Yilmaz, K., 2011 <b>The Cognitive Perspective on Learning: Its Theoretical Underpinnings and Implications for Classroom Practices</b>. The Clearing House: A Journal of Educational Strategies,  Issues and Ideas 84: 204–212. <a href="https://doi.org/10.1080/00098655.2011.568989">10.1080/00098655.2011.568989</a></li>
+<li id="Fori2012">Forišek, M., and M. Steinová, 2012 <b>Metaphors and analogies for teaching algorithms</b>. Proceedings of the 43rd ACM technical symposium on Computer Science Education. <a href="https://doi.org/10.1145/2157136.2157147">10.1145/2157136.2157147</a></li>
 <li id="Sztajnszrajber2013">Sztajnszrajber, D., 2013 <b>¿Para qué sirve la filosofía?</b> <i>Booklet</i>. <a href="https://www.planetadelibros.com/libro-para-que-sirve-la-filosofia/117353">https://www.planetadelibros.com/libro-para-que-sirve-la-filosofia/117353</a></li>
+<li id="Via2013">Via, A., T. Blicher, E. Bongcam-Rudloff, M. D. Brazas, C. Brooksbank <i>et al.</i>, 2013 <b>Best practices in bioinformatics training for life scientists</b>. Briefings in Bioinformatics 14: 528–537. <a href="https://doi.org/10.1093/bib/bbt043">10.1093/bib/bbt043</a></li>
+<li id="Gentner2014">Gentner, D., and A. L. Stevens (Eds.), 2014 <b>Mental Models</b>. <i>Psychology Press</i>. <a href="https://doi.org/10.4324/9781315802725">10.4324/9781315802725</a></li>
 <li id="weinstein2018understanding">Weinstein, Y., M. Sumeracki, and O. Caviglioli, 2018 <b>Understanding how we learn: A visual guide</b>. <i>Routledge</i>.</li>
 <li id="via2020course">Via, A., P. M. Palagi, J. M. Lindvall, R. E. Tractenberg, T. K. Attwood <i>et al.</i>, 2020 <b>Course design: Considerations for trainers–a Professional Guide</b>. F1000Research 9:</li>
 <li id="smallTeaching2021">Lang, J. M., 2021 <b>Small Teaching</b>. <i>Jossey-Bass</i>. <a href="https://books.google.ie/books?id=k8E4EAAAQBAJ&lpg=PR1&ots=i2Ut5NPUC7&lr&pg=PR1#v=onepage&q&f=false">https://books.google.ie/books?id=k8E4EAAAQBAJ&lpg=PR1&ots=i2Ut5NPUC7&lr&pg=PR1#v=onepage&q&f=false</a></li>
@@ -1820,7 +1825,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1851,41 +1856,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>

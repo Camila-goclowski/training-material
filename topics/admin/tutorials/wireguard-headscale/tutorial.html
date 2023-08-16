@@ -17,7 +17,7 @@
 <script type="text/javascript">
 Sentry.init({
   dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-  release: "galaxy-training-network@fbddb69c6b78d00ea18400ca7bec74d2b5006510",
+  release: "galaxy-training-network@a20023d4520db76364bfad637810cad968628355",
   integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   sampleRate: 0.1,
   tracesSampleRate: 0.1,
@@ -39,11 +39,13 @@ Sentry.init({
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1692219109' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1692219109' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
-
-
 
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
@@ -62,7 +64,7 @@ Sentry.init({
         <meta property="og:title" content="Galaxy Training: Deploying Tailscale/Headscale for private mesh networking">
         <meta property="og:description" content="Resources related to configuration and maintenance of Gal...">
         
-        <meta property="og:image" content="/training-material/assets/images/GTN.png">
+        <meta property="og:image" content="/training-material/assets/images/GTNLogo1000.png">
 
         
         <script type="application/ld+json">
@@ -239,7 +241,7 @@ Sentry.init({
         
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <script type="text/javascript" src="/training-material/assets/js/theme.js"></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1692219109'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -374,7 +376,7 @@ Sentry.init({
                     <li class="nav-item">
                       <div id="navbarSupportedContent" role="search">
                         <!-- Search form -->
-                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search2">
                           <i class="fas fa-search nav-link" aria-hidden="true"></i>
                           <div class="md-form mb-2">
                             <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
@@ -411,14 +413,7 @@ Sentry.init({
 
 
 
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-  room: 'galaxyproject/admins'
-  };
-</script>
 
-
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
 <article class="tutorial topic-admin">
     <h1 data-toc-skip>Deploying Tailscale/Headscale for private mesh networking</h1>
@@ -434,7 +429,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar">Helena Rasche</a>
+			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Avatar" width="36" height="36">Helena Rasche</a>
 		</td>
 	</tr>
 	
@@ -446,7 +441,7 @@ Sentry.init({
 	<tr>
 		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
 		<td>
-			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Avatar">Nate Coraor</a></td>
+			<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge contributor-natefoo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/natefoo?s=36" alt="Avatar" width="36" height="36">Nate Coraor</a></td>
 	</tr>
 	
 
@@ -781,7 +776,7 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuration-files"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Configuration files</div>
+  <div class="box-title hands-on-title" id="hands-on-configuration-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuration files</div>
 
   <ol>
     <li>
@@ -804,13 +799,13 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
 
       <blockquote class="code-2col">
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>hosts
 </code></pre></div>          </div>
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out-bash"><i class="fas fa-laptop-code" aria-hidden="true"></i> Output: Bash</div>
+          <div class="box-title code-out-title" id="code-out-bash"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
 
           <p>Your hostname is probably different:</p>
           <div class="Headscale">
@@ -850,7 +845,7 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
 <div class="Headscale">
 
   <blockquote class="details">
-    <div class="box-title details-title" id="details-consider-using-tailscale"><button class="gtn-boxify-button details" type="button" aria-controls="details-consider-using-tailscale" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true"></i> Details: Consider using Tailscale<span class="fold-unfold fa fa-minus-square"></span></button></div>
+    <div class="box-title details-title" id="details-consider-using-tailscale"><button class="gtn-boxify-button details" type="button" aria-controls="details-consider-using-tailscale" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> Details: Consider using Tailscale<span class="fold-unfold fa fa-minus-square"></span></button></div>
     <p>Tailscale has implemented the coordination server and infrastructure with much better, more robust infrastructure that you won’t have to be responsible for. If you can get your institution to pay for it, or grant money covering it, it’s <strong>probably worth it</strong>. They add many new features often, and things like the mobile apps only work with their service. Tailscale is free for personal use (i.e. to test things out) and offers a free plan for open source projects that you may qualify for.</p>
 
     <p>For a training event obviously we want something free and quick to setup and destroy, so, we’re using <a href="https://github.com/juanfont/headscale">Headscale</a> since it’s free and we’re just going to destroy it immediately, and no one will accidentally get billed ;)</p>
@@ -859,14 +854,14 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-installing-headscale"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Installing Headscale</div>
+    <div class="box-title hands-on-title" id="hands-on-installing-headscale"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Installing Headscale</div>
 
     <ol>
       <li>
         <p>Install the role</p>
 
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
           <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles ckstevenson.headscale
 </code></pre></div>          </div>
         </blockquote>
@@ -900,7 +895,7 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
         <p>Run the playbook:</p>
 
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
           <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook headscale.yml
 </code></pre></div>          </div>
         </blockquote>
@@ -915,14 +910,14 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
 <p>Now we can setup the nodes</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configure-the-nodes"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Configure the nodes</div>
+  <div class="box-title hands-on-title" id="hands-on-configure-the-nodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configure the nodes</div>
 
   <ol>
     <li>
       <p>Install the role</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles artis3n.tailscale
 </code></pre></div>        </div>
       </blockquote>
@@ -984,7 +979,7 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
       <p>Run the playbook:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook tail.yml <span class="nt">-e</span> <span class="nv">tailscale_authkey</span><span class="o">=</span>YOUR_CODE
 </code></pre></div>        </div>
 
@@ -1007,7 +1002,7 @@ bridge the gap, and Headscale or Tailscale can greatly simplify that process.</p
 </blockquote>
 
 <blockquote class="tip">
-  <div class="box-title tip-title" id="tip-exit-nodes"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-exit-nodes" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Exit Nodes<span class="fold-unfold fa fa-minus-square"></span></button></div>
+  <div class="box-title tip-title" id="tip-exit-nodes"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-exit-nodes" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Exit Nodes<span class="fold-unfold fa fa-minus-square"></span></button></div>
   <p>We’ve configured <code class="language-plaintext highlighter-rouge">--advertise-exit-node</code>, which means you can direct ALL of your traffic to use one of your tailscale endpoints as an exit node, just run <code class="language-plaintext highlighter-rouge">tailscale up --exit-node=...</code></p>
 
   <p>Note that:</p>
@@ -1180,7 +1175,7 @@ tools: []
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/fbddb69c6b78d00ea18400ca7bec74d2b5006510">fbddb69</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a20023d4520db76364bfad637810cad968628355">a20023d</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1211,41 +1206,8 @@ tools: []
     </div>
 </footer>
 
-        <script src="/training-material/assets/js/jquery.slim.min.js"></script>
-	<script src="/training-material/assets/js/popper.min.js"></script> <!-- used in dropdown menus -->
-        <script src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
-        <script src="/training-material/assets/js/details-element-polyfill.js"></script>
+
+        <script src='/training-material/assets/js/bundle.main.js?v=1692219109'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="/training-material/assets/js/bootstrap-toc.min.js"></script>
-        <script src="/training-material/assets/js/main.js"></script>
-        <script src="/training-material/assets/js/clipboard.min.js"></script>
-        <script>
-        document.querySelectorAll('div.highlight').forEach((snippet) => {
-                // Google translate has additional #text nodes mixed in with
-                // the pre for some reason.
-                var gtn_snippet_pres = [...snippet.childNodes].filter(x => x.tagName == "PRE")
-                if(gtn_snippet_pres && gtn_snippet_pres.length > 0){
-                        gtn_snippet_pres[0].insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet tabindex="0"><i class="fa fa-copy"></i>&nbsp;Copy</button>');
-                }
-        });
-
-        var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
-            target:function(trigger){return trigger.nextElementSibling;
-        }});
-        </script>
-        
-
-        <script type="text/javascript">
-            if(window.location.hostname === "galaxyproject.github.io") {
-                // Redirect
-                var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
-                $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
-
-                window.setTimeout(function(){
-                    window.location.href = redirect;
-                }, 5000)
-
-            }
-        </script>
     </body>
 </html>
