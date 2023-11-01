@@ -3,7 +3,7 @@
 You’ve previously done all the work to make a single cell matrix. Now it’s time to fully process our data using Seurat: remove low quality cells, reduce the many dimensions of data that make it difficult to work with, and ultimately try to define clusters and find some biological meaning and insights! There are many packages for analysing single cell data - Seurat ({% cite Satija2015 %}), Scanpy ({% cite Wolf2018 %}), Monocle ({% cite Trapnell2014 %}), Scater ({% cite McCarthy2017 %}), and many more. We’re working with Seurat in RStudio because it is well updated, broadly used, and highly trusted within the field of bioinformatics.
 
 > <comment-title></comment-title>
-> This tutorial is significantly based on the Seurat documentation({% cite Satija2015 %}) as well as [Seurat's Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html).
+> This tutorial is significantly based on the Seurat documentation ({% cite Satija2015 %}) as well as [Seurat's Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html).
 {: .comment}
 
 > <agenda-title></agenda-title>
@@ -20,8 +20,8 @@ We’ll provided you with experimental data to analyse from a mouse dataset of f
 # Get Data onto Galaxy
 To start, let's get our dataset loaded into Galaxy.
 
-You can access the data for this tutorial in multiple ways:
-1. **EBI Data Retrieval** - You may retrieve that files necessary to construct a Seurat Object in this way.Doing to will alleviate the necessity to convert AnnData (Python) objects into Seurat (R) objects:
+You can access the dataset for this tutorial in multiple ways:
+1. **EBI Data Retrieval** - You may retrieve that files necessary to construct a Seurat Object in this way. Doing so will alleviate the necessity to convert AnnData (Python) objects into Seurat (R) objects:
 
 > <hands-on-title>GetData</hands-on-title>
 >
