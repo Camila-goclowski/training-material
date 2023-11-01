@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@c93ee501f7ece6f502f6f17dae238bdf50605ecc",
+	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698800125' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698800125' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698805831' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698805831' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +103,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698805831'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -704,7 +704,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -830,6 +830,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				</li>
 				
 				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
+					</a>
+				</li>
+				
+				<li>
 					Using Galaxy and Managing your Data /
 					<a href="/training-material/topics/galaxy-interface/tutorials/workflow-reports/tutorial.html">
 					Workflow Reports
@@ -937,21 +944,21 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -1524,14 +1531,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -2434,6 +2441,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				</li>
 				
 				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
+					</a>
+				</li>
+				
+				<li>
 					Using Galaxy and Managing your Data /
 					<a href="/training-material/topics/galaxy-interface/tutorials/workflow-reports/tutorial.html">
 					Workflow Reports
@@ -2829,14 +2843,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -3238,7 +3252,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -3389,7 +3403,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -3640,7 +3654,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -3849,7 +3863,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -3972,7 +3986,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -4246,7 +4260,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
@@ -4399,14 +4413,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -4420,7 +4434,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -4638,7 +4652,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -5530,7 +5544,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -5553,7 +5567,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -5590,14 +5604,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -6967,7 +6981,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
@@ -7323,7 +7337,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -8602,7 +8616,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -8715,7 +8729,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -12757,7 +12771,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -12780,7 +12794,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -12803,7 +12817,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -12826,7 +12840,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -12849,7 +12863,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -12895,7 +12909,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
@@ -12918,7 +12932,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
@@ -12934,14 +12948,14 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html">
-					Combining datasets after pre-processing
+					Combining single cell datasets after pre-processing
 					</a>
 				</li>
 				
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -13056,7 +13070,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -13627,6 +13641,22 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 					Statistics and machine learning /
 					<a href="/training-material/topics/statistics/tutorials/hyperdimensional_computing/tutorial.html">
 					Supervised Learning with Hyperdimensional Computing
+					</a>
+				</li>
+				
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><a href="/training-material/by-tool/interactive_tool_qgis.html">interactive_tool_qgis</a></td>
+		<td>
+			<ul>
+				
+				<li>
+					Ecology /
+					<a href="/training-material/topics/ecology/tutorials/QGIS_Web_Feature_Services/tutorial.html">
+					QGIS Web Feature Services
 					</a>
 				</li>
 				
@@ -14211,22 +14241,6 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	</tr>
 	
 	<tr>
-		<td><a href="/training-material/by-tool/toolshed.g2.bx.psu.edu/bgruening.html">toolshed.g2.bx.psu.edu/bgruening</a></td>
-		<td>
-			<ul>
-				
-				<li>
-					Genome Annotation /
-					<a href="/training-material/topics/genome-annotation/tutorials/lncrna/tutorial.html">
-					Long non-coding RNAs (lncRNAs) annotation with FEELnc
-					</a>
-				</li>
-				
-			</ul>
-		</td>
-	</tr>
-	
-	<tr>
 		<td><a href="/training-material/by-tool/Extract_features1.html">Extract_features1</a></td>
 		<td>
 			<ul>
@@ -14555,6 +14569,70 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 					Epigenetics /
 					<a href="/training-material/topics/epigenetics/tutorials/atac-seq/tutorial.html">
 					ATAC-Seq data analysis
+					</a>
+				</li>
+				
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><a href="/training-material/by-tool/kpbioteam/minfi_analysis.html">kpbioteam/minfi_analysis</a></td>
+		<td>
+			<ul>
+				
+				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
+					</a>
+				</li>
+				
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><a href="/training-material/by-tool/kpbioteam/clusterprofiler_go.html">kpbioteam/clusterprofiler_go</a></td>
+		<td>
+			<ul>
+				
+				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
+					</a>
+				</li>
+				
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><a href="/training-material/by-tool/kpbioteam/clusterprofiler_bitr.html">kpbioteam/clusterprofiler_bitr</a></td>
+		<td>
+			<ul>
+				
+				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
+					</a>
+				</li>
+				
+			</ul>
+		</td>
+	</tr>
+	
+	<tr>
+		<td><a href="/training-material/by-tool/kpbioteam/chipeakanno_annopeaks.html">kpbioteam/chipeakanno_annopeaks</a></td>
+		<td>
+			<ul>
+				
+				<li>
+					Epigenetics /
+					<a href="/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html">
+					Infinium Human Methylation BeadChip
 					</a>
 				</li>
 				
@@ -19226,7 +19304,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19242,7 +19320,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19258,7 +19336,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19274,7 +19352,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19290,7 +19368,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19306,7 +19384,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19322,7 +19400,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19338,7 +19416,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">
-					Filter, Plot and Explore Single-cell RNA-seq Data
+					Filter, plot and explore single-cell RNA-seq data (Scanpy)
 					</a>
 				</li>
 				
@@ -19370,7 +19448,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19386,7 +19464,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19402,7 +19480,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19418,7 +19496,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19434,7 +19512,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19450,7 +19528,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19466,7 +19544,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19482,7 +19560,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19498,7 +19576,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html">
-					Inferring trajectories using Monocle3
+					Inferring single cell trajectories (Monocle3)
 					</a>
 				</li>
 				
@@ -19866,7 +19944,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				<li>
 					Single Cell /
 					<a href="/training-material/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html">
-					Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution
+					Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution
 					</a>
 				</li>
 				
@@ -22164,7 +22242,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/c93ee501f7ece6f502f6f17dae238bdf50605ecc">c93ee50</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a19919e789a4886e9e8226ac1162870bae152660">a19919e</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -22192,7 +22270,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698805831'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

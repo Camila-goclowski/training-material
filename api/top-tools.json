@@ -431,7 +431,7 @@
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -542,6 +542,12 @@
         "/topics/epigenetics/tutorials/atac-seq/tutorial.html"
       ],
       [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
+      ],
+      [
         "galaxy-interface/workflow-reports",
         "Workflow Reports",
         "Using Galaxy and Managing your Data",
@@ -633,19 +639,19 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -1183,13 +1189,13 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -2066,6 +2072,12 @@
         "/topics/ecology/tutorials/regionalGAM/tutorial.html"
       ],
       [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
+      ],
+      [
         "galaxy-interface/workflow-reports",
         "Workflow Reports",
         "Using Galaxy and Managing your Data",
@@ -2437,13 +2449,13 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -2879,7 +2891,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -3025,7 +3037,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -3267,7 +3279,7 @@
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -3481,7 +3493,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -3591,7 +3603,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -3863,7 +3875,7 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ],
@@ -4037,13 +4049,13 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ],
@@ -4055,7 +4067,7 @@
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -4275,7 +4287,7 @@
       ],
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ],
@@ -4618,6 +4630,10 @@
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.8.2",
         "1.0.8.2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/model_prediction/model_prediction/1.0.10.0",
+        "1.0.10.0"
       ]
     ],
     "tutorials": [
@@ -4662,6 +4678,10 @@
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.8.2",
         "1.0.8.2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_train_and_eval/keras_train_and_eval/1.0.10.0",
+        "1.0.10.0"
       ]
     ],
     "tutorials": [
@@ -4699,6 +4719,10 @@
   },
   "bgruening/keras_model_config": {
     "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/1.0.10.0",
+        "1.0.10.0"
+      ],
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_config/keras_model_config/0.5.0",
         "0.5.0"
@@ -4739,6 +4763,10 @@
   },
   "bgruening/keras_model_builder": {
     "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/1.0.10.0",
+        "1.0.10.0"
+      ],
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/keras_model_builder/keras_model_builder/0.5.0",
         "0.5.0"
@@ -5187,7 +5215,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ]
@@ -5217,7 +5245,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ],
@@ -5255,13 +5283,13 @@
     "tutorials": [
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ],
@@ -6068,6 +6096,10 @@
       [
         "toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.8.2",
         "1.0.8.2"
+      ],
+      [
+        "toolshed.g2.bx.psu.edu/repos/bgruening/ml_visualization_ex/ml_visualization_ex/1.0.10.0",
+        "1.0.10.0"
       ]
     ],
     "tutorials": [
@@ -6669,7 +6701,7 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ]
@@ -7069,7 +7101,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -8435,7 +8467,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ]
@@ -8545,7 +8577,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ],
@@ -12825,7 +12857,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -12851,7 +12883,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -12877,7 +12909,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -12903,7 +12935,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -12929,7 +12961,7 @@
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -12973,7 +13005,7 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ]
@@ -12999,7 +13031,7 @@
       ],
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ]
@@ -13019,13 +13051,13 @@
     "tutorials": [
       [
         "single-cell/scrna-case_alevin-combine-datasets",
-        "Combining datasets after pre-processing",
+        "Combining single cell datasets after pre-processing",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"
       ],
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -13135,7 +13167,7 @@
       ],
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ]
@@ -13773,6 +13805,22 @@
       ]
     ]
   },
+  "interactive_tool_qgis": {
+    "tool_id": [
+      [
+        "interactive_tool_qgis",
+        "interactive_tool_qgis"
+      ]
+    ],
+    "tutorials": [
+      [
+        "ecology/QGIS_Web_Feature_Services",
+        "QGIS Web Feature Services",
+        "Ecology",
+        "/topics/ecology/tutorials/QGIS_Web_Feature_Services/tutorial.html"
+      ]
+    ]
+  },
   "iuc/vapor": {
     "tool_id": [
       [
@@ -14365,22 +14413,6 @@
       ]
     ]
   },
-  "toolshed.g2.bx.psu.edu/bgruening": {
-    "tool_id": [
-      [
-        "https://toolshed.g2.bx.psu.edu/view/bgruening/text_processing/f46f0e4f75c4",
-        "f46f0e4f75c4"
-      ]
-    ],
-    "tutorials": [
-      [
-        "genome-annotation/lncrna",
-        "Long non-coding RNAs (lncRNAs) annotation with FEELnc",
-        "Genome Annotation",
-        "/topics/genome-annotation/tutorials/lncrna/tutorial.html"
-      ]
-    ]
-  },
   "Extract_features1": {
     "tool_id": [
       [
@@ -14714,6 +14746,70 @@
         "ATAC-Seq data analysis",
         "Epigenetics",
         "/topics/epigenetics/tutorials/atac-seq/tutorial.html"
+      ]
+    ]
+  },
+  "kpbioteam/minfi_analysis": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/kpbioteam/ewastools/minfi_analysis/2.1.0",
+        "2.1.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
+      ]
+    ]
+  },
+  "kpbioteam/clusterprofiler_go": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/kpbioteam/clusterprofiler_go/clusterprofiler_go/0.1.0",
+        "0.1.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
+      ]
+    ]
+  },
+  "kpbioteam/clusterprofiler_bitr": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/kpbioteam/clusterprofiler_bitr/clusterprofiler_bitr/0.1.0",
+        "0.1.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
+      ]
+    ]
+  },
+  "kpbioteam/chipeakanno_annopeaks": {
+    "tool_id": [
+      [
+        "toolshed.g2.bx.psu.edu/repos/kpbioteam/chipeakanno_annopeaks/chipeakanno_annopeaks/0.1.0",
+        "0.1.0"
+      ]
+    ],
+    "tutorials": [
+      [
+        "epigenetics/ewas-suite",
+        "Infinium Human Methylation BeadChip",
+        "Epigenetics",
+        "/topics/epigenetics/tutorials/ewas-suite/tutorial.html"
       ]
     ]
   },
@@ -19455,7 +19551,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19475,7 +19571,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19495,7 +19591,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19515,7 +19611,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19535,7 +19631,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19555,7 +19651,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19575,7 +19671,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19591,7 +19687,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_basic-pipeline",
-        "Filter, Plot and Explore Single-cell RNA-seq Data",
+        "Filter, plot and explore single-cell RNA-seq data (Scanpy)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html"
       ]
@@ -19623,7 +19719,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19639,7 +19735,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19655,7 +19751,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19671,7 +19767,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19687,7 +19783,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19703,7 +19799,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19719,7 +19815,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19735,7 +19831,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -19751,7 +19847,7 @@
     "tutorials": [
       [
         "single-cell/scrna-case_monocle3-trajectories",
-        "Inferring trajectories using Monocle3",
+        "Inferring single cell trajectories (Monocle3)",
         "Single Cell",
         "/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html"
       ]
@@ -20123,7 +20219,7 @@
     "tutorials": [
       [
         "single-cell/bulk-music-3-preparebulk",
-        "Bulk matrix to ESet object | Creating the bulk RNA-seq dataset for deconvolution",
+        "Bulk matrix to ESet | Creating the bulk RNA-seq dataset for deconvolution",
         "Single Cell",
         "/topics/single-cell/tutorials/bulk-music-3-preparebulk/tutorial.html"
       ]

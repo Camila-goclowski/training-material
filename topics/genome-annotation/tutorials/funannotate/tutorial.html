@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@c93ee501f7ece6f502f6f17dae238bdf50605ecc",
+	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698800125' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698800125' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698805831' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698805831' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -87,7 +87,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Genome annotation with Funannotate">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-05-18 09:34:29 +0000">
+<meta name="DC.date" content="2023-10-23 09:44:54 +0000">
 <meta name="DC.creator" content="Anthony Bretaudeau">
 
         
@@ -128,7 +128,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
     "name": "Galaxy Training Network",
     "url": "https://galaxyproject.org/teach/gtn/"
   },
-  "dateModified": "2023-05-18 09:34:29 +0000",
+  "dateModified": "2023-10-23 09:44:54 +0000",
   "discussionUrl": "https://gitter.im/Galaxy-Training-Network/Lobby",
   "headline": "Genome annotation with Funannotate",
   "interactivityType": "mixed",
@@ -276,7 +276,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698805831'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -777,7 +777,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
         </ul>
 
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> May 18, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 23, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             
@@ -875,12 +875,12 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 the shared data library (<code class="language-plaintext highlighter-rouge">GTN - Material</code> -&gt; <code class="language-plaintext highlighter-rouge">genome-annotation</code>
  -&gt; <code class="language-plaintext highlighter-rouge">Genome annotation with Funannotate</code>):</p>
 
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/genome_masked.fasta
-https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/rnaseq_R1.fq.gz
-https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/rnaseq_R2.fq.gz
-https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/SwissProt_subset.fasta
-https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/alternate_annotation.gbk
-https://zenodo.org/api/files/47406781-e8af-42e7-855d-d29e4a098f6f/alternate_annotation.gff3
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/7867921/files/genome_masked.fasta
+https://zenodo.org/record/7867921/files/rnaseq_R1.fq.gz
+https://zenodo.org/record/7867921/files/rnaseq_R2.fq.gz
+https://zenodo.org/record/7867921/files/SwissProt_subset.fasta
+https://zenodo.org/record/7867921/files/alternate_annotation.gbk
+https://zenodo.org/record/7867921/files/alternate_annotation.gff3
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
@@ -1139,7 +1139,7 @@ Anyway, with real data, you expect to have a vast majority of reads mapping uniq
   <li>You then need to prepare a file containing a few metadata. This can be done online on <a href="https://submit.ncbi.nlm.nih.gov/genbank/template/submission/">https://submit.ncbi.nlm.nih.gov/genbank/template/submission/</a>. You need to fill the form with some basic information, like that for example (for real data, you should of course write real information!):</li>
 </ul>
 
-<p><a href="../../images/ncbi_template.png" rel="noopener noreferrer"><figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/ncbi_template.png" alt="NCBI submission template. " width="1142" height="1640" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of a filled form to generate an NCBI submission template.&lt;/figcaption&gt;</figure></a></p>
+<figure id="figure-1" style="max-width: 90%; margin:auto;"><img src="../../images/ncbi_template.png" alt="NCBI submission template. " width="1142" height="1640" loading="lazy" /><a target="_blank" href="../../images/ncbi_template.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of a filled form to generate an NCBI submission template.</figcaption></figure>
 
 <p>When filled, you can click on the <strong>Create template</strong> button: you will be able to download a <code class="language-plaintext highlighter-rouge">.sbt</code> file that you should then upload to your Galaxy history.</p>
 
@@ -1350,7 +1350,7 @@ Anyway, with real data, you expect to have a vast majority of reads mapping uniq
 
     <p>You should see something like this:</p>
 
-    <p><a href="../../images/aegean_scaffold_11_637-7730.png" rel="noopener noreferrer"><figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/aegean_scaffold_11_637-7730.png" alt="Scaffold 11 - 637..7730. " width="650" height="268" loading="lazy" />&lt;figcaption&gt;<span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Comparison of the two annotations on Scaffold 11 - 637..7730&lt;/figcaption&gt;</figure></a></p>
+    <figure id="figure-2" style="max-width: 90%; margin:auto;"><img src="../../images/aegean_scaffold_11_637-7730.png" alt="Scaffold 11 - 637..7730. " width="650" height="268" loading="lazy" /><a target="_blank" href="../../images/aegean_scaffold_11_637-7730.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Comparison of the two annotations on Scaffold 11 - 637..7730</figcaption></figure>
 
     <p>As you can see, at this position, the alternate annotation as found only one big gene, while the annotation you have generated has found 4 different genes, not all on the same strand.</p>
 
@@ -1534,13 +1534,14 @@ author = "Anthony Bretaudeau",
 
 	<div class="col-md-3 col-xs-12">
 		
-		<img class="funder-avatar" src="https://www.erasmusplus.nl/assets/images/logo.png" alt="Logo">
+		<img class="funder-avatar" src="https://gallantries.github.io/assets/images/gallantries-logo.png" alt="Logo">
 		
-		<a href="/training-material/hall-of-fame/erasmusplus/" class="btn btn-secondary">See Funder Profile</a>
+		<a href="/training-material/hall-of-fame/gallantries/" class="btn btn-secondary">See Funder Profile</a>
 	</div>
 	<div class="col-md-9 col-xs-12">
 		<p>This project (<a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2020-1-NL01-KA203-064717"><code class="language-plaintext highlighter-rouge">2020-1-NL01-KA203-064717</code></a>) is funded with the support of the Erasmus+ programme of the European Union. Their funding has supported a large number of tutorials within the GTN across a wide array of topics.
-<img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg" alt="eu flag with the text: with the support of the erasmus programme of the european union" /></p>
+<img src="https://gallantries.github.io/assets/images/logosbeneficaireserasmusright_en.jpg" alt="eu flag with the text: with the support of the erasmus programme of the european union" />
+<img src="https://www.erasmusplus.nl/assets/images/logo.png" alt="erasmus plus logo" /></p>
 
 	</div>
 
@@ -1674,7 +1675,7 @@ tools:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/c93ee501f7ece6f502f6f17dae238bdf50605ecc">c93ee50</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a19919e789a4886e9e8226ac1162870bae152660">a19919e</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -1706,7 +1707,7 @@ tools:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698805831'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

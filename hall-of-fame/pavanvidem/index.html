@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@c93ee501f7ece6f502f6f17dae238bdf50605ecc",
+	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698800125' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698800125' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698805831' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698805831' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +103,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698805831'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -320,9 +320,12 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 			</div>
 
 			<div class="col-md-9">
-				<h1>
-					Pavankumar Videm
-				</h1>
+				<hgroup>
+					<h1>
+						Pavankumar Videm
+					</h1>
+				
+				</hgroup>
 				
 				
 
@@ -353,6 +356,12 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 					<li>
 						
 						<a href="/training-material/topics/single-cell">Single Cell</a>
+						
+					</li>
+				
+					<li>
+						
+						<a href="/training-material/learning-pathways/intro_single_cell.html">Introduction to Galaxy and Single Cell RNA Sequence analysis</a>
 						
 					</li>
 				
@@ -472,8 +481,25 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 							Single Cell
 						</a>
 						/
+						<a href="/training-material//topics/single-cell/tutorials/scrna-case_FilterPlotandExploreRStudio/tutorial.html">
+						Filter, plot, and explore single cell RNA-seq data (Seurat, R)
+						</a>
+						
+						
+	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
+
+
+					</li>
+				
+					<li>
+						
+						
+						<a href="/training-material/topics/single-cell">
+							Single Cell
+						</a>
+						/
 						<a href="/training-material//topics/single-cell/tutorials/scrna-case_monocle3-rstudio/tutorial.html">
-						Inferring Trajectories using Monocle3 (R)
+						Inferring single cell trajectories (Monocle3, R)
 						</a>
 						
 						
@@ -575,6 +601,83 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 <div class="card newsitem">
  <div class="card-header">
+     <a href="/training-material/news/2023/10/12/sc_subdomain.html"><h3 class="card-title">Single cell subdomain re-launch: Unified and feedback-driven</h3></a>
+  </div>
+ <div class="row no-gutters">
+  <div class="col-sm-5">
+   <img class="card-img newscover" src="/training-material/news/images/2023-10-12-singlecell_subdomain.png" alt="screenshot of the Single Cell Omics subdomain page, with purple mastheader, Single Cell Tools categories along the side, and an updated logo combining the Single Cell Omics connected cells image with the Human Cell Atlas blue embyro logo" loading="lazy">
+  </div>
+  <div class="col-sm-7">
+   <div class="card-body">
+        <!--<a href="/training-material/news/2023/10/12/sc_subdomain.html"><h4 class="card-title">Single cell subdomain re-launch: Unified and feedback-driven</h4></a>-->
+        <div class="text-muted">
+        12 October 2023
+        </div>
+        <div markdown="0">
+
+	<div class="contributors-line">
+		
+<table class="contributions">
+	
+	<tr>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Avatar" width="36" height="36">Wendi Bacon</a><a href="/training-material/hall-of-fame/pavanvidem/" class="contributor-badge contributor-pavanvidem"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/pavanvidem?s=36" alt="Avatar" width="36" height="36">Pavankumar Videm</a>
+		</td>
+	</tr>
+	
+
+
+	
+
+	
+
+	
+
+	
+
+	
+	<tr>
+		<td><abbr title="These people managed and provided infrastructure to the GTN or for training purposes">Infrastructure</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/kysrpex/" class="contributor-badge contributor-kysrpex"><img src="https://avatars.githubusercontent.com/kysrpex?s=36" alt="Avatar" width="36" height="36">José Manuel Domínguez</a></td>
+	</tr>
+	
+</table>
+
+
+	</div>
+
+</div>
+
+
+        
+<span class="label label-default tutorial_tag" style="--color-primary: #fff7cc; --color-darker: #f1dc00; --color-dimmed: #ffea42;">gtn</span>
+
+<span class="label label-default tutorial_tag" style="--color-primary: #00fb73; --color-darker: #00df65; --color-dimmed: #00ed6c;">singlecell</span>
+
+    <hr/>
+    <p class="card-text">
+      
+        The European Galaxy Days 2023 CoFest combined the forces of administrator, developer and trainer to update and re-launch the single cell Galaxy instance. Where previously there were two subdomains each with their own sets of tools, there is now a unified subdomain with re-categorized tools that makes sense for users.
+
+      
+    </p>
+    <a href="/training-material/news/2023/10/12/sc_subdomain.html" class="btn btn-primary">Full Story</a>
+   </div>
+  </div>
+ </div>
+</div>
+</article>
+
+                
+                   <article>
+
+
+
+
+<div class="card newsitem">
+ <div class="card-header">
      <a href="/training-material/news/2021/04/10/tutorial_plant_transcriptomics.html"><h3 class="card-title">New Tutorials: Whole transcriptome analysis of Arabidopsis thaliana</h3></a>
   </div>
  <div class="row no-gutters">
@@ -620,13 +723,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
         
-<span class="label label-default tutorial_tag" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffd1ab; --color-darker: #ffb254; --color-dimmed: #ffc287;">new tutorial</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;">transcriptomics</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #efdd00; --color-darker: #d5c400; --color-dimmed: #e2d000;">transcriptomics</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #6ced00; --color-darker: #60d300; --color-dimmed: #66e000;">plants</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #71f700; --color-darker: #64dc00; --color-dimmed: #6ae900;">plants</span>
 
-<span class="label label-default tutorial_tag" style="--color-primary: #ffbee6; --color-darker: #ff99db; --color-dimmed: #fface0;">mirna</span>
+<span class="label label-default tutorial_tag" style="--color-primary: #ffcbea; --color-darker: #ffa6de; --color-dimmed: #ffb9e4;">mirna</span>
 
     <hr/>
     <p class="card-text">
@@ -696,6 +799,10 @@ var topics = [
 
 	
 	
+	"Single Cell",
+
+	
+	
 	"Epigenetics",
 
 
@@ -727,10 +834,14 @@ var slidesVsTutos = [
 
 	"Tutorials",
 
+	"Tutorials",
+
 
 	"Slides",
 	
 
+
+	"News Posts",
 
 	"News Posts",
 
@@ -824,7 +935,7 @@ var chart2 = new Chart(ctx2, {
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/c93ee501f7ece6f502f6f17dae238bdf50605ecc">c93ee50</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a19919e789a4886e9e8226ac1162870bae152660">a19919e</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -852,7 +963,7 @@ var chart2 = new Chart(ctx2, {
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698805831'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

@@ -51,7 +51,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 		
 	Sentry.init({
 	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@c93ee501f7ece6f502f6f17dae238bdf50605ecc",
+	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
 	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 	  sampleRate: 0.1,
 	  tracesSampleRate: 0.1,
@@ -76,8 +76,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698800125' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698800125' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698805831' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698805831' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +103,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698805831'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -281,7 +281,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
 
-<h3 id="Single-Cell RNA"> <a href="#Single-Cell RNA"> Single-cell rna </a></h3>
+<h3 id="Analysis"> <a href="#Analysis"> Analysis </a></h3>
 
 <hr/>
 
@@ -301,23 +301,9 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 
 
 
-<h4 class="faq-area"> Why is amplification more of an issue in scRNA-seq than RNA-seq? <a href="/training-material/topics/single-cell/faqs/amplification.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+<h4 class="faq-area"> Notebook-based tutorials can give different outputs <a href="/training-material/topics/single-cell/faqs/notebook_warning.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
-<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-why-is-amplification-more-of-an-issue-in-scrna-seq-than-rna-seq"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-why-is-amplification-more-of-an-issue-in-scrna-seq-than-rna-seq" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Why is amplification more of an issue in scRNA-seq than RNA-seq?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Due to the extremely small amount of starting material, the initial amplification is likely to be uneven due to the first cycle of amplified products being overrepresented in the second cycle of amplification leading to further bias. In Bulk RNA-seq, the larger selection of RNA molecules to amplify, evens out the odds that any one transcript will be amplified more than others.</p> </blockquote> <!--END_SNIPPET-->
-
-
-
- <br> 
-
-<h3 id="gene"> <a href="#gene"> Gene </a></h3>
-
-<hr/>
-
-
-
-<h4 class="faq-area"> What exactly is a ‘Gene profile’? <a href="/training-material/topics/single-cell/faqs/gene_profile.html"><i class="fas fa-external-link-alt"></i></a> </h4>
-
-<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-what-exactly-is-a-gene-profile"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-what-exactly-is-a-gene-profile" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: What exactly is a ‘Gene profile’?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Think of it like a fingerprint that some cells exhibit and others don’t. It’s a small collection of genes which are up or down regulated in relation to one another. Their differences are not absolute, but relative. So if CellA has 100 counts of Gene1 and 50 counts of Gene2, this creates a relation of 2:1 between Gene1 and Gene2. If CellB has a 20 counts of Gene1 and 10 counts of Gene2, then they share the same relation. If CellA and CellB share other relations with other genes than this might be enough to say that they share a Gene profile, and will therefore likely cluster together as they describe the same cell type.</p> </blockquote> <!--END_SNIPPET-->
+<!--SNIPPET--><blockquote class="warning">   <div class="box-title warning-title" id="warning-notebook-based-tutorials-can-give-different-outputs"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Warning: Notebook-based tutorials can give different outputs</div>   <p>The nature of coding pulls the most recent tools to perform tasks. This can - and often does - change the outputs of an analysis. Be prepared, as you are unlikely to get outputs identical to a tutorial if you are running it in a programming environment like a Jupyter Notebook or R-Studio. That’s ok! The outputs should still be pretty close.</p> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -332,6 +318,62 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 <h4 class="faq-area"> Why do we only consider highly variable genes? <a href="/training-material/topics/single-cell/faqs/variable_genes.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
 <!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-why-do-we-only-consider-highly-variable-genes"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-why-do-we-only-consider-highly-variable-genes" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Why do we only consider highly variable genes?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>The non-variable genes are likely housekeeping genes, which are expressed everywhere and are not so useful for distinguishing one cell type from another. However background genes are important to the analysis and are used to generate a background baseline model for measuring the variability of the other genes.</p> </blockquote> <!--END_SNIPPET-->
+
+
+
+ <br> 
+
+<h3 id="Community"> <a href="#Community"> Community </a></h3>
+
+<hr/>
+
+
+
+<h4 class="faq-area"> How can I talk with other users? <a href="/training-material/topics/single-cell/faqs/user_community_join.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-talk-with-other-users"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-talk-with-other-users" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: How can I talk with other users?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To discuss with like-minded scientists, join our Matrix/Element chatroom to discuss with fellow users of Galaxy single cell analysis tools!</p>   <p><a href="https://matrix.to/#/#Galaxy-Training-Network_galaxy-single-cell:gitter.im"><img src="/training-material/topics/single-cell/images/matrix-badge.svg" alt="Matrix" /></a></p>   <p>We also post new tutorials / workflows there from time to time, as well as any other news.</p> </blockquote> <!--END_SNIPPET-->
+
+
+
+ <br> 
+
+<h3 id="Interpretation"> <a href="#Interpretation"> Interpretation </a></h3>
+
+<hr/>
+
+
+
+<h4 class="faq-area"> What exactly is a ‘Gene profile’? <a href="/training-material/topics/single-cell/faqs/gene_profile.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-what-exactly-is-a-gene-profile"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-what-exactly-is-a-gene-profile" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: What exactly is a ‘Gene profile’?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Think of it like a fingerprint that some cells exhibit and others don’t. It’s a small collection of genes which are up or down regulated in relation to one another. Their differences are not absolute, but relative. So if CellA has 100 counts of Gene1 and 50 counts of Gene2, this creates a relation of 2:1 between Gene1 and Gene2. If CellB has a 20 counts of Gene1 and 10 counts of Gene2, then they share the same relation. If CellA and CellB share other relations with other genes than this might be enough to say that they share a Gene profile, and will therefore likely cluster together as they describe the same cell type.</p> </blockquote> <!--END_SNIPPET-->
+
+
+
+ <br> 
+
+<h3 id="Resources"> <a href="#Resources"> Resources </a></h3>
+
+<hr/>
+
+
+
+<h4 class="faq-area"> Use our single cell Galaxy instance <a href="/training-material/topics/single-cell/faqs/single_cell_omics.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-use-our-single-cell-galaxy-instance"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-use-our-single-cell-galaxy-instance" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Use our single cell Galaxy instance<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Did you know we have a unique Galaxy instance with all our single cell tools highlighted to make it easier to use? We recommend this instance for all your single cell analysis needs, particularly for newer users.</p>   <p>This <strong>subdomain</strong> is uses the main European Galaxy infrastructure and power, it’s just organised better for users of particular analyses…like single cell!</p>   <p>Try it out! All your histories/workflows/logins from the general <a href="https://usegalaxy.eu">European Galaxy instance</a> will be there!</p>   <ul>   <li><i class="fa fa-tv" aria-hidden="true"></i> <a href="https://singlecell.usegalaxy.eu">Single cell omics Galaxy instance</a></li> </ul> </blockquote> <!--END_SNIPPET-->
+
+
+
+ <br> 
+
+<h3 id="Single-Cell RNA"> <a href="#Single-Cell RNA"> Single-cell rna </a></h3>
+
+<hr/>
+
+
+
+<h4 class="faq-area"> Why is amplification more of an issue in scRNA-seq than RNA-seq? <a href="/training-material/topics/single-cell/faqs/amplification.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-why-is-amplification-more-of-an-issue-in-scrna-seq-than-rna-seq"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-why-is-amplification-more-of-an-issue-in-scrna-seq-than-rna-seq" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Why is amplification more of an issue in scRNA-seq than RNA-seq?<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Due to the extremely small amount of starting material, the initial amplification is likely to be uneven due to the first cycle of amplified products being overrepresented in the second cycle of amplification leading to further bias. In Bulk RNA-seq, the larger selection of RNA molecules to amplify, evens out the odds that any one transcript will be amplified more than others.</p> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -398,7 +440,7 @@ add a button, include configuration options:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/c93ee501f7ece6f502f6f17dae238bdf50605ecc">c93ee50</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/a19919e789a4886e9e8226ac1162870bae152660">a19919e</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -426,7 +468,7 @@ add a button, include configuration options:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698800125'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698805831'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
