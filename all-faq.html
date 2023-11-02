@@ -6,63 +6,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
-
-<!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
+            <!-- JavaScript Error Monitoring, and performance tracking. -->
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@0507f052632bdb31ae85da4c40971ffe851dc3de",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -76,8 +55,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698886439' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698886439' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698889545' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698889545' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -103,7 +82,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698886439'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698889545'></script>
         <header>
     <nav class="navbar navbar-expand-md navbar-dark" aria-label="Site Navigation">
         <div class="container">
@@ -187,7 +166,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
 
 		<a href="/training-material/preferences.html" class="dropdown-item">
-			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> Themes have moved <span class="badge badge-secondary">New</span>
+			<i class="fas fa-palette" aria-hidden="true"></i><span class="visually-hidden">gtn-theme</span> User Preferences <span class="badge badge-secondary">New</span>
 		</a>
 
         <div class="dropdown-item">
@@ -1319,6 +1298,13 @@ When you get a red dataset in your history, it means something went wrong. But h
 
 
 
+<h4 class="faq-area"> Updating from 22.01 to 23.0 with Ansible <a href="/training-material/topics/admin/faqs/galaxy-update-22.05.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-updating-from-22-01-to-23-0-with-ansible"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-updating-from-22-01-to-23-0-with-ansible" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Updating from 22.01 to 23.0 with Ansible<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Galaxy introduced a number of changes in 22.05 and 23.0 that are extremely important to be aware of during the upgrade process. Namely a new database migration system, and a new required running environment (gunicorn instead of uwsgi).</p>   <p>The scripts to migrate to the new database migration system are only compatible with release 22.05, and then were subsequently removed, so it is <strong>mandatory</strong> to upgrade to 22.05 if you want to go further.</p>   <p>Here is the recommended update procedure with ansible:</p>   <ol>   <li>Update to 22.01 normally</li>   <li>Change the release to 22.05, and run the upgrade     <ol>       <li>Galaxy will probably not start correctly here, ignore it.</li>       <li>         <p>Run the database migration manually</p>         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GALAXY_CONFIG_FILE=/srv/galaxy/config/galaxy.yml sh manage_db.sh -c /srv/galaxy/config/galaxy.yml upgrade<br></code></pre></div>        </div>       </li>     </ol>   </li>   <li>Update your system’s ansible, you probably need something with a major version greater than 2.</li>   <li>     <p>Set the release to <code class="language-plaintext highlighter-rouge">23.0</code> and make other required changes. There are a lot of useful changes, but the easiest procedure is probably something like:</p>     <ol>       <li>git clone https://github.com/hexylena/git-gat/</li>       <li>git checkout step-4</li>       <li>         <p>Diff and sync (e.g. <code class="language-plaintext highlighter-rouge">vimdiff group_vars/galaxyservers.yml git-gat/group_vars/galaxyservers.yml</code>) for the main configuration files:</p>         <ul>           <li>group_vars/all.yml</li>           <li>group_vars/dbservers.yml</li>           <li>galaxy.yml</li>           <li>requirements.yml</li>           <li>hosts</li>           <li>templates/nginx/galaxy.j2</li>         </ul>       </li>     </ol>     <p>But the main change is the swap from uwsgi to gravity+gunicorn</p>     <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">-  uwsgi:<br>-    socket: 127.0.0.1:8080<br>-    buffer-size: 16384<br>-    processes: 1<br>-    threads: 4<br>-    offload-threads: 2<br>-    static-map:<br>-      - /static=/static<br>-      - /favicon.ico=/static/favicon.ico<br>-    static-safe: client/galaxy/images<br>-    master: true<br>-    virtualenv: ""<br>-    pythonpath: "/lib"<br>-    module: galaxy.webapps.galaxy.buildapp:uwsgi_app()<br>-    thunder-lock: true<br>-    die-on-term: true<br>-    hook-master-start:<br>-      - unix_signal:2 gracefully_kill_them_all<br>-      - unix_signal:15 gracefully_kill_them_all<br>-    py-call-osafterfork: true<br>-    enable-threads: true<br>-    mule:<br>-      - lib/galaxy/main.py<br>-      - lib/galaxy/main.py<br>-    farm: job-handlers:1,2<br></span><span class="gi">+  gravity:<br>+    process_manager: systemd<br>+    galaxy_root: "/server"<br>+    galaxy_user: ""<br>+    virtualenv: ""<br>+    gunicorn:<br>+      # listening options<br>+      bind: "unix:/gunicorn.sock"<br>+      # performance options<br>+      workers: 2<br>+      # Other options that will be passed to gunicorn<br>+      # This permits setting of 'secure' headers like REMOTE_USER (and friends)<br>+      # https://docs.gunicorn.org/en/stable/settings.html#forwarded-allow-ips<br>+      extra_args: '--forwarded-allow-ips="*"'<br>+      # This lets Gunicorn start Galaxy completely before forking which is faster.<br>+      # https://docs.gunicorn.org/en/stable/settings.html#preload-app<br>+      preload: true<br>+    celery:<br>+      concurrency: 2<br>+      loglevel: DEBUG<br>+    handlers:<br>+      handler:<br>+        processes: 2<br>+        pools:<br>+          - job-handlers<br>+          - workflow-schedulers<br></span></code></pre></div>    </div>     <p>Some other important changes include:</p>     <ul>       <li>uchida.miniconda is replaced with galaxyproject.conda</li>       <li>usegalaxy_eu.systemd is no longer needed</li>       <li><code class="language-plaintext highlighter-rouge">galaxy_user_name</code> is defined in all.yml in the latest git-gat</li>       <li>git-gat also separates out the DB serving into a <code class="language-plaintext highlighter-rouge">dbservers.yml</code> host group</li>     </ul>   </li>   <li>Backup your <code class="language-plaintext highlighter-rouge">venv</code>, <code class="language-plaintext highlighter-rouge">mv /srv/galaxy/venv/ /srv/galaxy/venv-old/</code>, as your NodeJS is probably out of date and Galaxy doesn’t handle that gracefully</li>   <li>Do any local customs for luck (knocking on wood, etc.)</li>   <li>Run the playbook</li>   <li>Things might go wrong with systemd units     <ul>       <li>try running <code class="language-plaintext highlighter-rouge">galaxyctl -c /srv/galaxy/config/galaxy.yml update</code> as root</li>       <li>you may also need to <code class="language-plaintext highlighter-rouge">rm /etc/systemd/system/galaxy.service</code> which is then no longer needed</li>       <li>you’ll have a <code class="language-plaintext highlighter-rouge">galaxy.target</code> and you can instead <code class="language-plaintext highlighter-rouge">systemctl daemon-reload</code> and <code class="language-plaintext highlighter-rouge">systemctl start galaxy.target</code></li>     </ul>   </li> </ol> </blockquote> <!--END_SNIPPET-->
+
+
+
+
 <h4 class="faq-area"> Variable connection <a href="/training-material/topics/admin/faqs/ansible-connection.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
 <!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-variable-connection"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-variable-connection" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Variable connection<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>When the playbook runs, as part of the setup, it collects any variables that are set. For a playbook affecting a group of hosts named <code class="language-plaintext highlighter-rouge">my_hosts</code>, it checks many different places for variables, including “group_vars/my_hosts.yml”. If there are variables there, they’re added to the collection of current variables. It also checks “group_vars/all.yml” (for the built-in host group <code class="language-plaintext highlighter-rouge">all</code>). There is a precedence order, but then these variables are available for roles and tasks to consume.</p> </blockquote> <!--END_SNIPPET-->
@@ -2371,7 +2357,7 @@ Undelete your deleted histories
 
 <h4 class="faq-area"> Launch JupyterLab <a href="/training-material/faqs/galaxy/interactive_tools_jupyter_launch.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
-<!--SNIPPET--><blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Launch JupyterLab in Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="link"><strong>Interactive Jupyter Notebook</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: interactive_tool_jupyter_notebook</span></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="link"><strong>Interactive JupyTool and notebook</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: interactive_tool_jupyter_notebook</span></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Launch Try JupyterLab if not available on Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote> <!--END_SNIPPET-->
+<!--SNIPPET--><blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Launch JupyterLab in Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive Jupyter Notebook</strong></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> Tip: Launch Try JupyterLab if not available on Galaxy<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -2637,7 +2623,7 @@ Undelete your deleted histories
 
 <h4 class="faq-area"> GTN Stats <a href="/training-material/faqs/gtn/gtn_stats.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
-<!--SNIPPET--> <!-- tutorial stats --> <div class="row" style="color: var(--text-color-boxtitle)"> <div class="col-md-4">  <div class="gtn-card color-agenda">    <div class="card-title">29</div>    <div class="card-text">Topics</div>  </div> </div> <div class="col-md-4">  <div class="gtn-card color-tip">    <div class="card-title">371</div>    <div class="card-text">Tutorials</div>  </div> </div> <div class="col-md-4">  <div class="gtn-card color-details">    <div class="card-title">397</div>    <div class="card-text"><abbr title="Frequently Asked Questions">FAQs</abbr></div>  </div> </div> <div class="col-md-6">  <div class="gtn-card color-comment">    <div class="card-title">329</div>    <div class="card-text">Contributors</div>  </div> </div> <div class="col-md-6">  <div class="gtn-card color-handson">    <div class="card-title">8.3</div>    <div class="card-text">Years</div>  </div> </div> </div> <!--END_SNIPPET-->
+<!--SNIPPET--> <!-- tutorial stats --> <div class="row" style="color: var(--text-color-boxtitle)"> <div class="col-md-4">  <div class="gtn-card color-agenda">    <div class="card-title">29</div>    <div class="card-text">Topics</div>  </div> </div> <div class="col-md-4">  <div class="gtn-card color-tip">    <div class="card-title">372</div>    <div class="card-text">Tutorials</div>  </div> </div> <div class="col-md-4">  <div class="gtn-card color-details">    <div class="card-title">398</div>    <div class="card-text"><abbr title="Frequently Asked Questions">FAQs</abbr></div>  </div> </div> <div class="col-md-6">  <div class="gtn-card color-comment">    <div class="card-title">331</div>    <div class="card-text">Contributors</div>  </div> </div> <div class="col-md-6">  <div class="gtn-card color-handson">    <div class="card-title">8.3</div>    <div class="card-text">Years</div>  </div> </div> </div> <!--END_SNIPPET-->
 
 
 
@@ -2805,7 +2791,7 @@ Undelete your deleted histories
 
 <h4 class="faq-area"> Flatten a list of list of paired datasets into a list of paired datasets <a href="/training-material/topics/galaxy-interface/faqs/flatten-list-list-paired-to-list-paired.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
-<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-flatten-a-list-of-list-of-paired-datasets-into-a-list-of-paired-datasets"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-flatten-a-list-of-list-of-paired-datasets-into-a-list-of-paired-datasets" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Flatten a list of list of paired datasets into a list of paired datasets<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Sometimes you find yourself with a <code class="language-plaintext highlighter-rouge">list:list:paired</code>, i.e. a collection of collection of paired end data, and you really want a <code class="language-plaintext highlighter-rouge">list:paired</code>, a flatter collection of paired end data. This is easy to resolve with <span class="tool" data-tool="__APPLY_RULES__" title="Apply rules tool" aria-role="link"><strong>Apply rules</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>APPLY_RULES</strong></span></span>:</p>   <ol>   <li>Open <span class="tool" data-tool="__APPLY_RULES__" title="Apply rules tool" aria-role="link"><strong>Apply rules</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <strong>APPLY_RULES</strong></span></span></li>   <li>Select your collection</li>   <li>Click <strong>Edit</strong></li> </ol>   <p>You’ll now be in the Apply rules editing interface. There are three columns (if it’s a <code class="language-plaintext highlighter-rouge">list:list:paired</code>)</p>   <ol>   <li>The outermost <code class="language-plaintext highlighter-rouge">list</code> identifier(s)</li>   <li>The next <code class="language-plaintext highlighter-rouge">list</code> identifier(s)</li>   <li>The paired-end indicator</li> </ol>   <p>Flattening this top level list, so it’s just a <code class="language-plaintext highlighter-rouge">list:paired</code> requires a few changes:</p>   <ol>   <li>From <strong>Column</strong> menu select <code class="language-plaintext highlighter-rouge">Concatenate Columns</code>     <ul>       <li><em>“From Column”</em>: <code class="language-plaintext highlighter-rouge">A</code></li>       <li><em>“From Column”</em>: <code class="language-plaintext highlighter-rouge">B</code> This creates a column with the top list identifier, and the inner list identifier, which will be our new list identifier for the flattened list.</li>     </ul>   </li>   <li>From <strong>Rules</strong> menu select <code class="language-plaintext highlighter-rouge">Add / Modify Column Definitions</code>     <ul>       <li>Click <code class="language-plaintext highlighter-rouge">Add Definition</code> button and select <code class="language-plaintext highlighter-rouge">Paired-end Indicator</code>         <ul>           <li><em>“Paired-end Indicator”</em>: <code class="language-plaintext highlighter-rouge">C</code></li>         </ul>       </li>       <li>Click <code class="language-plaintext highlighter-rouge">Add Definition</code> button and select <code class="language-plaintext highlighter-rouge">List Identifier(s)</code>         <ul>           <li><em>“List Identifier(s)”</em>: <code class="language-plaintext highlighter-rouge">D</code></li>         </ul>       </li>       <li>Click Apply</li>     </ul>   </li>   <li>Click <strong>Save</strong></li>   <li>Click <strong>Run Tool</strong></li> </ol>   <p>The tool will execute and reshape your list, congratulations!</p> </blockquote> <!--END_SNIPPET-->
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-flatten-a-list-of-list-of-paired-datasets-into-a-list-of-paired-datasets"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-flatten-a-list-of-list-of-paired-datasets-into-a-list-of-paired-datasets" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> Tip: Flatten a list of list of paired datasets into a list of paired datasets<span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Sometimes you find yourself with a <code class="language-plaintext highlighter-rouge">list:list:paired</code>, i.e. a collection of collection of paired end data, and you really want a <code class="language-plaintext highlighter-rouge">list:paired</code>, a flatter collection of paired end data. This is easy to resolve with <span class="tool" data-tool="__APPLY_RULES__" title="Apply rules tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Apply rules</strong></span>:</p>   <ol>   <li>Open <span class="tool" data-tool="__APPLY_RULES__" title="Apply rules tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Apply rules</strong></span></li>   <li>Select your collection</li>   <li>Click <strong>Edit</strong></li> </ol>   <p>You’ll now be in the Apply rules editing interface. There are three columns (if it’s a <code class="language-plaintext highlighter-rouge">list:list:paired</code>)</p>   <ol>   <li>The outermost <code class="language-plaintext highlighter-rouge">list</code> identifier(s)</li>   <li>The next <code class="language-plaintext highlighter-rouge">list</code> identifier(s)</li>   <li>The paired-end indicator</li> </ol>   <p>Flattening this top level list, so it’s just a <code class="language-plaintext highlighter-rouge">list:paired</code> requires a few changes:</p>   <ol>   <li>From <strong>Column</strong> menu select <code class="language-plaintext highlighter-rouge">Concatenate Columns</code>     <ul>       <li><em>“From Column”</em>: <code class="language-plaintext highlighter-rouge">A</code></li>       <li><em>“From Column”</em>: <code class="language-plaintext highlighter-rouge">B</code> This creates a column with the top list identifier, and the inner list identifier, which will be our new list identifier for the flattened list.</li>     </ul>   </li>   <li>From <strong>Rules</strong> menu select <code class="language-plaintext highlighter-rouge">Add / Modify Column Definitions</code>     <ul>       <li>Click <code class="language-plaintext highlighter-rouge">Add Definition</code> button and select <code class="language-plaintext highlighter-rouge">Paired-end Indicator</code>         <ul>           <li><em>“Paired-end Indicator”</em>: <code class="language-plaintext highlighter-rouge">C</code></li>         </ul>       </li>       <li>Click <code class="language-plaintext highlighter-rouge">Add Definition</code> button and select <code class="language-plaintext highlighter-rouge">List Identifier(s)</code>         <ul>           <li><em>“List Identifier(s)”</em>: <code class="language-plaintext highlighter-rouge">D</code></li>         </ul>       </li>       <li>Click Apply</li>     </ul>   </li>   <li>Click <strong>Save</strong></li>   <li>Click <strong>Run Tool</strong></li> </ol>   <p>The tool will execute and reshape your list, congratulations!</p> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -3514,7 +3500,7 @@ add a button, include configuration options:
 				The GTN infrastructure is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
 				</p>
 				<p>
-				Revision <a href="https://github.com/galaxyproject/training-material/commit/a19919e789a4886e9e8226ac1162870bae152660">a19919e</a>, built with Jekyll (4.3.2 | production)
+				Revision <a href="https://github.com/galaxyproject/training-material/commit/0507f052632bdb31ae85da4c40971ffe851dc3de">0507f05</a>, built with Jekyll (4.3.2 | production)
 				</p>
 			</div>
 			<div class="col-sm-6" style="text-align: right">
@@ -3542,7 +3528,7 @@ add a button, include configuration options:
 </footer>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698886439'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698889545'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>

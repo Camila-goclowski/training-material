@@ -6,63 +6,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Galaxy Training!</title>
         
-            <!--
-<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
--->
-<!-- We let users opt-out, so if they've opted in, we need to append the plausible script to the body -->
-
-<script>
-var scriptElement = document.createElement("script");
-scriptElement.async = true;
-scriptElement.defer = true;
-scriptElement.setAttribute("data-domain", "training.galaxyproject.org");
-scriptElement.src = "https://plausible.galaxyproject.eu/js/plausible.js";
-
-// Appending the script element to the body
-if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
-	console.log("Plausible: opt-in");
-	// Wait for the document to be available
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-}
-</script>
-
-<!-- JavaScript Error Monitoring, and performance tracking. -->
-<!--
+            <!-- JavaScript Error Monitoring, and performance tracking. -->
 <script
   src="https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js"
   integrity="sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43"
   crossorigin="anonymous"
 ></script>
--->
 <script type="text/javascript">
-var scriptElement = document.createElement("script");
-scriptElement.src = "https://browser.sentry-cdn.com/7.52.1/bundle.tracing.min.js";
-scriptElement.integrity = "sha384-muuFXKS3752PNA4rPm9Uq6BLvOfV4CXyr9MHDBPvozOJJUWLKkogEFWOIRoVps43";
-scriptElement.crossOrigin = "anonymous";
-
 if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
 	console.log("Sentry: opt-in");
-	// Appending the script element to the body
-	document.addEventListener("DOMContentLoaded", function(event) {
-		document.body.appendChild(scriptElement);
-	});
-		
 	Sentry.init({
-	  dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-	  release: "galaxy-training-network@a19919e789a4886e9e8226ac1162870bae152660",
-	  integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
-	  sampleRate: 0.1,
-	  tracesSampleRate: 0.1,
-	  // Capture Replay for no sessions by default
-	  replaysSessionSampleRate: 0.01,
-	  // plus for 1% of sessions with an error
-	  replaysOnErrorSampleRate: 0.01,
-	  // PII OFF
-	  sendDefaultPii: false, // Off by default but just in case.
-	  environment: "production",
+		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
+		release: "galaxy-training-network@0507f052632bdb31ae85da4c40971ffe851dc3de",
+		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+		sampleRate: 0.1,
+		tracesSampleRate: 0.1,
+		// Capture Replay for no sessions by default
+		replaysSessionSampleRate: 0.01,
+		// plus for 1% of sessions with an error
+		replaysOnErrorSampleRate: 0.01,
+		// PII OFF
+		sendDefaultPii: false, // Off by default but just in case.
+		environment: "production",
 	});
+}
+</script>
+
+<!-- Page view tracking -->
+<script async defer data-domain="training.galaxyproject.org" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+<script>
+if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTrack !== "1") {
+	localStorage.removeItem("plausible_ignore")
+	console.log("Plausible: opt-in");
+} else {
+	// if they're opting-out, or DNT
+	// we might get one page by accident but we won't get future ones.
+	localStorage.setItem("plausible_ignore", "true")
 }
 </script>
 
@@ -75,8 +54,8 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
-        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698886439' as='script'>
-<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698886439' as='script'>
+        <link rel='preload' href='/training-material/assets/js/bundle.theme.js?v=1698889545' as='script'>
+<link rel='preload' href='/training-material/assets/js/bundle.main.js?v=1698889545' as='script'>
         <link rel="stylesheet" href="/training-material/assets/css/main.css?v=3">
         <link rel="manifest" href="/training-material/manifest.json">
         <meta name="theme-color" content="#2c3143"/>
@@ -101,7 +80,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
         
     </head>
     <body data-brightness="auto" data-contrast="auto">
-        <script src='/training-material/assets/js/bundle.theme.js?v=1698886439'></script>
+        <script src='/training-material/assets/js/bundle.theme.js?v=1698889545'></script>
         <section class="tutorials-list by_tag_EBV workflow topic-type-">
 
 
@@ -150,15 +129,15 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00d5c5; --color-darker: #00bdb0; --color-dimmed: #00c9ba;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
+              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00fae8; --color-darker: #00dece; --color-dimmed: #00ecdb;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
               
-              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #81c4ff; --color-darker: #2fb2ff; --color-dimmed: #61bbff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
+              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #c9e2ff; --color-darker: #96ccff; --color-dimmed: #b1d7ff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
-              <a href="/training-material/search?query=modeling" class="label label-default tutorial_tag" style="--color-primary: #cfb0ff; --color-darker: #c194ff; --color-dimmed: #c7a2ff;" title="Click to show all tutorials tagged modeling">modeling</a>
+              <a href="/training-material/search?query=modeling" class="label label-default tutorial_tag" style="--color-primary: #e7daff; --color-darker: #d5bbff; --color-dimmed: #decaff;" title="Click to show all tutorials tagged modeling">modeling</a>
               
             
             </div>
@@ -379,17 +358,17 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffa5b3; --color-darker: #ff8399; --color-dimmed: #ff95a6;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
+              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
               
-              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #81c4ff; --color-darker: #2fb2ff; --color-dimmed: #61bbff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
+              <a href="/training-material/search?query=Community composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #c9e2ff; --color-darker: #96ccff; --color-dimmed: #b1d7ff;" title="Click to show all tutorials tagged Community composition EBV class">Community composition EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
-              <a href="/training-material/search?query=eDNA" class="label label-default tutorial_tag" style="--color-primary: #f8f600; --color-darker: #dddb00; --color-dimmed: #eae800;" title="Click to show all tutorials tagged eDNA">eDNA</a>
+              <a href="/training-material/search?query=eDNA" class="label label-default tutorial_tag" style="--color-primary: #fffd7d; --color-darker: #e4e200; --color-dimmed: #f3f000;" title="Click to show all tutorials tagged eDNA">eDNA</a>
               
-              <a href="/training-material/search?query=Metabarcoding" class="label label-default tutorial_tag" style="--color-primary: #edb600; --color-darker: #d3a200; --color-dimmed: #e0ac00;" title="Click to show all tutorials tagged Metabarcoding">Metabarcoding</a>
+              <a href="/training-material/search?query=Metabarcoding" class="label label-default tutorial_tag" style="--color-primary: #ffdb9d; --color-darker: #f7be00; --color-dimmed: #ffcc5b;" title="Click to show all tutorials tagged Metabarcoding">Metabarcoding</a>
               
             
             </div>
@@ -610,15 +589,15 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #ffefad; --color-darker: #f0d400; --color-dimmed: #fee100;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
+              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #fff7dc; --color-darker: #f8dc00; --color-dimmed: #ffea87;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
               
-              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffa5b3; --color-darker: #ff8399; --color-dimmed: #ff95a6;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
+              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
               
-              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00d5c5; --color-darker: #00bdb0; --color-dimmed: #00c9ba;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
+              <a href="/training-material/search?query=Species population EBV class" class="label label-default tutorial_tag" style="--color-primary: #00fae8; --color-darker: #00dece; --color-dimmed: #00ecdb;" title="Click to show all tutorials tagged Species population EBV class">Species population EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
             
             </div>
@@ -781,15 +760,15 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #ffefad; --color-darker: #f0d400; --color-dimmed: #fee100;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
+              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #fff7dc; --color-darker: #f8dc00; --color-dimmed: #ffea87;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
               
-              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffa5b3; --color-darker: #ff8399; --color-dimmed: #ff95a6;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
+              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
               
-              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00d5c5; --color-darker: #00bdb0; --color-dimmed: #00c9ba;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
+              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00fae8; --color-darker: #00dece; --color-dimmed: #00ecdb;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
             
             </div>
@@ -952,13 +931,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #ffefad; --color-darker: #f0d400; --color-dimmed: #fee100;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
+              <a href="/training-material/search?query=RAD-seq" class="label label-default tutorial_tag" style="--color-primary: #fff7dc; --color-darker: #f8dc00; --color-dimmed: #ffea87;" title="Click to show all tutorials tagged RAD-seq">RAD-seq</a>
               
-              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffa5b3; --color-darker: #ff8399; --color-dimmed: #ff95a6;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
+              <a href="/training-material/search?query=Genetic composition EBV class" class="label label-default tutorial_tag" style="--color-primary: #ffd5db; --color-darker: #ffb2bd; --color-dimmed: #ffc4cc;" title="Click to show all tutorials tagged Genetic composition EBV class">Genetic composition EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
             
             </div>
@@ -1121,13 +1100,13 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
             
             
               
-              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00d5c5; --color-darker: #00bdb0; --color-dimmed: #00c9ba;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
+              <a href="/training-material/search?query=Species populations EBV class" class="label label-default tutorial_tag" style="--color-primary: #00fae8; --color-darker: #00dece; --color-dimmed: #00ecdb;" title="Click to show all tutorials tagged Species populations EBV class">Species populations EBV class</a>
               
-              <a href="/training-material/search?query=Species traits EBV class" class="label label-default tutorial_tag" style="--color-primary: #afbaff; --color-darker: #93a3ff; --color-dimmed: #a1afff;" title="Click to show all tutorials tagged Species traits EBV class">Species traits EBV class</a>
+              <a href="/training-material/search?query=Species traits EBV class" class="label label-default tutorial_tag" style="--color-primary: #d9deff; --color-darker: #bac3ff; --color-dimmed: #cad1ff;" title="Click to show all tutorials tagged Species traits EBV class">Species traits EBV class</a>
               
-              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #e2a8ff; --color-darker: #da88ff; --color-dimmed: #de98ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
+              <a href="/training-material/search?query=EBV dataset" class="label label-default tutorial_tag" style="--color-primary: #f0d7ff; --color-darker: #e6b5ff; --color-dimmed: #ebc6ff;" title="Click to show all tutorials tagged EBV dataset">EBV dataset</a>
               
-              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00d6b2; --color-darker: #00bf9e; --color-dimmed: #00cba8;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
+              <a href="/training-material/search?query=EBV workflow" class="label label-default tutorial_tag" style="--color-primary: #00fcd1; --color-darker: #00e0ba; --color-dimmed: #00eec5;" title="Click to show all tutorials tagged EBV workflow">EBV workflow</a>
               
             
             </div>
@@ -1285,6 +1264,6 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 </section>
 
 
-        <script src='/training-material/assets/js/bundle.main.js?v=1698886439'></script>
+        <script src='/training-material/assets/js/bundle.main.js?v=1698889545'></script>
     </body>
 </html>
